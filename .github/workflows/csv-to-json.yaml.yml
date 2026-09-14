@@ -20,10 +20,7 @@ jobs:
       - name: Run CSV to JSON conversion
         run: python py/csvToJson.py
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m "Convert CSV to JSON"
-          git push
+      - name: Commit files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generate JSON files"
