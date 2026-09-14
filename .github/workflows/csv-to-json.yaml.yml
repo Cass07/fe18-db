@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - data
 
 jobs:
   csv-to-json:
@@ -18,3 +19,11 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run CSV to JSON conversion
         run: python py/csvToJson.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Convert CSV to JSON"
+          git push
