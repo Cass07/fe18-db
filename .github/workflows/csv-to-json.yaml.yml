@@ -2,8 +2,9 @@ name: csv-to-json.yaml
 on:
   push:
     branches:
-      - main
+      - data/*
       - data
+      - feature/*
 
 jobs:
   build:
