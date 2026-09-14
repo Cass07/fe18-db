@@ -9,6 +9,17 @@ def csv_to_json(_csv_file_path, _json_file_path):
         for row in csv_reader:
             data.append(row)
 
+    for row in data:
+        for key in row:
+            # Trim whitespace from string values
+            if isinstance(row[key], str):
+                row[key] = row[key].strip()
+            # Try to convert to int
+            try:
+                row[key] = int(row[key])
+            except ValueError:
+                pass
+
     with open(_json_file_path, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
