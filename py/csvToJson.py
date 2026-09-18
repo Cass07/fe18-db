@@ -20,8 +20,20 @@ def csv_to_json(_csv_file_path, _json_file_path):
             except ValueError:
                 pass
 
+    return data
+
+def add_growth_sum(data):
+    for row in data:
+        row['sum'] = 0
+        for key in row:
+            # Value가 int라면 합치기
+            if isinstance(row[key], int):
+                row['sum'] += row[key]
+    return data
+
+def save_json(csv_arr, _json_file_path):
     with open(_json_file_path, 'w', encoding='utf-8') as json_file:
-        json.dump(data, json_file, ensure_ascii=False, indent=4)
+        json.dump(csv_arr, json_file, ensure_ascii=False, indent=4)
 
 
 if __name__ == "__main__":
@@ -33,5 +45,11 @@ if __name__ == "__main__":
             csv_file_path = os.path.join(csv_folder, csv_file)
             json_file_name = os.path.splitext(csv_file)[0] + ".json"
             json_file_path = os.path.join(json_folder, json_file_name)
-            csv_to_json(csv_file_path, json_file_path)
+            data = csv_to_json(csv_file_path, json_file_path)
+
+            # csv file 명이 growth.csv 이면 sum을 추가
+            if csv_file.endswith("growth.csv"):
+                data = add_growth_sum(data)
+
+            save_json(data, json_file_path)
             print(f"Converted {csv_file} to {json_file_name}")
