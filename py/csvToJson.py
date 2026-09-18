@@ -45,11 +45,11 @@ if __name__ == "__main__":
             csv_file_path = os.path.join(csv_folder, csv_file)
             json_file_name = os.path.splitext(csv_file)[0] + ".json"
             json_file_path = os.path.join(json_folder, json_file_name)
-            data = csv_to_json(csv_file_path, json_file_path)
+            data_arr = csv_to_json(csv_file_path, json_file_path)
 
             # csv file 명이 growth.csv 이면 sum을 추가
             if csv_file.endswith("growth.csv"):
-                data = add_growth_sum(data)
+                data_arr = add_growth_sum(data_arr)
 
-            save_json(data, json_file_path)
+            save_json(data_arr, json_file_path)
             print(f"Converted {csv_file} to {json_file_name}")
