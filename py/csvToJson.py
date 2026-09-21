@@ -24,11 +24,12 @@ def csv_to_json(_csv_file_path, _json_file_path):
 
 def add_growth_sum(data):
     for row in data:
-        row['sum'] = 0
+        sum = 0;
         for key in row:
             # Value가 int라면 합치기
             if isinstance(row[key], int):
-                row['sum'] += row[key]
+                sum += row[key]
+        row['sum'] = sum
     return data
 
 def save_json(csv_arr, _json_file_path):
