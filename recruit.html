@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파엠 만자천홍 데이터베이스</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta name="description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:title" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:site_name" content="파엠 만자천홍 데이터베이스">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" crossorigin="anonymous">
+
+</head>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"
+        crossorigin="anonymous"></script>
+
+<body>
+<div class = "container">
+    <br>
+    <div class = "row">
+        <div class = "col">
+            <p>체크 데이터는 쿠키로 저장됩니다 (쿠키 삭제하면 날아가니 주의)</p>
+
+            <table id = "table"
+                   data-show-fullscreen="true"
+                   data-search="true"
+                   data-show-columns="true">
+                <thead>
+                <tr>
+                    <th data-field="name" data-sortable="true">유닛</th>
+                    <th data-field="c">카이 루트</th>
+                    <th data-field="d">디트리히 루트</th>
+                    <th data-field="t">세오도라 루트</th>
+                    <th data-field="l">레다 루트</th>
+                    <th data-field="skillSourceText" data-visible="false">기타</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+
+    const recruitData = [{"name":"카이","c_r":1,"c_b":0,"d_r":0,"d_b":0,"t_r":0,"t_b":0,"l_r":0,"l_b":0,"des":""},
+        {"name":"디트리히","c_r":0,"c_b":0,"d_r":1,"d_b":0,"t_r":0,"t_b":0,"l_r":0,"l_b":0,"des":""},
+        {"name":"세오도라","c_r":0,"c_b":0,"d_r":0,"d_b":0,"t_r":1,"t_b":0,"l_r":0,"l_b":0,"des":""},
+        {"name":"레다","c_r":0,"c_b":0,"d_r":0,"d_b":0,"t_r":0,"t_b":0,"l_r":1,"l_b":0,"des":""},
+        {"name":"티아라","c_r":1,"c_b":0,"d_r":9,"d_b":3,"t_r":10,"t_b":3,"l_r":8,"l_b":3,"des":"카이 외전 클리어"},
+        {"name":"피터르","c_r":1,"c_b":0,"d_r":8,"d_b":3,"t_r":7,"t_b":3,"l_r":10,"l_b":3,"des":""},
+        {"name":"울턴드","c_r":1,"c_b":0,"d_r":5,"d_b":3,"t_r":6,"t_b":3,"l_r":8,"l_b":3,"des":""},
+        {"name":"파비오","c_r":0,"c_b":0,"d_r":1,"d_b":0,"t_r":0,"t_b":0,"l_r":9,"l_b":3,"des":"디트리히 외전 클리어, 12장"},
+        {"name":"에스메랄다","c_r":7,"c_b":3,"d_r":1,"d_b":0,"t_r":9,"t_b":3,"l_r":6,"l_b":3,"des":""},
+        {"name":"미카엘라","c_r":5,"c_b":3,"d_r":1,"d_b":0,"t_r":8,"t_b":3,"l_r":6,"l_b":3,"des":""},
+        {"name":"보나파르테","c_r":0,"c_b":0,"d_r":0,"d_b":0,"t_r":1,"t_b":0,"l_r":0,"l_b":0,"des":""},
+        {"name":"토비아스","c_r":0,"c_b":0,"d_r":0,"d_b":0,"t_r":1,"t_b":0,"l_r":0,"l_b":0,"des":""},
+        {"name":"릴리안","c_r":8,"c_b":2,"d_r":8,"d_b":2,"t_r":1,"t_b":0,"l_r":7,"l_b":2,"des":""},
+        {"name":"라이선더","c_r":8,"c_b":3,"d_r":6,"d_b":3,"t_r":1,"t_b":0,"l_r":7,"l_b":3,"des":""},
+        {"name":"버커니어","c_r":0,"c_b":0,"d_r":8,"d_b":3,"t_r":8,"t_b":3,"l_r":1,"l_b":0,"des":"레다 외전 클리어"},
+        {"name":"시로코","c_r":9,"c_b":3,"d_r":9,"d_b":3,"t_r":5,"t_b":1,"l_r":1,"l_b":0,"des":""},
+        {"name":"올림피아","c_r":8,"c_b":3,"d_r":6,"d_b":3,"t_r":9,"t_b":3,"l_r":1,"l_b":0,"des":""},
+        {"name":"무우","c_r":9,"c_b":3,"d_r":7,"d_b":3,"t_r":9,"t_b":3,"l_r":1,"l_b":0,"des":""},
+        {"name":"게이츠","c_r":0,"c_b":0,"d_r":10,"d_b":3,"t_r":0,"t_b":0,"l_r":0,"l_b":0,"des":"베르트랑 외전 클리어, 12장"},
+        {"name":"제스터","c_r":10,"c_b":3,"d_r":6,"d_b":3,"t_r":9,"t_b":3,"l_r":10,"l_b":3,"des":""},
+        {"name":"골라이어스","c_r":7,"c_b":3,"d_r":6,"d_b":3,"t_r":9,"t_b":3,"l_r":10,"l_b":3,"des":"거대고기 3개 필요"},
+        {"name":"단테","c_r":10,"c_b":3,"d_r":8,"d_b":2,"t_r":6,"t_b":3,"l_r":10,"l_b":3,"des":""},
+        {"name":"디에고","c_r":10,"c_b":3,"d_r":9,"d_b":3,"t_r":8,"t_b":2,"l_r":8,"l_b":3,"des":"오르헬 외전 클리어"},
+        {"name":"로레타","c_r":7,"c_b":3,"d_r":9,"d_b":3,"t_r":5,"t_b":3,"l_r":5,"l_b":3,"des":""},
+        {"name":"세테스","c_r":6,"c_b":3,"d_r":0,"d_b":0,"t_r":6,"t_b":3,"l_r":10,"l_b":3,"des":""},
+        {"name":"리네","c_r":6,"c_b":3,"d_r":8,"d_b":3,"t_r":6,"t_b":3,"l_r":6,"l_b":3,"des":""},
+        {"name":"우술라","c_r":10,"c_b":3,"d_r":7,"d_b":3,"t_r":9,"t_b":3,"l_r":0,"l_b":0,"des":"타리문 외전 클리어"},
+        {"name":"루루디아","c_r":9,"c_b":3,"d_r":9,"d_b":3,"t_r":7,"t_b":3,"l_r":7,"l_b":3,"des":""},
+        {"name":"시몬","c_r":8,"c_b":3,"d_r":7,"d_b":3,"t_r":7,"t_b":3,"l_r":6,"l_b":3,"des":""},
+        {"name":"피아나","c_r":8,"c_b":3,"d_r":7,"d_b":3,"t_r":9,"t_b":3,"l_r":5,"l_b":3,"des":""},
+        {"name":"사란","c_r":0,"c_b":0,"d_r":10,"d_b":3,"t_r":0,"t_b":0,"l_r":8,"l_b":3,"des":"아나톨리아 외전 클리어"},
+        {"name":"나타","c_r":6,"c_b":3,"d_r":10,"d_b":3,"t_r":6,"t_b":2,"l_r":9,"l_b":3,"des":""},
+        {"name":"대도","c_r":7,"c_b":3,"d_r":10,"d_b":3,"t_r":5,"t_b":2,"l_r":5,"l_b":2,"des":""},
+        {"name":"하르빈","c_r":9,"c_b":3,"d_r":9,"d_b":3,"t_r":7,"t_b":3,"l_r":7,"l_b":3,"des":""},
+        {"name":"그자람","c_r":1,"c_b":1,"d_r":8,"d_b":3,"t_r":8,"t_b":3,"l_r":3,"l_b":1,"des":""},
+        {"name":"이오","c_r":10,"c_b":3,"d_r":3,"d_b":2,"t_r":10,"t_b":3,"l_r":6,"l_b":1,"des":""},
+        {"name":"카타냐","c_r":10,"c_b":3,"d_r":8,"d_b":1,"t_r":7,"t_b":3,"l_r":1,"l_b":1,"des":""},
+        {"name":"누디누","c_r":6,"c_b":1,"d_r":5,"d_b":2,"t_r":5,"t_b":3,"l_r":10,"l_b":3,"des":""},
+        {"name":"밴디츠","c_r":9,"c_b":3,"d_r":7,"d_b":2,"t_r":8,"t_b":1,"l_r":7,"l_b":3,"des":""},
+        {"name":"알렉산드라","c_r":7,"c_b":2,"d_r":8,"d_b":3,"t_r":6,"t_b":1,"l_r":10,"l_b":3,"des":""},
+        {"name":"양계","c_r":3,"c_b":2,"d_r":1,"d_b":1,"t_r":9,"t_b":3,"l_r":8,"l_b":3,"des":"세오도라면 답 감자, 레다면 치즈, 달, 감자 라고함"},
+        {"name":"녹투라","c_r":4,"c_b":1,"d_r":6,"d_b":1,"t_r":3,"t_b":1,"l_r":8,"l_b":3,"des":""},
+        {"name":"소피아","c_r":9,"c_b":3,"d_r":9,"d_b":3,"t_r":1,"t_b":1,"l_r":7,"l_b":3,"des":""},
+        {"name":"페페","c_r":9,"c_b":1,"d_r":8,"d_b":3,"t_r":7,"t_b":2,"l_r":0,"l_b":0,"des":"베르트랑 외전 클리어"},
+        {"name":"자코네","c_r":8,"c_b":3,"d_r":7,"d_b":3,"t_r":4,"t_b":1,"l_r":5,"l_b":2,"des":""},
+        {"name":"마지데","c_r":5,"c_b":2,"d_r":8,"d_b":3,"t_r":8,"t_b":3,"l_r":9,"l_b":3,"des":""},
+        {"name":"키로이카","c_r":8,"c_b":3,"d_r":4,"d_b":1,"t_r":10,"t_b":3,"l_r":4,"l_b":1,"des":""},
+        {"name":"자스민","c_r":8,"c_b":1,"d_r":9,"d_b":3,"t_r":8,"t_b":3,"l_r":4,"l_b":2,"des":""},
+        {"name":"누조","c_r":6,"c_b":2,"d_r":9,"d_b":1,"t_r":6,"t_b":1,"l_r":9,"l_b":3,"des":""},
+        {"name":"이니오니","c_r":8,"c_b":3,"d_r":8,"d_b":3,"t_r":9,"t_b":1,"l_r":7,"l_b":1,"des":""}];
+
+
+    $(document).ready(function () {
+        let tableData = makeTableData();
+        $('#table').bootstrapTable({data: tableData});
+        updateCheckboxStatesFromCookie();
+    });
+
+    $(document).on('change', '#table input[type="checkbox"]', function () {
+        saveCheckboxStatesCookie();
+    });
+
+    function makeUnitRecruitCheckerTextFromRoute(unitObject, routeCharacter) {
+        let route = routeCharacter.toLowerCase();
+        let checkboxId = route + '_' + unitObject.name;
+        if (unitObject[route + "_r"] === 0 && unitObject[route + "_b"] === 0) {
+            return `<label>영입 불가<br><input type="checkbox" id="${checkboxId}" disabled></label>`;
+        }
+        let recruitText = "명성" + unitObject[route + "_r"] + " / 지원 " + unitObject[route + "_b"];
+        return `<label>${recruitText}<br><input type="checkbox" id="${checkboxId}"></label>`;
+    }
+
+    function makeTableData() {
+        let tableData = [];
+        for (const element of recruitData) {
+            let unitObject = element;
+            let tableRow = {
+                name: unitObject.name,
+                c: makeUnitRecruitCheckerTextFromRoute(unitObject, "c"),
+                d: makeUnitRecruitCheckerTextFromRoute(unitObject, "d"),
+                t: makeUnitRecruitCheckerTextFromRoute(unitObject, "t"),
+                l: makeUnitRecruitCheckerTextFromRoute(unitObject, "l"),
+                des: unitObject.des
+            };
+            tableData.push(tableRow);
+        }
+        return tableData;
+    }
+
+    function saveCheckboxStatesCookie() {
+        let checkboxStates = {};
+        $('#table input[type="checkbox"]').each(function () {
+            let checkboxId = $(this).attr('id');
+            checkboxStates[checkboxId] = $(this).prop('checked');
+        });
+
+        // 쿠키 수명 13개월로 설정
+        let expirationDate = new Date();
+        expirationDate.setMonth(expirationDate.getMonth() + 13);
+        document.cookie = "checkboxStates=" + JSON.stringify(checkboxStates) + "; expires=" + expirationDate.toUTCString() + "; path=/";
+    }
+
+    function  getCheckboxStatesFromCookie() {
+        let cookieValue = document.cookie.split('; ').find(row => row.startsWith('checkboxStates='));
+        if (cookieValue) {
+            return JSON.parse(cookieValue.split('=')[1]);
+        }
+        return {};
+    }
+
+    function updateCheckboxStatesFromCookie() {
+        let checkboxStates = getCheckboxStatesFromCookie();
+        $('#table input[type="checkbox"]').each(function () {
+            let checkboxId = $(this).attr('id');
+            if (checkboxStates.hasOwnProperty(checkboxId)) {
+                $(this).prop('checked', checkboxStates[checkboxId]);
+            }
+        });
+    }
+
+
+
+</script>
