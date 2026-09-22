@@ -32,6 +32,16 @@ def add_growth_sum(data):
         row['sum'] = sum
     return data
 
+def add_class_rank_text(data):
+    class_rank_text = ["기본직", "초급직", "중급직", "상급직", "최상급직"]
+    for row in data:
+        rank = row.get("rank", 0)
+        if 1 <= rank <= 5:
+            row["rank_text"] = class_rank_text[rank - 1]
+        else:
+            row["rank_text"] = "알 수 없음"
+    return data
+
 def save_json(csv_arr, _json_file_path):
     with open(_json_file_path, 'w', encoding='utf-8') as json_file:
         json.dump(csv_arr, json_file, ensure_ascii=False, indent=4)
@@ -51,6 +61,10 @@ if __name__ == "__main__":
             # csv file 명이 growth.csv 이면 sum을 추가
             if csv_file.endswith("growth.csv"):
                 data_arr = add_growth_sum(data_arr)
+
+            # 클래스관련 csv file이면 rank_text를 추가
+            if csv_file.startswith("class_"):
+                data_arr = add_class_rank_text(data_arr)
 
             save_json(data_arr, json_file_path)
             print(f"Converted {csv_file} to {json_file_name}")
