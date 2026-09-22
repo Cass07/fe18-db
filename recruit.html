@@ -30,6 +30,8 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"
         crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"
+        crossorigin="anonymous"></script>
 
 <body>
 <div class = "container">
@@ -37,6 +39,16 @@
     <div class = "row">
         <div class = "col">
             <p>체크 데이터는 쿠키로 저장됩니다 (쿠키 삭제하면 날아가니 주의)</p>
+            <button class="btn btn-primary" id="resetButton">체크 초기화</button>
+            <br>
+            <div class ="form-group">
+                <p>데이터 백업</p>
+                <input class = "form-control" type = "text" id = "backupText" >
+                <br>
+                <button class="btn btn-primary" id="backupButton">백업 생성</button>
+                <button class="btn btn-primary" id="restoreButton">복원</button>
+            </div>
+
 
             <table id = "table"
                    data-show-fullscreen="true"
@@ -124,6 +136,18 @@
         saveCheckboxStatesCookie();
     });
 
+    $(document).on('click', '#resetButton', function () {
+        resetCheckboxStates();
+    });
+
+    $(document).on('click', '#backupButton', function () {
+        $('#backupText').val(makeBackupString());
+    });
+
+    $(document).on('click', '#restoreButton', function () {
+        restoreFromBackupString($('#backupText').val());
+    });
+
     function makeUnitRecruitCheckerTextFromRoute(unitObject, routeCharacter) {
         let route = routeCharacter.toLowerCase();
         let checkboxId = route + '_' + unitObject.name;
@@ -151,13 +175,20 @@
         return tableData;
     }
 
-    function saveCheckboxStatesCookie() {
+    function getCheckboxStates() {
         let checkboxStates = {};
         $('#table input[type="checkbox"]').each(function () {
             let checkboxId = $(this).attr('id');
             checkboxStates[checkboxId] = $(this).prop('checked');
         });
+        return checkboxStates;
+    }
 
+    function saveCheckboxStatesCookie() {
+        saveCheckboxStatesToCookie(getCheckboxStates());
+    }
+
+    function saveCheckboxStatesToCookie(checkboxStates) {
         // 쿠키 수명 13개월로 설정
         let expirationDate = new Date();
         expirationDate.setMonth(expirationDate.getMonth() + 13);
@@ -170,6 +201,40 @@
             return JSON.parse(cookieValue.split('=')[1]);
         }
         return {};
+    }
+
+    function resetCheckboxStates() {
+        $('#table input[type="checkbox"]').prop('checked', false);
+        saveCheckboxStatesCookie();
+    }
+
+    function makeBackupString() {
+        let checkboxStates = getCheckboxStates();
+        return LZString.compressToEncodedURIComponent(JSON.stringify(checkboxStates));
+    }
+
+    function restoreFromBackupString(backupString) {
+        if (!backupString) {
+            alert("백업 문자열을 입력해주세요.");
+            return;
+        }
+
+        let checkboxStates;
+        try {
+            let json = LZString.decompressFromEncodedURIComponent(backupString.trim());
+            checkboxStates = JSON.parse(json);
+        } catch (e) {
+            checkboxStates = null;
+        }
+
+        if (!checkboxStates || typeof checkboxStates !== 'object') {
+            alert("백업 문자열을 읽을 수 없습니다.");
+            return;
+        }
+
+        // 복원한 상태를 쿠키에 쓰고, 쿠키를 읽어서 체크박스에 반영
+        saveCheckboxStatesToCookie(checkboxStates);
+        updateCheckboxStatesFromCookie();
     }
 
     function updateCheckboxStatesFromCookie() {
