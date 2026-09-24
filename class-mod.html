@@ -39,6 +39,7 @@
     <div class = "row">
         <div class = "col">
             <h3>클래스 보정치</h3>
+            <label><input type = checkbox id="is-spoiler-avail">스포일러 표시</label>
             <table id = "mainTable"
                    data-search="true"
                    data-toggle="table"
@@ -70,4 +71,34 @@
 
 <script>
 
+    function saveCheckboxStatesToCookie(checkboxStates) {
+        // 쿠키 수명 13개월로 설정
+        let expirationDate = new Date();
+        expirationDate.setMonth(expirationDate.getMonth() + 13);
+        document.cookie = "spoiler=" + checkboxStates + "; expires=" + expirationDate.toUTCString() + "; path=/";
+    }
+
+    function loadCheckboxStatesFromCookie() {
+        let match = document.cookie.match(/(?:^|;\s*)spoiler=([^;]*)/);
+        return match ? match[1] === "true" : false;
+    }
+
+    // 스포일러 미표시 시 rank 4 이하만 표시
+    function applySpoilerFilter() {
+        let isSpoilerAvail = $('#is-spoiler-avail').is(':checked');
+        $('#mainTable').bootstrapTable('filterBy', {}, {
+            filterAlgorithm: function (row) {
+                return isSpoilerAvail || Number(row.rank) <= 4;
+            }
+        });
+    }
+
+    $(function () {
+        $('#is-spoiler-avail').prop('checked', loadCheckboxStatesFromCookie());
+        $('#is-spoiler-avail').on('change', function () {
+            saveCheckboxStatesToCookie($(this).is(':checked'));
+            applySpoilerFilter();
+        });
+        applySpoilerFilter();
+    });
 </script>
