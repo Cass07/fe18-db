@@ -3,7 +3,7 @@
 <head>
     <title>파엠 만자천홍 데이터베이스</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
     <meta name="description" content="파엠 만자천홍 데이터베이스">
     <meta property="og:title" content="파엠 만자천홍 데이터베이스">
@@ -38,15 +38,26 @@
     <br>
     <div class = "row">
         <div class = "col">
-            <p>만자천홍 데이터 링크모음 나중에 다듬을예정</p>
-            <p>나무위키에 복붙하지마셈</p>
-            <p><a href = "growth.html">성장률</a></p>
-            <p><a href = "class-growth.html">클래스 성장률</a></p>
-            <p><a href = "class-mod.html">클래스 보정치</a></p>
-            <p><a href = "magic.html">마법 리스트</a></p>
-            <p><a href = "paralogue.html">외전 수주 가능일 리스트</a></p>
-            <p><a href = "recruit.html">1부 영입 체커</a></p>
-            <p><a href = "map.html">지도</a></p>
+            <table id = "mainTable"
+                   data-search="false"
+                   data-toggle="table"
+                   data-url="data/magic.json"
+                   data-show-columns="true">
+                <thead>
+                <tr>
+                    <th data-field="name" data-sortable="true">이름</th>
+                    <th data-field="might" data-sortable="true">위력</th>
+                    <th data-field="weight" data-sortable="true">무게</th>
+                    <th data-field="hit" data-sortable="true">명중</th>
+                    <th data-field="avoid" data-sortable="true" data-visible="false">회피</th>
+                    <th data-field="crit" data-sortable="true">필살</th>
+                    <th data-field="range" data-sortable="true">사거리</th>
+                    <th data-field="uses" data-sortable="true">내구</th>
+                    <th data-field="desc" data-sortable="true" data-visible="false">설명</th>
+                    <th data-field="kind" data-sortable="true" data-visible="false">속성</th>
+                </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </div>
