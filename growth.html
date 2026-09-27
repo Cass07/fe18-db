@@ -39,6 +39,7 @@
     <div class = "row">
         <div class = "col">
             <p>개인스킬, 유니크스킬 검색 옆 오른쪽 아이콘 눌러서 체크하면 표시됨</p>
+            <label><input type = checkbox id="is-spoiler-avail">스포일러 표시</label>
             <table id = "mainTable"
                    data-search="true"
                    data-toggle="table"
@@ -59,6 +60,7 @@
                     <th data-field="sum" data-sortable="true">합계</th>
                     <th data-field="p_skill" data-visible="false">개인스킬</th>
                     <th data-field="u_skill" data-visible="false">유니크 스킬</th>
+                    <th data-field="spoiler" data-visible="false"></th>
                 </tr>
                 </thead>
             </table>
@@ -69,6 +71,16 @@
 </body>
 </html>
 
+<script src="assets/js/spoiler.js"></script>
+
 <script>
+    function applySpoilerFilter() {
+        let isSpoilerAvail = $('#is-spoiler-avail').is(':checked');
+        $('#mainTable').bootstrapTable('filterBy', {}, {
+            filterAlgorithm: function (row) {
+                return isSpoilerAvail || Number(row.spoiler) === 0;
+            }
+        });
+    }
 
 </script>
