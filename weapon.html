@@ -38,26 +38,30 @@
     <br>
     <div class = "row">
         <div class = "col">
+            <button class="btn btn-primary" id="sword">검</button>
+            <button class="btn btn-primary" id="lance">창</button>
+            <button class="btn btn-primary" id="axe">도끼</button>
+            <button class="btn btn-primary" id="bow">활</button>
+            <button class="btn btn-primary" id="gauntlet">건틀릿</button>
+            <button class="btn btn-primary" id="all">전체</button>
             <table id = "mainTable"
-                   data-search="true"
+                   data-search="false"
                    data-toggle="table"
-                   data-url="data/growth.json"
+                   data-url="data/weapon.json"
                    data-show-columns="true">
                 <thead>
                 <tr>
                     <th data-field="name" data-sortable="true">이름</th>
-                    <th data-field="hp" data-sortable="true">HP</th>
-                    <th data-field="str" data-sortable="true">힘</th>
-                    <th data-field="mg" data-sortable="true">마력</th>
-                    <th data-field="spd" data-sortable="true">속도</th>
-                    <th data-field="dex" data-sortable="true">기술</th>
-                    <th data-field="def" data-sortable="true">수비</th>
-                    <th data-field="res" data-sortable="true">마방</th>
-                    <th data-field="lck" data-sortable="true">행운</th>
-                    <th data-field="cha" data-sortable="true">매력</th>
-                    <th data-field="sum" data-sortable="true">합계</th>
-                    <th data-field="p_skill" data-visible="false">개인스킬</th>
-                    <th data-field="u_skill" data-visible="false">유니크 스킬</th>
+                    <th data-field="might" data-sortable="true">위력</th>
+                    <th data-field="weight" data-sortable="true">무게</th>
+                    <th data-field="hit" data-sortable="true">명중</th>
+                    <th data-field="avoid" data-sortable="true" data-visible="false">회피</th>
+                    <th data-field="crit" data-sortable="true">필살</th>
+                    <th data-field="range" data-sortable="true">사거리</th>
+                    <th data-field="uses" data-sortable="true">내구</th>
+                    <th data-field="rank" data-sortable="true">무기랭크</th>
+                    <th data-field="desc" data-sortable="true" data-visible="false">설명</th>
+                    <th data-field="kind" data-sortable="true" data-visible="false">속성</th>
                 </tr>
                 </thead>
             </table>
@@ -69,5 +73,22 @@
 </html>
 
 <script>
+    $(function () {
+        function filterByKind(kind) {
+            if (kind === "all") {
+                $("#mainTable").bootstrapTable("filterBy", {});
+                return;
+            }
+            $("#mainTable").bootstrapTable("filterBy", {
+                kind: kind
+            });
+        }
 
+        $("#sword").on("click", function () { filterByKind("sword"); });
+        $("#lance").on("click", function () { filterByKind("lance"); });
+        $("#axe").on("click", function () { filterByKind("axe"); });
+        $("#bow").on("click", function () { filterByKind("bow"); });
+        $("#gauntlet").on("click", function () { filterByKind("gauntlet"); });
+        $("#all").on("click", function () { filterByKind("all"); });
+    });
 </script>
