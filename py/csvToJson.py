@@ -33,10 +33,10 @@ def add_growth_sum(data):
     return data
 
 def add_class_rank_text(data):
-    class_rank_text = ["기본직", "초급직", "중급직", "상급직", "최상급직"]
+    class_rank_text = ["기본직", "초급직", "중급직", "상급직", "최상급직", "신장직"]
     for row in data:
         rank = row.get("rank", 0)
-        if 1 <= rank <= 5:
+        if 1 <= rank <= 6:
             row["rank_text"] = class_rank_text[rank - 1]
         else:
             row["rank_text"] = "알 수 없음"
