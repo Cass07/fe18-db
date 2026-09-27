@@ -143,6 +143,19 @@
         "kind": "sword"
     },
     {
+        "name": "철의 검+3",
+        "might": 19,
+        "weight": 4,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "D",
+        "desc": "철을 단조해 만든 양질의 검. 기술 +2",
+        "kind": "sword"
+    },
+    {
         "name": "다 미나의 검",
         "might": 12,
         "weight": 4,
@@ -312,6 +325,58 @@
         "kind": "sword"
     },
     {
+        "name": "질풍의 검",
+        "might": 8,
+        "weight": 2,
+        "hit": 90,
+        "avoid": 10,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "C",
+        "desc": "칼날에 바람 정령의 힘이 깃든 검",
+        "kind": "sword"
+    },
+    {
+        "name": "질풍의 검+2",
+        "might": 17,
+        "weight": 2,
+        "hit": 90,
+        "avoid": 10,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "C",
+        "desc": "칼날에 바람 정령의 힘이 깃든 검",
+        "kind": "sword"
+    },
+    {
+        "name": "그레이트 소드+1",
+        "might": 20,
+        "weight": 15,
+        "hit": 60,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 30,
+        "rank": "검 D/도끼 D",
+        "desc": "어떤 상대든 쪼개 버리는 거대한 검",
+        "kind": "sword"
+    },
+    {
+        "name": "재계의 검",
+        "might": 8,
+        "weight": 3,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "E",
+        "desc": "성스러운 축복으로 청정해진 검. 전투 시 적의 [명부의 가호] 무효화",
+        "kind": "sword"
+    },
+    {
         "name": "재계의 검+1",
         "might": 12,
         "weight": 3,
@@ -335,6 +400,19 @@
         "uses": 20,
         "rank": "E",
         "desc": "혈인의 소유자만 다룰 수 있는 영웅의 유산.디트리히만이 전투 기술 [혈섬] 사용 가능",
+        "kind": "sword"
+    },
+    {
+        "name": "사검 엔주라",
+        "might": 14,
+        "weight": 8,
+        "hit": 80,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "A",
+        "desc": "명계의 어두운 힘이 깃든 마독검. 전투 기술 [독 매장]을 사용 가능 (원주력 2)",
         "kind": "sword"
     },
     {
@@ -377,8 +455,34 @@
         "kind": "sword"
     },
     {
+        "name": "열린 구세의 검+1",
+        "might": 11,
+        "weight": 5,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "E",
+        "desc": "어느 이국 신화에 등장하는 신의 피를 이은 왕자에게 맡겨진 검 인접한 이군의 방어력 +1",
+        "kind": "sword"
+    },
+    {
         "name": "왕가의 보검",
         "might": 5,
+        "weight": 4,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 10,
+        "rank": "E",
+        "desc": "어느 이국 우화에 등장하는 망국의 왕자가 지닌 보검 [노나 파이어 EX]를 사용할 수 있다",
+        "kind": "sword"
+    },
+    {
+        "name": "왕가의 보검+1",
+        "might": 10,
         "weight": 4,
         "hit": 90,
         "avoid": 0,
@@ -494,6 +598,19 @@
         "kind": "lance"
     },
     {
+        "name": "청동의 창+3",
+        "might": 18,
+        "weight": 7,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 15,
+        "rank": "E",
+        "desc": "청동으로 주조한 일반적인 창. 수비 +1",
+        "kind": "lance"
+    },
+    {
         "name": "철의 창",
         "might": 10,
         "weight": 7,
@@ -517,6 +634,19 @@
         "uses": 20,
         "rank": "D",
         "desc": "철을 단조해 만든 양질의 창",
+        "kind": "lance"
+    },
+    {
+        "name": "철의 창+3",
+        "might": 17,
+        "weight": 7,
+        "hit": 80,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "D",
+        "desc": "철을 단조해 만든 양질의 창. 기술 +2",
         "kind": "lance"
     },
     {
@@ -611,6 +741,19 @@
         "kind": "lance"
     },
     {
+        "name": "슬렌드 스피어",
+        "might": 11,
+        "weight": 12,
+        "hit": 70,
+        "avoid": 0,
+        "crit": 0,
+        "range": "1-2",
+        "uses": 20,
+        "rank": "B",
+        "desc": "위력을 높인 고품질 투창",
+        "kind": "lance"
+    },
+    {
         "name": "극+1",
         "might": 15,
         "weight": 7,
@@ -621,6 +764,19 @@
         "uses": 25,
         "rank": "창 B/도끼 D",
         "desc": "다양한 전투 방식에 대응 가능한 창. 전투 기술 [바람 꿰기] 사용 가능",
+        "kind": "lance"
+    },
+    {
+        "name": "글레이브+1",
+        "might": 9,
+        "weight": 6,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 5,
+        "range": 1,
+        "uses": 20,
+        "rank": "검 D/창 D",
+        "desc": "날이 적당히 굽어 베기에도 좋은 창. 전투 기술 [필살창] 사용 가능",
         "kind": "lance"
     },
     {
@@ -639,6 +795,19 @@
     {
         "name": "언월도+1",
         "might": 14,
+        "weight": 9,
+        "hit": 90,
+        "avoid": 10,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "검 D/창 B",
+        "desc": "넓고 무거운 창날을 가진 강력한 창",
+        "kind": "lance"
+    },
+    {
+        "name": "언월도+2",
+        "might": 21,
         "weight": 9,
         "hit": 90,
         "avoid": 10,
@@ -673,6 +842,19 @@
         "uses": 20,
         "rank": "E",
         "desc": "전설 속 영웅이 휘두른 황금빛 창. 전투 기술 [진월] 사용 가능. [진월]의 위력 +2",
+        "kind": "lance"
+    },
+    {
+        "name": "신자의 작살+1",
+        "might": 12,
+        "weight": 16,
+        "hit": 65,
+        "avoid": 0,
+        "crit": 0,
+        "range": "1-2",
+        "uses": 30,
+        "rank": "E",
+        "desc": "에스메랄다의 아버지가 남긴 작살. 전투 기술 [괴력 던지기] 사용 가능",
         "kind": "lance"
     },
     {
@@ -754,6 +936,19 @@
         "kind": "lance"
     },
     {
+        "name": "요창 벤데타",
+        "might": 27,
+        "weight": 20,
+        "hit": 60,
+        "avoid": 0,
+        "crit": 0,
+        "range": "1-2",
+        "uses": 20,
+        "rank": "A",
+        "desc": "명계의 어두운 힘이 깃든 ㅅ하복창. 전투 기술 [패사] 사용 가능 (원주력 2)",
+        "kind": "lance"
+    },
+    {
         "name": "성스러운 창 아살",
         "might": 7,
         "weight": 8,
@@ -782,6 +977,19 @@
     {
         "name": "얼음의 구세의 창",
         "might": 7,
+        "weight": 7,
+        "hit": 85,
+        "avoid": 10,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "E",
+        "desc": "어느 이국 신화에 등장하는 얼음의 왕녀에게 맡겨진 창",
+        "kind": "lance"
+    },
+    {
+        "name": "얼음의 구세의 창+1",
+        "might": 12,
         "weight": 7,
         "hit": 85,
         "avoid": 10,
@@ -897,6 +1105,19 @@
         "kind": "axe"
     },
     {
+        "name": "청동의 도끼+3",
+        "might": 20,
+        "weight": 9,
+        "hit": 70,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "E",
+        "desc": "청동으로 주조한 일반적인 도끼. 수비 +1",
+        "kind": "axe"
+    },
+    {
         "name": "철의 도끼",
         "might": 13,
         "weight": 10,
@@ -933,6 +1154,19 @@
         "uses": 25,
         "rank": "D",
         "desc": "철을 단조해 만든 양질의 도끼",
+        "kind": "axe"
+    },
+    {
+        "name": "철의 도끼+3",
+        "might": 20,
+        "weight": 10,
+        "hit": 65,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 25,
+        "rank": "D",
+        "desc": "철을 단조해 만든 양질의 도끼. 기술 +2",
         "kind": "axe"
     },
     {
@@ -1024,6 +1258,32 @@
         "uses": 25,
         "rank": "C",
         "desc": "던지기 좋은 양질의 투척도끼",
+        "kind": "axe"
+    },
+    {
+        "name": "쇼트 액스+2",
+        "might": 15,
+        "weight": 12,
+        "hit": 60,
+        "avoid": 0,
+        "crit": 0,
+        "range": "1-2",
+        "uses": 25,
+        "rank": "C",
+        "desc": "던지기 좋은 양질의 투척도끼",
+        "kind": "axe"
+    },
+    {
+        "name": "매 발톱 도끼+1",
+        "might": 7,
+        "weight": 8,
+        "hit": 75,
+        "avoid": 0,
+        "crit": 0,
+        "range": "1-2",
+        "uses": 20,
+        "rank": "검 D/도끼 D",
+        "desc": "예리한 투척도끼",
         "kind": "axe"
     },
     {
@@ -1141,6 +1401,19 @@
         "uses": 25,
         "rank": "A",
         "desc": "명계의 어두운 힘이 깃든 양날 도끼. 전투 기술 [폭풍 걸음] 사용 가능 (원주력 1)",
+        "kind": "axe"
+    },
+    {
+        "name": "다그다의 곤봉",
+        "might": 36,
+        "weight": 25,
+        "hit": 5,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 35,
+        "rank": "A",
+        "desc": "만물을 깨부수는 지고의 아크. 전투 기술 [신격] 사용 가능. [신격] 외의 전투 기술 사용 불가",
         "kind": "axe"
     },
     {
@@ -1284,6 +1557,19 @@
         "uses": 20,
         "rank": "D",
         "desc": "용수철을 결합한 양질의 활",
+        "kind": "bow"
+    },
+    {
+        "name": "철의 활+3",
+        "might": 17,
+        "weight": 6,
+        "hit": 75,
+        "avoid": 0,
+        "crit": 0,
+        "range": 2,
+        "uses": 20,
+        "rank": "D",
+        "desc": "용수철을 결합한 양질의 활. 기술 +2",
         "kind": "bow"
     },
     {
@@ -1625,6 +1911,32 @@
         "kind": "gauntlet"
     },
     {
+        "name": "철의 건틀릿+3",
+        "might": 17,
+        "weight": 3,
+        "hit": 90,
+        "avoid": 7,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "D",
+        "desc": "철을 단조해 만든 양질의 건틀릿. 기술 +2",
+        "kind": "gauntlet"
+    },
+    {
+        "name": "반격의 건틀릿",
+        "might": 11,
+        "weight": 4,
+        "hit": 70,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "C",
+        "desc": "반격할 때 진가를 발휘하는 건틀릿. 후공일 경우 해당 전투 중 공격력 +5",
+        "kind": "gauntlet"
+    },
+    {
         "name": "건곤권",
         "might": 10,
         "weight": 4,
@@ -1661,6 +1973,32 @@
         "uses": 20,
         "rank": "검 D/격투 D",
         "desc": "끝에 예리한 칼날이 달린 건틀릿. 전투 기술 [필살갑] 사용 가능",
+        "kind": "gauntlet"
+    },
+    {
+        "name": "자마다르+1",
+        "might": 15,
+        "weight": 5,
+        "hit": 90,
+        "avoid": 0,
+        "crit": 5,
+        "range": 1,
+        "uses": 20,
+        "rank": "검 D/격투 D",
+        "desc": "끝에 예리한 칼날이 달린 건틀릿. 전투 기술 [필살갑] 사용 가능",
+        "kind": "gauntlet"
+    },
+    {
+        "name": "큰 곰의 오른 발톱",
+        "might": 15,
+        "weight": 1,
+        "hit": 75,
+        "avoid": 0,
+        "crit": 0,
+        "range": 1,
+        "uses": 20,
+        "rank": "B",
+        "desc": "꺼림칙한 발톱 장갑의 일부분. 전투 기술 [폭조] 사용 가능",
         "kind": "gauntlet"
     },
     {
@@ -1718,6 +2056,19 @@
     {
         "name": "브레이다블리크",
         "might": 2,
+        "weight": 4,
+        "hit": 85,
+        "avoid": 0,
+        "crit": 0,
+        "range": "1-2",
+        "uses": 20,
+        "rank": "E",
+        "desc": "이국 신화에 등장하는 소환사의 신기 마법 공격. 지원도 상승 확률이 높다 전투 기술 [인연의 광명] 사용 가능",
+        "kind": "gauntlet"
+    },
+    {
+        "name": "브레이다블리크+1",
+        "might": 3,
         "weight": 4,
         "hit": 85,
         "avoid": 0,
