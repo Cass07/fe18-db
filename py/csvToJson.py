@@ -23,9 +23,10 @@ def csv_to_json(_csv_file_path, _json_file_path):
     return data
 
 def add_growth_sum(data):
+    stat_arr = ["hp", "str", "mg", "spd", "dex", "def", "res", "lck", "cha"]
     for row in data:
         sum = 0;
-        for key in row:
+        for key in stat_arr:
             # Value가 int라면 합치기
             if isinstance(row[key], int):
                 sum += row[key]

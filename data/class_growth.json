@@ -16,7 +16,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "-",
-        "sum": 1,
+        "sum": 0,
         "rank_text": "기본직"
     },
     {
@@ -36,7 +36,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "-",
-        "sum": 1,
+        "sum": 0,
         "rank_text": "기본직"
     },
     {
@@ -56,7 +56,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "검,도끼,격투 D (선택)",
-        "sum": 22,
+        "sum": 20,
         "rank_text": "초급직"
     },
     {
@@ -76,7 +76,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "검,활 D (선택)",
-        "sum": 32,
+        "sum": 30,
         "rank_text": "초급직"
     },
     {
@@ -96,7 +96,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "창,도끼 D (선택)",
-        "sum": 27,
+        "sum": 25,
         "rank_text": "초급직"
     },
     {
@@ -116,7 +116,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 E+,창,도끼 D (선택)",
-        "sum": 37,
+        "sum": 35,
         "rank_text": "초급직"
     },
     {
@@ -136,7 +136,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "흑마법,백마법 D (선택)",
-        "sum": 27,
+        "sum": 25,
         "rank_text": "초급직"
     },
     {
@@ -156,7 +156,7 @@
         "class_skill_2": "검 필살 +3 : 검 장비 시 필살 +3",
         "class_skill_3": "",
         "require": "검 C",
-        "sum": 48,
+        "sum": 45,
         "rank_text": "중급직"
     },
     {
@@ -176,7 +176,7 @@
         "class_skill_2": "도끼 명중 +3 : 도끼 장비 시 명중 +3",
         "class_skill_3": "",
         "require": "검,도끼 C (선택)",
-        "sum": 43,
+        "sum": 40,
         "rank_text": "중급직"
     },
     {
@@ -196,7 +196,7 @@
         "class_skill_2": "격투 회피 +3 : 건틀릿 장비 시 회피 +3",
         "class_skill_3": "",
         "require": "격투 C",
-        "sum": 53,
+        "sum": 50,
         "rank_text": "중급직"
     },
     {
@@ -216,7 +216,7 @@
         "class_skill_2": "활 명중 +5 : 활 장비 시 명중 +5",
         "class_skill_3": "",
         "require": "활 C",
-        "sum": 53,
+        "sum": 50,
         "rank_text": "중급직"
     },
     {
@@ -236,7 +236,7 @@
         "class_skill_2": "자물쇠 열기 : 열쇠가 없어도 보물 상자를 열 수 있다",
         "class_skill_3": "탐색술 : 부대에 있을 때 탐색을 하면 PERFECT가 될 확률이 약간 높아진다",
         "require": "검,활 C (선택)",
-        "sum": 48,
+        "sum": 45,
         "rank_text": "중급직"
     },
     {
@@ -256,7 +256,7 @@
         "class_skill_2": "후공 수비 +3 : 후공일 경우 해당 전투 중 물방 +3",
         "class_skill_3": "",
         "require": "중갑 E+,창,도끼 C (선택)",
-        "sum": 43,
+        "sum": 40,
         "rank_text": "중급직"
     },
     {
@@ -276,7 +276,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 D,검,창 C (선택)",
-        "sum": 43,
+        "sum": 40,
         "rank_text": "중급직"
     },
     {
@@ -296,7 +296,7 @@
         "class_skill_2": "전차병의 전술 : [타기],[내리기]를 사용 가능,[기병] [돌진] 사용 가능",
         "class_skill_3": "전차병의 길 : 자신의 레벨이 높아질수록 성장률도 높아진다",
         "require": "기마 D,활 C",
-        "sum": 48,
+        "sum": 45,
         "rank_text": "중급직"
     },
     {
@@ -316,7 +316,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 D,창,도끼 C (선택)",
-        "sum": 53,
+        "sum": 50,
         "rank_text": "중급직"
     },
     {
@@ -336,7 +336,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "비행 D,창 도끼 C (선택)",
-        "sum": 48,
+        "sum": 45,
         "rank_text": "중급직"
     },
     {
@@ -356,7 +356,7 @@
         "class_skill_2": "마법 명중 +3 : 마법 장비 시 명중 +3",
         "class_skill_3": "",
         "require": "흑마법 C",
-        "sum": 48,
+        "sum": 45,
         "rank_text": "중급직"
     },
     {
@@ -376,7 +376,7 @@
         "class_skill_2": "마법 회복 +5 : 마법으로 아군을 회복할 때 회복량 +5",
         "class_skill_3": "",
         "require": "백마법 C",
-        "sum": 53,
+        "sum": 50,
         "rank_text": "중급직"
     },
     {
@@ -396,7 +396,7 @@
         "class_skill_2": "검 필살 +5 : 검 장비 시 필살 +5",
         "class_skill_3": "",
         "require": "검 B",
-        "sum": 49,
+        "sum": 45,
         "rank_text": "상급직"
     },
     {
@@ -416,7 +416,7 @@
         "class_skill_2": "춤추기 : 전투 기술 [춤추기]를 사용할 수 있다",
         "class_skill_3": "",
         "require": "활 검 B (선택)",
-        "sum": 94,
+        "sum": 90,
         "rank_text": "상급직"
     },
     {
@@ -436,7 +436,7 @@
         "class_skill_2": "도끼 명중 +5 : 도끼 장비 시 명중 +5",
         "class_skill_3": "격투 명중 +5 : 건틀릿 장비 시 명중 +5",
         "require": "검,도끼,격투 B (선택)",
-        "sum": 44,
+        "sum": 40,
         "rank_text": "상급직"
     },
     {
@@ -456,7 +456,7 @@
         "class_skill_2": "도끼 명중 +5 : 도끼 장비 시 명중 +5",
         "class_skill_3": "",
         "require": "흑마법 D,도끼 C",
-        "sum": 69,
+        "sum": 65,
         "rank_text": "상급직"
     },
     {
@@ -476,7 +476,7 @@
         "class_skill_2": "활 명중 +10 : 활 장비 시 명중 +10",
         "class_skill_3": "",
         "require": "활 B",
-        "sum": 69,
+        "sum": 65,
         "rank_text": "상급직"
     },
     {
@@ -496,7 +496,7 @@
         "class_skill_2": "전투 기술 장비 +1 : 장비 가능한 전투 기술 개수 +1",
         "class_skill_3": "활 명중 +5 : 활 장비 시 명중 +5",
         "require": "기마 D,활 B",
-        "sum": 64,
+        "sum": 60,
         "rank_text": "상급직"
     },
     {
@@ -516,7 +516,7 @@
         "class_skill_2": "자물쇠 열기 : 열쇠가 없어도 보물 상자를 열 수 있다",
         "class_skill_3": "상급 탐색술 : 부대에 있을 때 탐색을 하면 PERFECT가 될 확률이 높아진다",
         "require": "활 검 B (선택)",
-        "sum": 74,
+        "sum": 70,
         "rank_text": "상급직"
     },
     {
@@ -536,7 +536,7 @@
         "class_skill_2": "마법 회복 +10 : 마법으로 아군을 회복할 때 회복량 +10",
         "class_skill_3": "",
         "require": "창 B",
-        "sum": 64,
+        "sum": 60,
         "rank_text": "상급직"
     },
     {
@@ -556,7 +556,7 @@
         "class_skill_2": "후공 수비 +5 : 후공일 경우 해당 전투 중 물방 +5",
         "class_skill_3": "",
         "require": "중갑 D,창 도끼 B (선택)",
-        "sum": 49,
+        "sum": 45,
         "rank_text": "상급직"
     },
     {
@@ -576,7 +576,7 @@
         "class_skill_2": "전투 기술 장비 +2 : 장비 가능한 전투 기술 개수 +2",
         "class_skill_3": "",
         "require": "기마 C,검 창 B (선택)",
-        "sum": 54,
+        "sum": 50,
         "rank_text": "상급직"
     },
     {
@@ -596,7 +596,7 @@
         "class_skill_2": "전투 기술 장비 +1 : 장비 가능한 전투 기술 개수 +1",
         "class_skill_3": "후공 수비 +3 : 후공일 경우 해당 전투 중 물방 +3",
         "require": "중갑 E+,기마 D,도끼 창 B (선택)",
-        "sum": 29,
+        "sum": 25,
         "rank_text": "상급직"
     },
     {
@@ -616,7 +616,7 @@
         "class_skill_2": "마법 회복 +5 : 마법으로 아군을 회복할 때 회복량 +5",
         "class_skill_3": "마법 명중 +3 : 마법 장비 시 명중 +3",
         "require": "기마 D,흑마법 백마법 B",
-        "sum": 79,
+        "sum": 75,
         "rank_text": "상급직"
     },
     {
@@ -636,7 +636,7 @@
         "class_skill_2": "흑마술의 탐구 : 흑마법 횟수가 2배로 증가한다",
         "class_skill_3": "전투 기술 장비 +1 : 장비 가능한 전투 기술 개수 +1",
         "require": "기마 B,흑마법 B",
-        "sum": 74,
+        "sum": 70,
         "rank_text": "상급직"
     },
     {
@@ -656,7 +656,7 @@
         "class_skill_2": "전투 기술 장비 +1 : 장비 가능한 전투 기술 개수 +1",
         "class_skill_3": "",
         "require": "비행 C,창 도끼 B (선택)",
-        "sum": 64,
+        "sum": 60,
         "rank_text": "상급직"
     },
     {
@@ -676,7 +676,7 @@
         "class_skill_2": "마법 명중 +5 : 마법 장비 시 명중 +5",
         "class_skill_3": "",
         "require": "흑마법 B",
-        "sum": 64,
+        "sum": 60,
         "rank_text": "상급직"
     },
     {
@@ -696,7 +696,7 @@
         "class_skill_2": "마법 회복 +10 : 마법으로 아군을 회복할 때 회복량 +10",
         "class_skill_3": "",
         "require": "백마법 B",
-        "sum": 69,
+        "sum": 65,
         "rank_text": "상급직"
     },
     {
@@ -716,7 +716,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 C",
-        "sum": 64,
+        "sum": 60,
         "rank_text": "상급직"
     },
     {
@@ -736,7 +736,7 @@
         "class_skill_2": "도끼 명중 +7 : 도끼 장비 시 명중 +7",
         "class_skill_3": "격투 명중 +7 : 건틀릿 장비 시 명중 +7",
         "require": "격투 도끼 검 A (선택)",
-        "sum": 55,
+        "sum": 50,
         "rank_text": "최상급직"
     },
     {
@@ -756,7 +756,7 @@
         "class_skill_2": "활 명중 +15 : 활 장비 시 명중 +15",
         "class_skill_3": "-",
         "require": "활 A",
-        "sum": 80,
+        "sum": 75,
         "rank_text": "최상급직"
     },
     {
@@ -776,7 +776,7 @@
         "class_skill_2": "자물쇠 열기 : 열쇠가 없어도 보물 상자를 열 수 있다",
         "class_skill_3": "최상급 탐색술 : 부대에 있을 때 탐색을 하면 PERFECT가 될 확률이 높아진다",
         "require": "활 검 A (선택)",
-        "sum": 90,
+        "sum": 85,
         "rank_text": "최상급직"
     },
     {
@@ -796,7 +796,7 @@
         "class_skill_2": "마법 회복 +10 : 마법으로 아군을 회복할 때 회복량 +10",
         "class_skill_3": "백마술의 탐구 : 백마법 횟수가 2배로 증가한다",
         "require": "창 A",
-        "sum": 80,
+        "sum": 75,
         "rank_text": "최상급직"
     },
     {
@@ -816,7 +816,7 @@
         "class_skill_2": "후공 수비 +7 : 후공일 경우 해당 전투 중 물방 +7",
         "class_skill_3": "-",
         "require": "중갑 C, 도끼 창 A (선택)",
-        "sum": 60,
+        "sum": 55,
         "rank_text": "최상급직"
     },
     {
@@ -836,7 +836,7 @@
         "class_skill_2": "전투 기술 장비 +3 : 장비 가능한 전투 기술 개수 +3",
         "class_skill_3": "-",
         "require": "기마 B, 창 검 A (선택)",
-        "sum": 60,
+        "sum": 55,
         "rank_text": "최상급직"
     },
     {
@@ -856,7 +856,7 @@
         "class_skill_2": "전투 기술 장비 +1 : 장비 가능한 전투 기술 개수 +1",
         "class_skill_3": "-",
         "require": "비행 C, 도끼 창 A (선택)",
-        "sum": 65,
+        "sum": 60,
         "rank_text": "최상급직"
     },
     {
@@ -876,7 +876,7 @@
         "class_skill_2": "마법 명중 +7 : 마법 장비 시 명중 +7",
         "class_skill_3": "-",
         "require": "흑마법 A",
-        "sum": 85,
+        "sum": 80,
         "rank_text": "최상급직"
     },
     {
@@ -896,7 +896,7 @@
         "class_skill_2": "마법 회복 +15 : 마법으로 아군을 회복할 때 회복량 +15",
         "class_skill_3": "-",
         "require": "백마법 A",
-        "sum": 80,
+        "sum": 75,
         "rank_text": "최상급직"
     },
     {
@@ -916,7 +916,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "백마법 D, 격투 B",
-        "sum": 75,
+        "sum": 70,
         "rank_text": "최상급직"
     },
     {
@@ -936,7 +936,7 @@
         "class_skill_2": "전투 기술 장비 +1 : 장비 가능한 전투 기술 개수 +1",
         "class_skill_3": "비행 회피 +7 :",
         "require": "비행 C, 창 검 A (선택)",
-        "sum": 80,
+        "sum": 75,
         "rank_text": "최상급직"
     },
     {
@@ -956,7 +956,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "중갑 기마 D, 도끼 창 A (선택)",
-        "sum": 40,
+        "sum": 35,
         "rank_text": "최상급직"
     },
     {
@@ -976,7 +976,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "검 A",
-        "sum": 75,
+        "sum": 70,
         "rank_text": "최상급직"
     },
     {
@@ -996,7 +996,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 D, 흑마법 D, 검 B",
-        "sum": 80,
+        "sum": 75,
         "rank_text": "최상급직"
     },
     {
@@ -1016,7 +1016,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 D, 활 A",
-        "sum": 65,
+        "sum": 60,
         "rank_text": "최상급직"
     },
     {
@@ -1036,7 +1036,7 @@
         "class_skill_2": "",
         "class_skill_3": "",
         "require": "기마 D, 백마법 흑마법 A (선택)",
-        "sum": 80,
+        "sum": 75,
         "rank_text": "최상급직"
     }
 ]
