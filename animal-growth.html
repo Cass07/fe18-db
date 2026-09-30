@@ -38,18 +38,13 @@
     <br>
     <div class = "row">
         <div class = "col">
-            <p>검색 옆 오른쪽 아이콘 눌러서 원하는 컬럼 보기 가능</p>
-            <button class="btn btn-primary" id="show-stat">성장률 보기</button>
-            <button class="btn btn-primary" id="show-skill">개인스킬 보기</button>
-        </div>
-    </div>
-    <div class = "row">
-        <div class = "col">
-            <label><input type = checkbox id="is-spoiler-avail">스포일러 표시</label>
+            <h3>동물 성장률</h3>
+            <p>아래 링크글 정보 숫자만 정리함.<br>잡는 위치, 선호 맛 등은 링크 확인</p>
+            <p><a href = "https://gall.dcinside.com/mgallery/board/view/?id=fireemblem&no=753281" target="_blank" >링크 클릭</a></p>
             <table id = "mainTable"
                    data-search="true"
                    data-toggle="table"
-                   data-url="data/growth.json"
+                   data-url="data/animal.json"
                    data-show-columns="true">
                 <thead>
                 <tr>
@@ -63,10 +58,7 @@
                     <th data-field="res" data-sortable="true">마방</th>
                     <th data-field="lck" data-sortable="true">행운</th>
                     <th data-field="cha" data-sortable="true">매력</th>
-                    <th data-field="sum" data-sortable="true">합계</th>
-                    <th data-field="p_skill" data-visible="false">개인스킬</th>
-                    <th data-field="u_skill" data-visible="false">유니크 스킬</th>
-                    <th data-field="spoiler" data-visible="false"></th>
+                    <th data-field="master_skill" data-visible="true">마스터 스킬</th>
                 </tr>
                 </thead>
             </table>
@@ -77,34 +69,3 @@
 </body>
 </html>
 
-<script src="assets/js/spoiler.js"></script>
-
-<script>
-    function applySpoilerFilter() {
-        let isSpoilerAvail = $('#is-spoiler-avail').is(':checked');
-        $('#mainTable').bootstrapTable('filterBy', {}, {
-            filterAlgorithm: function (row) {
-                return isSpoilerAvail || Number(row.spoiler) === 0;
-            }
-        });
-    }
-
-    const STAT_COLUMNS = ['name', 'hp', 'str', 'mg', 'spd', 'dex', 'def', 'res', 'lck', 'cha', 'sum'];
-    const SKILL_COLUMNS = ['name', 'p_skill', 'u_skill'];
-
-    function showOnlyColumns(visibleColumns) {
-        let $table = $('#mainTable');
-        STAT_COLUMNS.concat(SKILL_COLUMNS).forEach(function (field) {
-            $table.bootstrapTable(visibleColumns.includes(field) ? 'showColumn' : 'hideColumn', field);
-        });
-    }
-
-    $('#show-stat').on('click', function () {
-        showOnlyColumns(STAT_COLUMNS);
-    });
-
-    $('#show-skill').on('click', function () {
-        showOnlyColumns(SKILL_COLUMNS);
-    });
-
-</script>

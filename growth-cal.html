@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파엠 만자천홍 데이터베이스</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:title" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:site_name" content="파엠 만자천홍 데이터베이스">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/select2.min.css"/>
+
+    <style>
+        .unit-dropdown, .class-dropdown, .animal-dropdown {
+            margin-bottom: 6px;
+        }
+
+        .unit-title {
+            font-weight: bold;
+            margin: 8px 0 4px;
+        }
+
+        #resultTable td, #resultTable th {
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        #resultTable .stat-value {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        #resultTable .stat-detail {
+            display: block;
+            font-size: 0.75em;
+            color: #6c757d;
+        }
+
+        #resultTable .diff {
+            color: #6c757d;
+        }
+
+        #resultTable .diff.win1, #resultTable .diff.win2 {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        #resultTable .bigger {
+            background-color: #e7f1ff;
+        }
+
+        #resultTable tr.sum-row td, #resultTable td.sum-col {
+            border-top: 2px solid #adb5bd;
+        }
+    </style>
+</head>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"
+        crossorigin="anonymous"></script>
+
+<body>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col">
+            <h3>성장률 계산기</h3>
+            <label><input type=checkbox id="is-spoiler-avail">스포일러 표시</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- 캐릭터 1-->
+            <div class="unit-title">유닛 1</div>
+            <select id="character1" class="unit-dropdown" style="width: 100%">
+            </select>
+            <select id="class1" class="class-dropdown" style="width: 100%">
+            </select>
+            <select id="animal1" class="animal-dropdown" style="width: 100%">
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- 캐릭터 2-->
+            <div class="unit-title">유닛 2</div>
+            <select id="character2" class="unit-dropdown" style="width: 100%">
+            </select>
+            <select id="class2" class="class-dropdown" style="width: 100%">
+            </select>
+            <select id="animal2" class="animal-dropdown" style="width: 100%">
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- 결과 -->
+            <br>
+            <button type="button" id="toggle-mode" class="btn btn-outline-secondary btn-sm"></button>
+            <button type="button" id="copy-url" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-link-45deg"></i> 링크 복사
+            </button>
+            <span id="copy-message" class="text-success small ms-2"></span>
+            <br><br>
+            <div class="table-responsive">
+                <table id="resultTable" class="table table-bordered table-sm"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script src="assets/js/spoiler.js"></script>
+
+<script>
+    const STATS = [
+        {key: 'hp', label: 'HP'},
+        {key: 'str', label: '힘'},
+        {key: 'mg', label: '마력'},
+        {key: 'spd', label: '속도'},
+        {key: 'dex', label: '기술'},
+        {key: 'def', label: '수비'},
+        {key: 'res', label: '마방'},
+        {key: 'lck', label: '행운'},
+        {key: 'cha', label: '매력'},
+        {key: 'sum', label: '합계'}
+    ];
+
+    // sum 을 제외한 실제 스탯 key
+    const STAT_KEYS = STATS.filter(function (s) {
+        return s.key !== 'sum';
+    }).map(function (s) {
+        return s.key;
+    });
+
+    // query string key
+    const QUERY_KEYS = {character1: 'c1', class1: 'k1', animal1: 'a1', character2: 'c2', class2: 'k2', animal2: 'a2'};
+
+    let characters = [];
+    let classes = [];
+    let animals = [];
+    let cavaliers = [];
+    // 클래스 드롭다운 id -> {cls: class_growth 데이터, cavalier: cavaliers 데이터(없으면 undefined)}
+    let classEntryMap = {};
+    let mode = 'v'; // v: 세로, h: 가로
+    let isRestoring = false;
+
+    function isSpoilerAvail() {
+        return $('#is-spoiler-avail').is(':checked');
+    }
+
+    function isCharacterSpoiler(c) {
+        return Number(c.spoiler) !== 0;
+    }
+
+    // class-growth.html 과 동일하게 rank 5 이상을 스포일러로 취급
+    function isClassSpoiler(c) {
+        return Number(c.rank) > 4;
+    }
+
+    function buildCharacterOptions() {
+        let showSpoiler = isSpoilerAvail();
+        let options = [{id: '', text: ''}];
+        characters.forEach(function (c) {
+            if (showSpoiler || !isCharacterSpoiler(c)) {
+                options.push({id: c.name, text: c.name});
+            }
+        });
+        return options;
+    }
+
+    // 동물을 타는 클래스는 cavaliers 의 name 별로 항목을 나눔 (예: 전차병, 전차병 (레벨 35))
+    function buildClassEntryMap() {
+        classEntryMap = {};
+        classes.forEach(function (c) {
+            let variants = cavaliers.filter(function (v) {
+                return v.origin === c.name;
+            });
+            if (variants.length === 0) {
+                classEntryMap[c.name] = {cls: c};
+            }
+            variants.forEach(function (v) {
+                classEntryMap[v.name] = {cls: c, cavalier: v};
+            });
+        });
+    }
+
+    function buildClassOptions() {
+        let showSpoiler = isSpoilerAvail();
+        let groups = [];
+        let groupMap = {};
+        Object.keys(classEntryMap).forEach(function (id) {
+            let c = classEntryMap[id].cls;
+            if (!showSpoiler && isClassSpoiler(c)) {
+                return;
+            }
+            if (!groupMap[c.rank_text]) {
+                groupMap[c.rank_text] = {text: c.rank_text, children: []};
+                groups.push(groupMap[c.rank_text]);
+            }
+            groupMap[c.rank_text].children.push({id: id, text: id});
+        });
+        return [{id: '', text: ''}].concat(groups);
+    }
+
+    function buildAnimalOptions(kind) {
+        let options = [{id: '', text: ''}];
+        animals.forEach(function (a) {
+            if (a.kind === kind) {
+                options.push({id: a.name, text: a.name + ' (' + a.kind + ')'});
+            }
+        });
+        return options;
+    }
+
+    // 선택된 클래스가 동물을 탈 수 있을 때만 동물 드롭다운 활성화, 아니면 기본값(미선택)으로 변경
+    function refreshAnimalDropdown(n, value) {
+        let $select = $('#animal' + n);
+        let entry = classEntryMap[$('#class' + n).val()];
+        let kind = entry && entry.cavalier ? entry.cavalier.kind : null;
+        let current = value !== undefined ? value : $select.val();
+        $select.prop('disabled', !kind);
+        initDropdown($select, buildAnimalOptions(kind), kind ? '동물 선택' : '동물 선택 불가', kind ? current : '');
+    }
+
+    // 드롭다운 재생성. 기존 선택값이 목록에 남아 있으면 유지
+    function initDropdown($select, data, placeholder, value) {
+        if ($select.hasClass('select2-hidden-accessible')) {
+            $select.select2('destroy');
+        }
+        $select.empty();
+        $select.select2({
+            data: data,
+            placeholder: placeholder,
+            allowClear: true
+        });
+        let exists = $select.find('option').toArray().some(function (option) {
+            return option.value === value;
+        });
+        $select.val(exists ? value : '').trigger('change.select2');
+    }
+
+    function refreshDropdowns(values) {
+        let characterOptions = buildCharacterOptions();
+        let classOptions = buildClassOptions();
+        [1, 2].forEach(function (n) {
+            let characterId = 'character' + n;
+            let classId = 'class' + n;
+            initDropdown($('#' + characterId), characterOptions, '캐릭터 선택',
+                values ? values[characterId] : $('#' + characterId).val());
+            initDropdown($('#' + classId), classOptions, '클래스 선택',
+                values ? values[classId] : $('#' + classId).val());
+            refreshAnimalDropdown(n, values ? values['animal' + n] : undefined);
+        });
+    }
+
+    // spoiler.js 에서 체크박스 변경 시 호출
+    function applySpoilerFilter() {
+        if (characters.length === 0 || classes.length === 0) {
+            return;
+        }
+        refreshDropdowns();
+        render();
+    }
+
+    function findByName(list, name) {
+        return list.find(function (x) {
+            return x.name === name;
+        });
+    }
+
+    // 데이터의 스탯값 * mul (sum 은 스탯값을 합산해서 계산)
+    function statValue(data, key, mul) {
+        if (!data) {
+            return 0;
+        }
+        if (key === 'sum') {
+            return STAT_KEYS.reduce(function (acc, k) {
+                return acc + statValue(data, k, mul);
+            }, 0);
+        }
+        return (Number(data[key]) || 0) * (mul || 1);
+    }
+
+    function getUnit(n) {
+        let character = findByName(characters, $('#character' + n).val());
+        let entry = classEntryMap[$('#class' + n).val()];
+        let cls = entry ? entry.cls : undefined;
+        let cavalier = entry ? entry.cavalier : undefined;
+        let animal = cavalier ? findByName(animals, $('#animal' + n).val()) : undefined;
+        if (!character && !cls) {
+            return null;
+        }
+        let mul = cavalier ? Number(cavalier.mul) || 1 : 1;
+        let unit = {
+            character: character,
+            classId: entry ? $('#class' + n).val() : '',
+            animal: animal,
+            mul: mul,
+            stats: {}
+        };
+        STATS.forEach(function (s) {
+            let base = statValue(character, s.key);
+            // 클래스 성장률 + 동물 탑승 클래스 추가 보정
+            let bonus = statValue(cls, s.key) + statValue(cavalier, s.key);
+            let animalBonus = statValue(animal, s.key, mul);
+            unit.stats[s.key] = {total: base + bonus + animalBonus, base: base, bonus: bonus, animal: animalBonus};
+        });
+        return unit;
+    }
+
+    function unitLabel(unit) {
+        if (!unit) {
+            return '유닛';
+        }
+        let names = [];
+        if (unit.character) names.push(unit.character.name);
+        if (unit.classId) names.push(unit.classId);
+        if (unit.animal) names.push(unit.animal.name + (unit.mul !== 1 ? ' ×' + unit.mul : ''));
+        return names.join(' / ');
+    }
+
+    function signed(value) {
+        return (value >= 0 ? ' + ' : ' - ') + Math.abs(value);
+    }
+
+    function valueCell(unit, key, isBigger, extraClass) {
+        let $td = $('<td>').addClass(extraClass || '');
+        if (!unit) {
+            return $td.text('-');
+        }
+        let stat = unit.stats[key];
+        if (isBigger) {
+            $td.addClass('bigger');
+        }
+        $td.append($('<span class="stat-value">').text(stat.total));
+        // 캐릭터 + 클래스 (+ 동물)
+        let detail = stat.base + signed(stat.bonus) + (unit.animal ? signed(stat.animal) : '');
+        $td.append($('<span class="stat-detail">').text(detail));
+        return $td;
+    }
+
+    // 두 값의 차이와 큰 쪽을 가리키는 화살표
+    function diffCell(unit1, unit2, key, extraClass) {
+        let $td = $('<td class="diff">').addClass(extraClass || '');
+        if (!unit1 || !unit2) {
+            return $td.text('');
+        }
+        let v1 = unit1.stats[key].total;
+        let v2 = unit2.stats[key].total;
+        let diff = Math.abs(v1 - v2);
+        if (v1 === v2) {
+            return $td.html('<i class="bi bi-dash"></i> 0');
+        }
+        // 세로 모드: 유닛1 왼쪽 / 유닛2 오른쪽, 가로 모드: 유닛1 위 / 유닛2 아래
+        let arrow1 = mode === 'v' ? 'bi-arrow-left' : 'bi-arrow-up';
+        let arrow2 = mode === 'v' ? 'bi-arrow-right' : 'bi-arrow-down';
+        if (v1 > v2) {
+            $td.addClass('win1').html('<i class="bi ' + arrow1 + '"></i> ' + diff);
+        } else {
+            $td.addClass('win2').html(diff + ' <i class="bi ' + arrow2 + '"></i>');
+        }
+        return $td;
+    }
+
+    function compare(unit1, unit2, key) {
+        if (!unit1 || !unit2) {
+            return 0;
+        }
+        return unit1.stats[key].total - unit2.stats[key].total;
+    }
+
+    // 세로 모드: 스탯이 행, [유닛1 | 차이 | 유닛2] 가 열
+    function renderVertical($table, unit1, unit2) {
+        let $thead = $('<thead>').append($('<tr>')
+            .append($('<th>').text('스탯'))
+            .append($('<th>').text(unitLabel(unit1)))
+            .append($('<th>').text('차이'))
+            .append($('<th>').text(unitLabel(unit2))));
+        let $tbody = $('<tbody>');
+        STATS.forEach(function (s) {
+            let cmp = compare(unit1, unit2, s.key);
+            let $tr = $('<tr>').toggleClass('sum-row', s.key === 'sum');
+            $tr.append($('<th>').text(s.label));
+            $tr.append(valueCell(unit1, s.key, cmp > 0));
+            $tr.append(diffCell(unit1, unit2, s.key));
+            $tr.append(valueCell(unit2, s.key, cmp < 0));
+            $tbody.append($tr);
+        });
+        $table.append($thead, $tbody);
+    }
+
+    // 가로 모드: 스탯이 열, [유닛1 / 차이 / 유닛2] 가 행
+    function renderHorizontal($table, unit1, unit2) {
+        let $headRow = $('<tr>').append($('<th>').text(''));
+        STATS.forEach(function (s) {
+            $headRow.append($('<th>').text(s.label));
+        });
+        let $row1 = $('<tr>').append($('<th>').text(unitLabel(unit1)));
+        let $rowDiff = $('<tr>').append($('<th>').text('차이'));
+        let $row2 = $('<tr>').append($('<th>').text(unitLabel(unit2)));
+        STATS.forEach(function (s) {
+            let cmp = compare(unit1, unit2, s.key);
+            let sumClass = s.key === 'sum' ? 'sum-col' : '';
+            $row1.append(valueCell(unit1, s.key, cmp > 0, sumClass));
+            $rowDiff.append(diffCell(unit1, unit2, s.key, sumClass));
+            $row2.append(valueCell(unit2, s.key, cmp < 0, sumClass));
+        });
+        $table.append($('<thead>').append($headRow), $('<tbody>').append($row1, $rowDiff, $row2));
+    }
+
+    function render() {
+        let unit1 = getUnit(1);
+        let unit2 = getUnit(2);
+        let $table = $('#resultTable').empty();
+        if (mode === 'h') {
+            renderHorizontal($table, unit1, unit2);
+        } else {
+            renderVertical($table, unit1, unit2);
+        }
+        $('#toggle-mode').html(mode === 'h'
+            ? '<i class="bi bi-distribute-vertical"></i> 세로 모드로 보기'
+            : '<i class="bi bi-distribute-horizontal"></i> 가로 모드로 보기');
+        updateQueryString();
+    }
+
+    function buildShareUrl() {
+        let params = new URLSearchParams();
+        Object.keys(QUERY_KEYS).forEach(function (id) {
+            let value = $('#' + id).val();
+            if (value) {
+                params.set(QUERY_KEYS[id], value);
+            }
+        });
+        params.set('mode', mode);
+        if (isSpoilerAvail()) {
+            params.set('spoiler', '1');
+        }
+        return location.pathname + '?' + params.toString();
+    }
+
+    // 선택이 바뀔 때마다 주소창의 query string 갱신
+    function updateQueryString() {
+        if (isRestoring) {
+            return;
+        }
+        history.replaceState(null, '', buildShareUrl());
+    }
+
+    // query string 으로부터 선택값, 가로/세로 모드 복구
+    function restoreFromQueryString() {
+        let params = new URLSearchParams(location.search);
+        let values = {};
+        Object.keys(QUERY_KEYS).forEach(function (id) {
+            values[id] = params.get(QUERY_KEYS[id]) || '';
+        });
+        mode = params.get('mode') === 'h' ? 'h' : 'v';
+
+        // 공유된 링크에 스포일러 항목이 포함되어 있으면 스포일러 표시를 켬 (쿠키는 변경하지 않음)
+        let hasSpoiler = params.get('spoiler') === '1'
+            || [values.character1, values.character2].some(function (name) {
+                let c = findByName(characters, name);
+                return c && isCharacterSpoiler(c);
+            })
+            || [values.class1, values.class2].some(function (id) {
+                let entry = classEntryMap[id];
+                return entry && isClassSpoiler(entry.cls);
+            });
+        if (hasSpoiler) {
+            $('#is-spoiler-avail').prop('checked', true);
+        }
+        return values;
+    }
+
+    $(function () {
+        $.when($.getJSON('data/growth.json'), $.getJSON('data/class_growth.json'),
+            $.getJSON('data/animal.json'), $.getJSON('data/cavaliers.json'))
+            .done(function (growthRes, classRes, animalRes, cavalierRes) {
+                characters = growthRes[0];
+                classes = classRes[0];
+                animals = animalRes[0];
+                cavaliers = cavalierRes[0];
+                buildClassEntryMap();
+
+                isRestoring = true;
+                let values = restoreFromQueryString();
+                refreshDropdowns(values);
+                isRestoring = false;
+
+                $('.class-dropdown').on('change', function () {
+                    refreshAnimalDropdown(this.id.replace('class', ''));
+                });
+                $('.unit-dropdown, .class-dropdown, .animal-dropdown').on('change', render);
+                render();
+            })
+            .fail(function () {
+                $('#resultTable').html('<tr><td>데이터를 불러오지 못했습니다.</td></tr>');
+            });
+
+        $('#toggle-mode').on('click', function () {
+            mode = mode === 'h' ? 'v' : 'h';
+            render();
+        });
+
+        $('#copy-url').on('click', function () {
+            let url = location.origin + buildShareUrl();
+            navigator.clipboard.writeText(url).then(function () {
+                $('#copy-message').text('링크가 복사되었습니다.');
+                setTimeout(function () {
+                    $('#copy-message').text('');
+                }, 2000);
+            }, function () {
+                prompt('아래 링크를 복사하세요', url);
+            });
+        });
+    });
+</script>

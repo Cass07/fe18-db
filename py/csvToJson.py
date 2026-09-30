@@ -45,7 +45,7 @@ def add_class_rank_text(data):
 
 def save_json(csv_arr, _json_file_path):
     with open(_json_file_path, 'w', encoding='utf-8') as json_file:
-        json.dump(csv_arr, json_file, ensure_ascii=False, indent=4)
+        json.dump(csv_arr, json_file, ensure_ascii=False)
 
 
 if __name__ == "__main__":
