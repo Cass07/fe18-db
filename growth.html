@@ -38,7 +38,13 @@
     <br>
     <div class = "row">
         <div class = "col">
-            <p>개인스킬, 유니크스킬 검색 옆 오른쪽 아이콘 눌러서 체크하면 표시됨</p>
+            <p>검색 옆 오른쪽 아이콘 눌러서 원하는 컬럼 보기 가능</p>
+            <button class="btn btn-primary" id="show-stat">성장률 보기</button>
+            <button class="btn btn-primary" id="show-skill">개인스킬 보기</button>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col">
             <label><input type = checkbox id="is-spoiler-avail">스포일러 표시</label>
             <table id = "mainTable"
                    data-search="true"
@@ -82,5 +88,23 @@
             }
         });
     }
+
+    const STAT_COLUMNS = ['name', 'hp', 'str', 'mg', 'spd', 'dex', 'def', 'res', 'lck', 'cha', 'sum'];
+    const SKILL_COLUMNS = ['name', 'p_skill', 'u_skill'];
+
+    function showOnlyColumns(visibleColumns) {
+        let $table = $('#mainTable');
+        STAT_COLUMNS.concat(SKILL_COLUMNS).forEach(function (field) {
+            $table.bootstrapTable(visibleColumns.includes(field) ? 'showColumn' : 'hideColumn', field);
+        });
+    }
+
+    $('#show-stat').on('click', function () {
+        showOnlyColumns(STAT_COLUMNS);
+    });
+
+    $('#show-skill').on('click', function () {
+        showOnlyColumns(SKILL_COLUMNS);
+    });
 
 </script>
