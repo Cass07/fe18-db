@@ -49,13 +49,13 @@ def add_boonbain_text(data):
         "lance": "창",
         "axe": "도끼",
         "bow": "활",
-        "gauntlet": "건틀릿",
+        "gauntlet": "격투",
         "black_magic": "흑마법",
         "white_magic": "백마법",
-        "authority": "권위",
-        "infantry": "보병",
+        "authority": "지휘",
+        "infantry": "보행",
         "riding": "기마",
-        "armor": "중장갑",
+        "armor": "중장",
         "flying": "비행"
     }
     for row in data:
