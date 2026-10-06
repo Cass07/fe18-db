@@ -94,6 +94,10 @@ if __name__ == "__main__":
             if csv_file.endswith("growth.csv"):
                 data_arr = add_growth_sum(data_arr)
 
+            # growth.csv면 boon bane text를 추가
+            if csv_file.endswith("growth.csv"):
+                data_arr = add_boonbain_text(data_arr)
+
             # 클래스관련 csv file이면 rank_text를 추가
             if csv_file.startswith("class_"):
                 data_arr = add_class_rank_text(data_arr)
