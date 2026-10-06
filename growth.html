@@ -41,6 +41,7 @@
             <p>검색 옆 오른쪽 아이콘 눌러서 원하는 컬럼 보기 가능</p>
             <button class="btn btn-primary" id="show-stat">성장률 보기</button>
             <button class="btn btn-primary" id="show-skill">개인스킬 보기</button>
+            <button class="btn btn-primary" id="show-boonbain">기술 강약점 보기</button>
         </div>
     </div>
     <div class = "row">
@@ -67,6 +68,20 @@
                     <th data-field="p_skill" data-visible="false">개인스킬</th>
                     <th data-field="u_skill" data-visible="false">유니크 스킬</th>
                     <th data-field="spoiler" data-visible="false"></th>
+                    <th data-field="sword" data-visible="false">검</th>
+                    <th data-field="lance" data-visible="false">창</th>
+                    <th data-field="axe" data-visible="false">도끼</th>
+                    <th data-field="bow" data-visible="false">활</th>
+                    <th data-field="gauntlet" data-visible="false">격투</th>
+                    <th data-field="black_magic" data-visible="false">흑마법</th>
+                    <th data-field="white_magic" data-visible="false">백마법</th>
+                    <th data-field="authority" data-visible="false">지휘</th>
+                    <th data-field="infantry" data-visible="false">보행</th>
+                    <th data-field="riding" data-visible="false">기마</th>
+                    <th data-field="armor" data-visible="false">중갑</th>
+                    <th data-field="flying" data-visible="false">비행</th>
+                    <th data-field="boon" data-visible="false">강점</th>
+                    <th data-field="bane" data-visible="false">약점</th>
                 </tr>
                 </thead>
             </table>
@@ -91,10 +106,14 @@
 
     const STAT_COLUMNS = ['name', 'hp', 'str', 'mg', 'spd', 'dex', 'def', 'res', 'lck', 'cha', 'sum'];
     const SKILL_COLUMNS = ['name', 'p_skill', 'u_skill'];
+    const SKILL_BOONBAIN_COLUMNS = ['name', 'boon','bane'];
 
     function showOnlyColumns(visibleColumns) {
         let $table = $('#mainTable');
-        STAT_COLUMNS.concat(SKILL_COLUMNS).forEach(function (field) {
+
+        let concat_colums = STAT_COLUMNS.concat(SKILL_COLUMNS).concat(SKILL_BOONBAIN_COLUMNS);
+
+        concat_colums.forEach(function (field) {
             $table.bootstrapTable(visibleColumns.includes(field) ? 'showColumn' : 'hideColumn', field);
         });
     }
@@ -105,6 +124,10 @@
 
     $('#show-skill').on('click', function () {
         showOnlyColumns(SKILL_COLUMNS);
+    });
+
+    $('#show-boonbain').on('click', function () {
+        showOnlyColumns(SKILL_BOONBAIN_COLUMNS);
     });
 
 </script>

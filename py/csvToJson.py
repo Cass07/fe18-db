@@ -43,6 +43,37 @@ def add_class_rank_text(data):
             row["rank_text"] = "알 수 없음"
     return data
 
+def add_boonbain_text(data):
+    boonbain_text = {
+        "sword": "검",
+        "lance": "창",
+        "axe": "도끼",
+        "bow": "활",
+        "gauntlet": "격투",
+        "black_magic": "흑마법",
+        "white_magic": "백마법",
+        "authority": "지휘",
+        "infantry": "보행",
+        "riding": "기마",
+        "armor": "중장",
+        "flying": "비행"
+    }
+    for row in data:
+        row["boon"] = ""
+        row["bane"] = ""
+        for key in boonbain_text:
+            if key in row:
+                value = row[key]
+                if isinstance(value, int):
+                    if value > 0:
+                        row["boon"] += f"{boonbain_text[key]} "
+                    elif value < 0:
+                        row["bane"] += f"{boonbain_text[key]} "
+        row["boon"] = row["boon"].strip()
+        row["bane"] = row["bane"].strip()
+
+    return data
+
 def save_json(csv_arr, _json_file_path):
     with open(_json_file_path, 'w', encoding='utf-8') as json_file:
         json.dump(csv_arr, json_file, ensure_ascii=False)
@@ -62,6 +93,10 @@ if __name__ == "__main__":
             # csv file 명이 growth.csv 이면 sum을 추가
             if csv_file.endswith("growth.csv"):
                 data_arr = add_growth_sum(data_arr)
+
+            # growth.csv면 boon bane text를 추가
+            if csv_file.endswith("growth.csv"):
+                data_arr = add_boonbain_text(data_arr)
 
             # 클래스관련 csv file이면 rank_text를 추가
             if csv_file.startswith("class_"):
