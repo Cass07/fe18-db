@@ -43,6 +43,37 @@ def add_class_rank_text(data):
             row["rank_text"] = "알 수 없음"
     return data
 
+def add_boonbain_text(data):
+    boonbain_text = {
+        "sword": "검",
+        "lance": "창",
+        "axe": "도끼",
+        "bow": "활",
+        "gauntlet": "건틀릿",
+        "black_magic": "흑마법",
+        "white_magic": "백마법",
+        "authority": "권위",
+        "infantry": "보병",
+        "riding": "기마",
+        "armor": "중장갑",
+        "flying": "비행"
+    }
+    for row in data:
+        row["boon"] = ""
+        row["bane"] = ""
+        for key in boonbain_text:
+            if key in row:
+                value = row[key]
+                if isinstance(value, int):
+                    if value > 0:
+                        row["boon"] += f"{boonbain_text[key]} "
+                    elif value < 0:
+                        row["bane"] += f"{boonbain_text[key]} "
+        row["boon"] = row["boon"].strip()
+        row["bane"] = row["bane"].strip()
+
+    return data
+
 def save_json(csv_arr, _json_file_path):
     with open(_json_file_path, 'w', encoding='utf-8') as json_file:
         json.dump(csv_arr, json_file, ensure_ascii=False)
