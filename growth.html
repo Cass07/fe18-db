@@ -106,11 +106,14 @@
 
     const STAT_COLUMNS = ['name', 'hp', 'str', 'mg', 'spd', 'dex', 'def', 'res', 'lck', 'cha', 'sum'];
     const SKILL_COLUMNS = ['name', 'p_skill', 'u_skill'];
-    const SKILL_BOONBAIN_COLUMNS = ['sword','lance','axe','bow','gauntlet','black_magic','white_magic','authority','infantry','riding','armor','flying'];
+    const SKILL_BOONBAIN_COLUMNS = ['name', 'boon','bane'];
 
     function showOnlyColumns(visibleColumns) {
         let $table = $('#mainTable');
-        STAT_COLUMNS.concat(SKILL_COLUMNS).forEach(function (field) {
+
+        let concat_colums = STAT_COLUMNS.concat(SKILL_COLUMNS).concat(SKILL_BOONBAIN_COLUMNS);
+
+        concat_colums.forEach(function (field) {
             $table.bootstrapTable(visibleColumns.includes(field) ? 'showColumn' : 'hideColumn', field);
         });
     }
