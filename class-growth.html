@@ -38,6 +38,15 @@
     <br>
     <div class = "row">
         <div class = "col">
+            <p>검색 옆 오른쪽 아이콘 눌러서 원하는 컬럼 보기 가능</p>
+            <button class="btn btn-primary" id="show-stat">성장률 보기</button>
+            <button class="btn btn-primary" id="show-skill">마스터, 클래스 스킬 보기</button>
+            <button class="btn btn-primary" id="show-require">요구치 보기</button>
+            <button class="btn btn-primary" id="show-support">지원보정치 보기</button>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col">
             <h3>클래스 성장률</h3>
             <label><input type = checkbox id="is-spoiler-avail">스포일러 표시</label>
             <table id = "mainTable"
@@ -63,6 +72,7 @@
                     <th data-field="class_skill_2" data-visible="false">클래스 스킬 2</th>
                     <th data-field="class_skill_3" data-visible="false">클래스 스킬 3</th>
                     <th data-field="require" data-visible="false">요구치</th>
+                    <th data-field="support" data-visible="false">지원보정치</th>
                 </tr>
                 </thead>
             </table>
@@ -86,4 +96,37 @@
             }
         });
     }
+
+    const STAT_COLUMNS = ['name', 'rank_text', 'hp', 'str', 'mg', 'spd', 'dex', 'def', 'res', 'lck', 'cha'];
+    const SKILL_COLUMNS = ['name', 'master_skill', 'class_skill_1', 'class_skill_2', 'class_skill_3'];
+    const REQUIRE_COLUMNS = ['name', 'require'];
+    const SUPPORT_COLUMNS = ['name', 'support'];
+
+    const CONCAT_COLUMNS = STAT_COLUMNS.concat(SKILL_COLUMNS).concat(REQUIRE_COLUMNS).concat(SUPPORT_COLUMNS);
+
+    function showOnlyColumns(visibleColumns) {
+        let $table = $('#mainTable');
+
+        CONCAT_COLUMNS.forEach(function (field) {
+            $table.bootstrapTable(visibleColumns.includes(field) ? 'showColumn' : 'hideColumn', field);
+        });
+    }
+
+    $('#show-stat').on('click', function () {
+        showOnlyColumns(STAT_COLUMNS);
+    });
+
+    $('#show-skill').on('click', function () {
+        showOnlyColumns(SKILL_COLUMNS);
+    });
+
+    $('#show-require').on('click', function () {
+        showOnlyColumns(REQUIRE_COLUMNS);
+    });
+
+    $('#show-support').on('click', function () {
+        showOnlyColumns(SUPPORT_COLUMNS);
+    });
+
+
 </script>
