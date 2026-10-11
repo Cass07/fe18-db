@@ -84,28 +84,29 @@
 </html>
 
 <script>
-    $('#is-final').on('change', function () {
-        applyFinal();
-    });
-
-    function applyFinal() {
-        let isFinal = $('#is-final').is(':checked');
-        $('#mainTable').bootstrapTable('filterBy', {}, {
-            filterAlgorithm: function (row) {
-                return !isFinal || Number(row.final) === 1;
-            }
-        });
-    }
-
     $(function () {
-        function filterByKind(kind) {
-            if (kind === "all") {
-                $("#mainTable").bootstrapTable("filterBy", {});
-                return;
-            }
-            $("#mainTable").bootstrapTable("filterBy", {
-                kind: kind
+        const filters = {
+            kind : null,
+            finalOnly : false
+        }
+
+        function applyFilters() {
+            $("#mainTable").bootstrapTable("filterBy", {}, {
+                filterAlgorithm: function (row) {
+                    return (!filters.kind || row.kind === filters.kind)
+                        && (!filters.finalOnly || Number(row.final) === 1);
+                }
             });
+        }
+
+        $('#is-final').on('change', function () {
+            filters.finalOnly = this.checked;
+            applyFilters();
+        });
+
+        function filterByKind(kind) {
+            filters.kind = kind;
+            applyFilters();
         }
 
         $("#sword").on("click", function () { filterByKind("sword"); });
@@ -113,6 +114,6 @@
         $("#axe").on("click", function () { filterByKind("axe"); });
         $("#bow").on("click", function () { filterByKind("bow"); });
         $("#gauntlet").on("click", function () { filterByKind("gauntlet"); });
-        $("#all").on("click", function () { filterByKind("all"); });
+        $("#all").on("click", function () { filterByKind(null); });
     });
 </script>
