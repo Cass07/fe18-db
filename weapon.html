@@ -37,13 +37,23 @@
 <div class = "container">
     <br>
     <div class = "row">
-        <div class = "col">
+        <div class= "col">
             <button class="btn btn-primary" id="sword">검</button>
             <button class="btn btn-primary" id="lance">창</button>
             <button class="btn btn-primary" id="axe">도끼</button>
             <button class="btn btn-primary" id="bow">활</button>
             <button class="btn btn-primary" id="gauntlet">건틀릿</button>
             <button class="btn btn-primary" id="all">전체</button>
+        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div class= "col">
+            <label><input type = checkbox id="is-final"> 최종강화만 표시</label>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col">
             <table id = "mainTable"
                    data-search="false"
                    data-toggle="table"
@@ -62,6 +72,7 @@
                     <th data-field="rank" data-sortable="true">무기랭크</th>
                     <th data-field="desc" data-sortable="true" data-visible="false">설명</th>
                     <th data-field="kind" data-sortable="true" data-visible="false">속성</th>
+                    <th data-field="final" data-visible="false">최종 여부</th>
                 </tr>
                 </thead>
             </table>
@@ -74,14 +85,28 @@
 
 <script>
     $(function () {
-        function filterByKind(kind) {
-            if (kind === "all") {
-                $("#mainTable").bootstrapTable("filterBy", {});
-                return;
-            }
-            $("#mainTable").bootstrapTable("filterBy", {
-                kind: kind
+        const filters = {
+            kind : null,
+            finalOnly : false
+        }
+
+        function applyFilters() {
+            $("#mainTable").bootstrapTable("filterBy", {}, {
+                filterAlgorithm: function (row) {
+                    return (!filters.kind || row.kind === filters.kind)
+                        && (!filters.finalOnly || Number(row.final) === 1);
+                }
             });
+        }
+
+        $('#is-final').on('change', function () {
+            filters.finalOnly = this.checked;
+            applyFilters();
+        });
+
+        function filterByKind(kind) {
+            filters.kind = kind;
+            applyFilters();
         }
 
         $("#sword").on("click", function () { filterByKind("sword"); });
@@ -89,6 +114,6 @@
         $("#axe").on("click", function () { filterByKind("axe"); });
         $("#bow").on("click", function () { filterByKind("bow"); });
         $("#gauntlet").on("click", function () { filterByKind("gauntlet"); });
-        $("#all").on("click", function () { filterByKind("all"); });
+        $("#all").on("click", function () { filterByKind(null); });
     });
 </script>
