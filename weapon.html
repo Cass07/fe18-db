@@ -92,7 +92,7 @@
         let isFinal = $('#is-final').is(':checked');
         $('#mainTable').bootstrapTable('filterBy', {}, {
             filterAlgorithm: function (row) {
-                return isFinal || Number(row.final) === 0;
+                return !isFinal || Number(row.final) === 1;
             }
         });
     }
