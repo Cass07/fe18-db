@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파엠 만자천홍 데이터베이스</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:title" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:site_name" content="파엠 만자천홍 데이터베이스">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/select2.min.css"/>
+
+
+<style>
+    #resultTable .speaker-col { min-width: 100px; }
+</style>
+</head>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"
+        crossorigin="anonymous"></script>
+
+<body>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col">
+            <h3>지원회화</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- 캐릭터 1-->
+            <select id="character1" class="unit-dropdown" style="width: 100%">
+            </select>
+            <select id="character2" class="unit-dropdown" style="width: 100%">
+            </select>
+            <select id="rank" class="unit-dropdown" style="width: 100%">
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <br>
+    </div>
+    <div class = "row">
+        <div class = "col">
+            <table id="resultTable"
+                   data-toggle="table">
+                <thead>
+                <tr>
+                    <th data-field="index" data-sortable="true" data-visible="false">index</th>
+                    <th data-field="speakerName" data-sortable="false" data-width="100" data-width-unit="px" data-class="speaker-col">화자</th>
+                    <th data-field="supportText" data-sortable="false" data-formatter="supportTextFormatter">대사</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <br>
+        <br>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+    const unitList = [
+        "카이",
+        "디트리히",
+        "세오도라",
+        "레다",
+        "티아라",
+        "피터르",
+        "울턴드",
+        "파비오",
+        "에스메랄다",
+        "미카엘라",
+        "보나파르트",
+        "토비아스",
+        "릴리안",
+        "라이선더",
+        "버커니어",
+        "시로코",
+        "올림피아",
+        "무우",
+        "베르트랑",
+        "게이츠",
+        "단테",
+        "제스터",
+        "골라이어스",
+        "타리문",
+        "우술라",
+        "루루디아",
+        "시몬",
+        "피아나",
+        "오르헬",
+        "디에고",
+        "리네",
+        "로레타",
+        "세테스",
+        "아나톨리아",
+        "사란",
+        "나타",
+        "대도",
+        "하르빈",
+        "그자람",
+        "이오",
+        "카타냐",
+        "누디누",
+        "밴디츠",
+        "알렉산드라",
+        "양계",
+        "녹투라",
+        "소피아",
+        "페페",
+        "자코네",
+        "마지데",
+        "키로이카",
+        "자스민",
+        "누조",
+        "이니오니",
+        "키릭",
+        "네이선",
+        "이스마르",
+        "홍화",
+        "트로이아",
+        "아스완",
+        "타호니아",
+        "크라프카",
+        "센트리온"
+    ];
+
+
+    function supportTextFormatter(value, row) {
+        if (row.speakerName === '이미지') {
+            return '<img src="image/support/' + encodeURIComponent(value) + '" style="width:100%">';
+        }
+        return value;
+    }
+
+    $(function () {
+        const $c1 = $('#character1'), $c2 = $('#character2'), $rank = $('#rank');
+        const $table = $('#resultTable');
+        let data = null;
+
+        function fill($sel, items, placeholder) {
+            $sel.empty().append($('<option>').val('').text(placeholder));
+            items.forEach(v => $sel.append($('<option>').val(v).text(v)));
+            $sel.val('');
+        }
+
+        function clearTable() {
+            $table.bootstrapTable('load', []);
+        }
+
+        $.getJSON('data/support.json', function (json) {
+            data = json;
+            $('.unit-dropdown').select2();
+            fill($c1, unitList, '캐릭터 1');
+            fill($c2, [], '캐릭터 2');
+            fill($rank, [], '랭크');
+            $table.bootstrapTable();
+        });
+
+        $c1.on('change', function () {
+            const u1 = $c1.val();
+            const partners = new Set(data.pair.filter(p => p.u1 === u1).map(p => p.u2));
+            fill($c2, unitList.filter(u => partners.has(u)), '캐릭터 2');
+            fill($rank, [], '랭크');
+            clearTable();
+        });
+
+        $c2.on('change', function () {
+            const u1 = $c1.val(), u2 = $c2.val();
+            const pair = data.pair.find(p => p.u1 === u1 && p.u2 === u2);
+            const pairRank = pair && data.pair_rank.find(r => r.key === pair.key);
+            fill($rank, pairRank ? pairRank.rank : [], '랭크');
+            clearTable();
+        });
+
+        $rank.on('change', function () {
+            const u1 = $c1.val(), u2 = $c2.val(), rank = $rank.val();
+            const pair = data.pair.find(p => p.u1 === u1 && p.u2 === u2);
+            if (!pair || !rank) {
+                clearTable();
+                return;
+            }
+            const rows = data.value
+                .filter(v => v.charaPairKey === pair.key && v.rank === rank)
+                .sort((a, b) => a.index - b.index);
+            $table.bootstrapTable('load', rows);
+        });
+    });</script>
