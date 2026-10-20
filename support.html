@@ -77,8 +77,8 @@
                 <thead>
                 <tr>
                     <th data-field="index" data-sortable="true" data-visible="false">index</th>
-                    <th data-field="speakerName" data-sortable="false" data-width="100" data-width-unit="px" data-class="speaker-col" data-formatter="speakerNameFormatter">화자</th>
-                    <th data-field="supportText" data-sortable="false" data-formatter="supportTextFormatter">대사</th>
+                    <th data-field="sp" data-sortable="false" data-width="100" data-width-unit="px" data-class="speaker-col" data-formatter="speakerNameFormatter">화자</th>
+                    <th data-field="st" data-sortable="false" data-formatter="supportTextFormatter">대사</th>
                 </tr>
                 </thead>
             </table>
@@ -166,7 +166,7 @@
     const CHOICE_DIVIDER_TEXTS = ['종료', '-', '분기', '선택지 종료'];
 
     function isChoiceDivider(row) {
-        return row.speakerName === '선택지' && CHOICE_DIVIDER_TEXTS.includes((row.supportText || '').trim());
+        return row.sp === '선택지' && CHOICE_DIVIDER_TEXTS.includes((row.st || '').trim());
     }
 
     function speakerNameFormatter(value, row) {
@@ -180,7 +180,7 @@
     }
 
     function supportTextFormatter(value, row) {
-        if (row.speakerName === '이미지') {
+        if (row.sp === '이미지') {
             return '<img src="image/support/' + encodeURIComponent(value) + '" style="width:100%">';
         }
         return value;
@@ -204,7 +204,7 @@
         $table.on('post-body.bs.table', function () {
             $table.bootstrapTable('getData').forEach((row, i) => {
                 if (isChoiceDivider(row)) {
-                    $table.bootstrapTable('mergeCells', {index: i, field: 'speakerName', colspan: 2});
+                    $table.bootstrapTable('mergeCells', {index: i, field: 'sp', colspan: 2});
                 }
             });
         });
@@ -242,7 +242,7 @@
                 return;
             }
             const rows = data.value
-                .filter(v => v.charaPairKey === pair.key && v.rank === rank)
+                .filter(v => v.cKey === pair.key && v.rank === rank)
                 .sort((a, b) => a.index - b.index);
             $table.bootstrapTable('load', rows);
         });
