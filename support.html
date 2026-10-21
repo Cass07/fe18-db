@@ -28,6 +28,8 @@
     #resultTable hr.choice-divider { border: 0; border-top: 1px solid #adb5bd; opacity: 1; margin: 0.25rem 0; }
     #resultTable td:has(> hr.choice-divider) { padding-top: 0.3rem; padding-bottom: 0.3rem; }
     #resultTable .choice-speaker { color: #408ed0; }
+    /* query string 의 line 으로 지정된 행 강조 */
+    #resultTable tr.line-highlight > td { background-color: #fff3cd; }
 </style>
 </head>
 
@@ -191,6 +193,7 @@
         const $c1 = $('#character1'), $c2 = $('#character2'), $rank = $('#rank');
         const $table = $('#resultTable');
         let data = null;
+        let isRestoring = false;
 
         function fill($sel, items, placeholder) {
             $sel.empty().append($('<option>').val('').text(placeholder));
@@ -200,6 +203,66 @@
 
         function clearTable() {
             $table.bootstrapTable('load', []);
+        }
+
+        // 선택이 바뀔 때마다 주소창의 query string 갱신 (line 은 복구 시에만 유지)
+        function updateQueryString(line) {
+            if (isRestoring) {
+                return;
+            }
+            const params = new URLSearchParams();
+            [['c1', $c1], ['c2', $c2], ['rank', $rank]].forEach(([key, $sel]) => {
+                if ($sel.val()) {
+                    params.set(key, $sel.val());
+                }
+            });
+            if (line !== undefined) {
+                params.set('line', line);
+            }
+            const query = params.toString();
+            history.replaceState(null, '', location.pathname + (query ? '?' + query : ''));
+        }
+
+        // 옵션에 존재하는 값일 때만 선택 후 change 이벤트로 다음 단계를 채움
+        function selectIfExists($sel, value) {
+            if (!value || $sel.find('option').filter((i, o) => o.value === value).length === 0) {
+                return false;
+            }
+            $sel.val(value).trigger('change');
+            return true;
+        }
+
+        // index 가 line 인 행을 강조하고 화면 맨 위로 스크롤. 숫자가 아니거나 범위를 벗어나면 스크롤하지 않음
+        function scrollToLine(line) {
+            if (!/^\d+$/.test(line || '')) {
+                return false;
+            }
+            const index = Number(line);
+            const rows = $table.bootstrapTable('getData');
+            const maxIndex = rows.reduce((max, row) => Math.max(max, row.index), -1);
+            const position = rows.findIndex(row => row.index === index);
+            if (index < 0 || index > maxIndex || position === -1) {
+                return false;
+            }
+            const tr = $table.find('tbody tr[data-index="' + position + '"]')[0];
+            if (!tr) {
+                return false;
+            }
+            $(tr).addClass('line-highlight');
+            tr.scrollIntoView({block: 'start'});
+            return true;
+        }
+
+        // query string 으로부터 캐릭터 1, 캐릭터 2, 랭크 선택값 복구 및 렌더링
+        function restoreFromQueryString() {
+            const params = new URLSearchParams(location.search);
+            const line = params.get('line');
+            isRestoring = true;
+            const restored = selectIfExists($c1, params.get('c1'))
+                && selectIfExists($c2, params.get('c2'))
+                && selectIfExists($rank, params.get('rank'));
+            isRestoring = false;
+            updateQueryString(restored && scrollToLine(line) ? line : undefined);
         }
 
         $table.on('post-body.bs.table', function () {
@@ -217,6 +280,7 @@
             fill($c2, [], '캐릭터 2');
             fill($rank, [], '랭크');
             $table.bootstrapTable();
+            restoreFromQueryString();
         });
 
         $c1.on('change', function () {
@@ -225,6 +289,7 @@
             fill($c2, unitList.filter(u => partners.has(u)), '캐릭터 2');
             fill($rank, [], '랭크');
             clearTable();
+            updateQueryString();
         });
 
         $c2.on('change', function () {
@@ -233,11 +298,13 @@
             const pairRank = pair && data.pair_rank.find(r => r.key === pair.key);
             fill($rank, pairRank ? pairRank.rank : [], '랭크');
             clearTable();
+            updateQueryString();
         });
 
         $rank.on('change', function () {
             const u1 = $c1.val(), u2 = $c2.val(), rank = $rank.val();
             const pair = data.pair.find(p => p.u1 === u1 && p.u2 === u2);
+            updateQueryString();
             if (!pair || !rank) {
                 clearTable();
                 return;
