@@ -35,6 +35,7 @@
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/select2.min.js"></script>
+<script src="assets/js/kor-name-code.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
@@ -166,10 +167,10 @@
     ];
 
 
-    const CHOICE_DIVIDER_TEXTS = ['종료', '-', '분기', '선택지 종료'];
+    const CHOICE_DIVIDER_TEXTS = new Set(['종료', '-', '분기', '선택지 종료']);
 
     function isChoiceDivider(row) {
-        return row.sp === '선택지' && CHOICE_DIVIDER_TEXTS.includes((row.st || '').trim());
+        return row.sp === '선택지' && CHOICE_DIVIDER_TEXTS.has((row.st || '').trim());
     }
 
     function speakerNameFormatter(value, row) {
@@ -211,9 +212,9 @@
                 return;
             }
             const params = new URLSearchParams();
-            [['c1', $c1], ['c2', $c2], ['rank', $rank]].forEach(([key, $sel]) => {
+            [['c1', $c1, KorNameCode.encode], ['c2', $c2, KorNameCode.encode], ['rank', $rank, v => v]].forEach(([key, $sel, encode]) => {
                 if ($sel.val()) {
-                    params.set(key, $sel.val());
+                    params.set(key, encode($sel.val()));
                 }
             });
             if (line !== undefined) {
@@ -258,8 +259,8 @@
             const params = new URLSearchParams(location.search);
             const line = params.get('line');
             isRestoring = true;
-            const restored = selectIfExists($c1, params.get('c1'))
-                && selectIfExists($c2, params.get('c2'))
+            const restored = selectIfExists($c1, KorNameCode.decode(params.get('c1')))
+                && selectIfExists($c2, KorNameCode.decode(params.get('c2')))
                 && selectIfExists($rank, params.get('rank'));
             isRestoring = false;
             updateQueryString(restored && scrollToLine(line) ? line : undefined);
