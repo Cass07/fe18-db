@@ -278,7 +278,7 @@
         });
     }
 
-    // spoiler.js 에서 체크박스 변경 시 호출
+    // 스포일러 체크박스 변경 시 호출
     function applySpoilerFilter() {
         if (characters.length === 0 || classes.length === 0) {
             return;
@@ -286,6 +286,7 @@
         refreshDropdowns();
         render();
     }
+    Spoiler.init(applySpoilerFilter);
 
     function findByName(list, name) {
         return list.find(function (x) {
