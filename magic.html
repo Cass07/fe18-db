@@ -42,7 +42,10 @@
                    data-search="false"
                    data-toggle="table"
                    data-url="data/magic.json"
-                   data-show-columns="true">
+                   data-show-columns="true"
+                   data-detail-view="true"
+                   data-detail-view-by-click="true"
+                   data-detail-formatter="detailFormatter">
                 <thead>
                 <tr>
                     <th data-field="name" data-sortable="true">이름</th>
@@ -71,5 +74,45 @@
 </html>
 
 <script>
+    const RANK_ORDER = ["E", "D", "D+", "C", "C+", "B", "B+", "A", "A+", "S"];
+    let unitMagics = null;
 
+    // 마법 데이터 로드
+    Promise.all([
+        fetch("data/unit_faith.json").then(res => res.json()),
+        fetch("data/unit_reason.json").then(res => res.json())
+    ]).then(([faith, reason]) => {
+        unitMagics = faith.concat(reason);
+    }).catch(err => {
+        console.error(err);
+        unitMagics = [];
+    });
+
+    function detailFormatter(index, row) {
+        if (unitMagics === null) {
+            return "불러오는 중...";
+        }
+
+        // rank별 습득 유닛 목록
+        const byRank = {};
+        unitMagics.forEach(unit => {
+            RANK_ORDER.forEach(rank => {
+                const cell = unit[rank];
+                if (!cell) return;
+                String(cell).split(",").forEach(entry => {
+                    // ex) "떠돌이 벽(Lv45)" -> magic: "떠돌이 벽", extra: "(Lv45)"
+                    const match = entry.trim().match(/^(.*?)\s*(\(.*\))?$/);
+                    if (match[1] !== row.name) return;
+                    (byRank[rank] = byRank[rank] || []).push(unit.name + (match[2] || ""));
+                });
+            });
+        });
+
+        const lines = RANK_ORDER
+            .filter(rank => byRank[rank])
+            .map(rank => rank + " : " + byRank[rank].sort((a, b) => a.localeCompare(b, "ko")).join(", "));
+
+
+        return row.desc + "<br><br>" + (lines.length > 0 ? lines.join("<br>") : "습득하는 유닛이 없습니다.");
+    }
 </script>
