@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파엠 만자천홍 데이터베이스</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:title" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:site_name" content="파엠 만자천홍 데이터베이스">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/select2.min.css"/>
+
+</head>
+<style>
+    #resultTable hr.choice-divider { border: 0; border-top: 1px solid #adb5bd; opacity: 1; margin: 0.25rem 0; }
+    #resultTable .choice-speaker { color: #408ed0; }
+    #resultTable tbody tr { cursor: pointer; }
+    #resultTable mark.search-highlight { background-color: #ffed9a; padding: 0; }
+</style>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/js/kor-name-code.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"
+        crossorigin="anonymous"></script>
+
+<body>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col">
+            <h3>지원회화 검색</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="input-group">
+            <input type = "text" id = "searchInput" class = "form-control" placeholder = "검색어를 입력하세요. (2글자 이상)">
+            <button type="button" id="searchButton" class="btn btn-primary"><i class="bi bi-search"></i> 검색</button>
+        </div>
+    </div>
+    <div class="row">
+        <br>
+    </div>
+
+    <div class = "row">
+        <div class = "col">
+            <table id="resultTable"
+                   data-toggle="table"
+                   data-pagination="true"
+                   data-page-size="30"
+                   data-pagination-parts="['pageInfo', 'pageList']">
+                <thead>
+                <tr>
+                    <th data-field="cKey" data-sortable="false" data-visible="true">조합</th>
+                    <th data-field="rank" data-sortable="false" data-visible="true">랭크</th>
+                    <th data-field="index" data-sortable="false" data-visible="false">index</th>
+                    <th data-field="sp" data-sortable="false" data-width="100" data-width-unit="px" data-class="speaker-col" data-formatter="speakerNameFormatter">화자</th>
+                    <th data-field="st" data-sortable="false" data-formatter="supportTextFormatter">대사</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <br>
+        <br>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+
+
+    const CHOICE_DIVIDER_TEXTS = ['종료', '-', '분기', '선택지 종료'];
+
+    function isChoiceDivider(row) {
+        return row.sp === '선택지' && CHOICE_DIVIDER_TEXTS.includes((row.st || '').trim());
+    }
+
+    function speakerNameFormatter(value, row) {
+        if (isChoiceDivider(row)) {
+            return '<hr class="choice-divider">';
+        }
+        if (value === '선택지') {
+            return '<span class="choice-speaker">' + value + '</span>';
+        }
+        return value;
+    }
+
+    function supportTextFormatter(value, row) {
+        if (row.sp === '이미지') {
+            return '<img src="image/support/' + encodeURIComponent(value) + '" style="width:100%">';
+        }
+        return highlightText(value, row.hl);
+    }
+
+    function escapeHtml(text) {
+        return $('<div>').text(text).html();
+    }
+
+    // Fuse.js 의 일치 구간([start, end], end 포함)을 <mark> 로 감싸 강조
+    function highlightText(text, indices) {
+        text = text || '';
+        if (!indices || indices.length === 0) {
+            return escapeHtml(text);
+        }
+        const merged = [];
+        [...indices].sort((a, b) => a[0] - b[0]).forEach(([start, end]) => {
+            const last = merged[merged.length - 1];
+            if (last && start <= last[1] + 1) {
+                last[1] = Math.max(last[1], end);
+            } else {
+                merged.push([start, end]);
+            }
+        });
+        let html = '', pos = 0;
+        merged.forEach(([start, end]) => {
+            html += escapeHtml(text.slice(pos, start));
+            html += '<mark class="search-highlight">' + escapeHtml(text.slice(start, end + 1)) + '</mark>';
+            pos = end + 1;
+        });
+        return html + escapeHtml(text.slice(pos));
+    }
+
+    $(function () {
+        const MIN_QUERY_LENGTH = 2;
+        const $table = $('#resultTable'), $input = $('#searchInput');
+        let fuse = null;
+
+        // 대사(st)만 검색. 이미지 행과 선택지 구분선은 검색 대상에서 제외
+        $.getJSON('data/support.json', function (json) {
+            const lines = json.value.filter(v => v.sp !== '이미지' && !isChoiceDivider(v));
+            fuse = new Fuse(lines, {
+                keys: ['st'],
+                includeScore: true,
+                includeMatches: true,
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: MIN_QUERY_LENGTH,
+            });
+        });
+
+        // 결과는 Fuse.js 가 반환한 유사도 순서 그대로 표시
+        function search() {
+            const query = $input.val().trim();
+            if (!fuse || query.length < MIN_QUERY_LENGTH) {
+                return;
+            }
+            const rows = fuse.search(query).map(result => {
+                const match = (result.matches || []).find(m => m.key === 'st');
+                return Object.assign({}, result.item, {hl: match ? match.indices : []});
+            });
+            $table.bootstrapTable('load', rows);
+            $table.bootstrapTable('selectPage', 1);
+        }
+
+        $('#searchButton').on('click', search);
+        $input.on('keydown', function (e) {
+            if (e.key === 'Enter' && !e.originalEvent.isComposing) {
+                search();
+            }
+        });
+
+        // 행 클릭 시 해당 지원회화의 대사 위치로 이동
+        $table.on('click-row.bs.table', function (e, row) {
+            const [c1, c2] = row.cKey.split(' ');
+            const params = new URLSearchParams({
+                c1: KorNameCode.encode(c1),
+                c2: KorNameCode.encode(c2),
+                rank: row.rank,
+                line: row.index,
+            });
+            window.open('support.html?' + params.toString(), '_blank', 'noopener');
+        });
+    });
+
+
+    </script>
