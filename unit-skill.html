@@ -169,11 +169,11 @@
                 const match = entry.trim().match(/^(.*?)\s*(\(.*\))?$/);
                 if (!match[1]) return;
                 const desc = descMap[match[1]];
-                items.push('<li><b>' + escapeHtml(match[1] + (match[2] || '')) + '</b> (' + rank + ')'
-                    + (desc ? ' : ' + escapeHtml(desc) : '') + '</li>');
+                items.push('<b>' + escapeHtml(match[1] + (match[2] || '')) + '</b> (' + rank + ')'
+                    + (desc ? ' : ' + escapeHtml(desc) : ''));
             });
         });
-        return items.length > 0 ? '<ul class="mb-0">' + items.join('') + '</ul>' : '습득하는 기술이 없습니다.';
+        return items.length > 0 ? items.join('<br>') : '습득하는 기술이 없습니다.';
     }
 
     $(function () {
