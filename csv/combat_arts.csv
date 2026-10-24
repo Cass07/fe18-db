@@ -10,12 +10,12 @@ Finesse Blade,비검,최소 10 이상의 대미지를 준다,검
 Flash Blow,필섬의 일격,공격 시 (기술÷2)%로 발동. 공격력 +5,검
 Furious Strike,대강격,위력과 명중이 높다,검
 Gale Blow,질풍의 일격,공격 시 (속도÷2)%로 발동. 공격력 +5,검
-Greater Hexblade,Greater Hexblade,,검
+Greater Hexblade,마법 칼날: 대,위력과 명중이 높다. 마법 공격에 속한다,검
 Grounder,제비 베기,비행 유효,검
 Haze Slice,안개 베기,전투 시 회피 +10/15,검
 Heat Haze,아지랑이,적 처치 시 회피 +20 (다음 자신의 페이즈 전까지),검
 Hexblade,마법 칼날,마법 공격에 속한다,검
-Lunging Gale,몰아치는 열풍,"전투 시 공속 +3, 추격 시 공격력 +7",검
+Lunging Gale,몰아치는 열풍,"전투 시 공속 +3, 추격 시 공격력 +7/10",검
 Mist Reaper,미스트 리퍼,"전투 시 회피 +10, 추격 시 필살 +10",검
 Rend Armor,틈새 노리기,중갑 유효,검
 Ripple Slash,파문 베기,반드시 명중한다 /(추격도 반드시 명중),검
