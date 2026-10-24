@@ -12,6 +12,9 @@
 - [외전 정보](https://cass07.github.io/fe18-db/paralogue.html)
 - [영입 체커 & 영입 조건](https://cass07.github.io/fe18-db/recruit.html)
 - [사막 바다 지도](https://cass07.github.io/fe18-db/map.html)
+- [기술별 배우는 유닛](https://cass07.github.io/fe18-db/skill.html)
+- [유닛별 배우는 기술](https://cass07.github.io/fe18-db/unit-skill.html)
+- [지원회화 검색](https://cass07.github.io/fe18-db/support-search.html)
 
 ### 데이터 정리중
 - [지원회화](https://cass07.github.io/fe18-db/support.html)
