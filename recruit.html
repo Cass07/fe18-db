@@ -34,6 +34,19 @@
         crossorigin="anonymous"></script>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+    <div class="container-fluid" style="margin : 0 10px">
+        <a class="navbar-brand" href="index.html">만자천홍 데이터</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class = "container">
     <br>
     <div class = "row">
@@ -74,6 +87,12 @@
     </div>
 </div>
 
+<script src="assets/js/nav.js"></script>
+<script>
+    $(document).ready(function () {
+        NavInitiator.initiate();
+    });
+</script>
 </body>
 </html>
 
