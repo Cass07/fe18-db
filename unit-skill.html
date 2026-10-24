@@ -80,7 +80,10 @@
         <div class = "col">
             <table id = "mainTable"
                    data-search="false"
-                   data-show-columns="true">
+                   data-show-columns="true"
+                   data-detail-view="true"
+                   data-detail-view-by-click="true"
+                   data-detail-formatter="detailFormatter">
                 <thead>
                 <tr>
                     <th data-field="name" data-sortable="true" data-width="12" data-width-unit="%">이름</th>
@@ -113,7 +116,7 @@
 <script>
     const RANK_ORDER = ["E", "D", "D+", "C", "C+", "B", "B+", "A", "A+", "S", "S+"];
     // 파일에 따라 존재하지 않을 수 있는 컬럼
-    const OPTIONAL_RANKS = ["E", "S+"];
+    const OPTIONAL_RANKS = ["E","D+", "C+", "B+", "A+", "S", "S+"];
     // 컬럼별 최소 너비(px)
     const NAME_MIN_WIDTH = 90;
     const RANK_MIN_WIDTH = 80;
@@ -124,6 +127,53 @@
             return '';
         }
         return String(value).split(',').map(v => v.trim()).join('<br>');
+    }
+
+    let descMap = null;
+
+    // 스킬, 전투기술, 마법의 설명 로드. 이름이 겹치면 skills > combat_arts > magic 순으로 우선
+    Promise.all([
+        fetch('data/skills.json').then(res => res.json()),
+        fetch('data/combat_arts.json').then(res => res.json()),
+        fetch('data/magic.json').then(res => res.json())
+    ]).then(([skills, arts, magics]) => {
+        const map = {};
+        const add = (name, desc) => {
+            if (name && !(name in map)) {
+                map[name] = desc || '';
+            }
+        };
+        skills.forEach(s => add(s.kr, s.desc));
+        arts.forEach(a => add(a.name, a.desc));
+        magics.forEach(m => add(m.name, m.desc));
+        descMap = map;
+    }).catch(err => {
+        console.error(err);
+        descMap = {};
+    });
+
+    function escapeHtml(str) {
+        const entities = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'};
+        return String(str).replace(/[&<>"']/g, c => entities[c]);
+    }
+
+    function detailFormatter(index, row) {
+        if (descMap === null) {
+            return '불러오는 중...';
+        }
+        const items = [];
+        RANK_ORDER.forEach(rank => {
+            if (!row[rank]) return;
+            String(row[rank]).split(',').forEach(entry => {
+                // ex) "떠돌이 벽(Lv45)" -> name: "떠돌이 벽", extra: "(Lv45)"
+                const match = entry.trim().match(/^(.*?)\s*(\(.*\))?$/);
+                if (!match[1]) return;
+                const desc = descMap[match[1]];
+                items.push('<b>' + escapeHtml(match[1] + (match[2] || '')) + '</b> (' + rank + ')'
+                    + (desc ? ' : ' + escapeHtml(desc) : ''));
+            });
+        });
+        return items.length > 0 ? items.join('<br>') : '습득하는 기술이 없습니다.';
     }
 
     $(function () {

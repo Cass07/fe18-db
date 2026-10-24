@@ -57,7 +57,10 @@
                    data-search="true"
                    data-toggle="table"
                    data-url="data/growth.json"
-                   data-show-columns="true">
+                   data-show-columns="true"
+                   data-detail-view="true"
+                   data-detail-view-by-click="true"
+                   data-detail-formatter="detailFormatter">
                 <thead>
                 <tr>
                     <th data-field="name" data-sortable="true">이름</th>
@@ -142,4 +145,74 @@
         showOnlyColumns(SKILL_BOONBAIN_COLUMNS);
     });
 
-</script>
+    const STAT_LABELS = [["hp", "HP"], ["str", "힘"], ["mg", "마력"], ["spd", "속도"], ["dex", "기술"], ["def", "수비"], ["res", "마방"], ["lck", "행운"], ["cha", "매력"]];
+    const APTITUDE_KINDS = [
+        ["sword", "검", "sword"], ["lance", "창", "lance"], ["axe", "도끼", "axe"], ["bow", "활", "bow"], ["gauntlet", "격투", "gauntlet"],
+        ["black_magic", "흑마법", "reason"], ["white_magic", "백마법", "faith"], ["authority", "지휘", "authority"],
+        ["infantry", "보행", "infantry"], ["riding", "기마", "riding"], ["armor", "중갑", "armor"], ["flying", "비행", "flying"]
+    ];
+    const RANK_ORDER = ["E", "D", "D+", "C", "C+", "B", "B+", "A", "A+", "S", "S+"];
+    const fetchJson = url => fetch(url).then(res => res.ok ? res.json() : []).catch(() => []);
+    let unitSkills = null;
+    let skillDescs = {};
+
+    Promise.all(["skills", "combat_arts", "magic"].map(f => fetchJson("data/" + f + ".json"))).then(lists => {
+        lists.flat().forEach(s => {
+            skillDescs[s.name] = s.desc;
+        });
+    });
+
+    Promise.all(APTITUDE_KINDS.map(k => fetchJson("data/unit_" + k[2] + ".json"))).then(lists => {
+        unitSkills = {};
+        APTITUDE_KINDS.forEach((k, i) => {
+            unitSkills[k[0]] = lists[i];
+        });
+    });
+
+    function aptitudeMark(value) {
+        const v = Number(value);
+        if (v > 0) return '<span class="text-primary">▲</span>';
+        if (v < 0) return '<span class="text-danger">▼</span>';
+        return "-";
+    }
+
+    function formatLearned(cell) {
+        return String(cell).split(/[,\r\n]+/).map(entry => entry.trim()).filter(entry => entry).map(entry => {
+            const match = entry.match(/^([\s\S]*?)\s*(\([\s\S]*\))?$/);
+            const desc = match && skillDescs[match[1]];
+            return entry + (desc ? " <small class='text-muted'>- " + desc + "</small>" : "");
+        }).join(", ");
+    }
+
+    function detailFormatter(index, row) {
+        const statTable = '<div class="table-responsive"><table class="table table-sm table-bordered text-center mb-2">'
+            + '<tr>' + STAT_LABELS.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
+            + '<tr>' + STAT_LABELS.map(s => '<td>' + row[s[0]] + '</td>').join("") + '</tr></table></div>';
+
+        const aptitudeTable = '<div class="table-responsive"><table class="table table-sm table-bordered text-center mb-2">'
+            + '<tr>' + APTITUDE_KINDS.map(k => '<th>' + k[1] + '</th>').join("") + '</tr>'
+            + '<tr>' + APTITUDE_KINDS.map(k => '<td>' + aptitudeMark(row[k[0]]) + '</td>').join("") + '</tr></table></div>';
+
+        const total = STAT_LABELS.reduce((acc, s) => acc + Number(row[s[0]] || 0), 0);
+        const totalExceptLckCha = total - Number(row.lck || 0) - Number(row.cha || 0);
+        const sums = '<p class="mb-2">성장률 합계 : ' + total + '<br>행운&매력 제외 합계 : ' + totalExceptLckCha + '</p>';
+
+        const skills = '<p class="mb-2"><b>개인스킬</b><br>' + (row.p_skill || "-")
+            + '<br><b>유니크 스킬</b><br>' + (row.u_skill || "-") + '</p>';
+
+        let learn;
+        if (unitSkills === null) {
+            learn = "불러오는 중...";
+        } else {
+            const lines = [];
+            APTITUDE_KINDS.forEach(k => {
+                const unit = (unitSkills[k[0]] || []).find(u => u.name === row.name);
+                if (!unit) return;
+                const entries = RANK_ORDER.filter(rank => unit[rank]).map(rank => rank + " : " + formatLearned(unit[rank]));
+                if (entries.length > 0) lines.push("<b>" + k[1] + "</b><br>" + entries.join("<br>"));
+            });
+            learn = lines.length > 0 ? lines.join("<br><br>") : "습득하는 기술이 없습니다.";
+        }
+
+        return statTable + aptitudeTable + sums + skills + '<p class="mb-0"><b>습득 기술</b><br>' + learn + '</p>';
+    }</script>
