@@ -1,3 +1,13 @@
 name,file
+검,unit_sword
+창,unit_lance
+도끼,unit_axe
+활,unit_bow
+격투,unit_gauntlet
 흑마법,unit_reason
 백마법,unit_faith
+지휘,unit_authority
+보행,unit_infantry
+기병,unit_riding
+중갑,unit_armor
+비행,unit_flying

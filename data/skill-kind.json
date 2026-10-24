@@ -1,1 +1,1 @@
-[{"name": "흑마법", "file": "unit_reason"}, {"name": "백마법", "file": "unit_faith"}]
+[{"name": "검", "file": "unit_sword"}, {"name": "창", "file": "unit_lance"}, {"name": "도끼", "file": "unit_axe"}, {"name": "활", "file": "unit_bow"}, {"name": "격투", "file": "unit_gauntlet"}, {"name": "흑마법", "file": "unit_reason"}, {"name": "백마법", "file": "unit_faith"}, {"name": "지휘", "file": "unit_authority"}, {"name": "보행", "file": "unit_infantry"}, {"name": "기병", "file": "unit_riding"}, {"name": "중갑", "file": "unit_armor"}, {"name": "비행", "file": "unit_flying"}]

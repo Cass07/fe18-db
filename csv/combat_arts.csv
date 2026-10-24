@@ -1,0 +1,195 @@
+en,name,desc,kind
+Blade Slam,블레이드 슬램,"",검
+Blaze Blow,화염의 일격,공격 시 (힘÷2)%로 발동. 공격력 +5,검
+Chop,내려찍기,명중이 낮지만 위력이 높다,검
+Crosswise Cut,크로스와이즈,전투 후 기술 +2 (최대 10까지 증가) (맵이 끝날 때까지),검
+Dark Ray,다크 레이즈,,검
+Destreza,데스트레사,"적의 HP가 절반 이하면 공격력 +5/7, 필살 +10/15",검
+Fateful Strike,Fateful Strike,,검
+Finesse Blade,비검,최소 10 이상의 대미지를 준다,검
+Flash Blow,필섬의 일격,공격 시 (기술÷2)%로 발동. 공격력 +5,검
+Furious Strike,대강격,위력과 명중이 높다,검
+Gale Blow,질풍의 일격,공격 시 (속도÷2)%로 발동. 공격력 +5,검
+Greater Hexblade,Greater Hexblade,,검
+Grounder,제비 베기,비행 유효,검
+Haze Slice,안개 베기,전투 시 회피 +10/15,검
+Heat Haze,아지랑이,적 처치 시 회피 +20 (다음 자신의 페이즈 전까지),검
+Hexblade,마법 칼날,마법 공격에 속한다,검
+Lunging Gale,몰아치는 열풍,"전투 시 공속 +3, 추격 시 공격력 +7",검
+Mist Reaper,미스트 리퍼,"전투 시 회피 +10, 추격 시 필살 +10",검
+Rend Armor,틈새 노리기,중갑 유효,검
+Ripple Slash,파문 베기,반드시 명중한다 /(추격도 반드시 명중),검
+Shadow Gambit,그림자 마무리,적이 유리한 지형에 있으면 해당 지형의 영향을 무시한다,검
+Single Sunder,일도양단,명중이 낮지만 내구 소비가 적고 위력이 높다,검
+Skysplit,하늘 가르기,전투 시 공속 +5,검
+Subdue,칼등 치기,적의 HP가 2 이상이면 HP를 1 남긴다 (추격 불가),검
+Sunder,양단,필살이 높다,검
+Tiger Slash,호랑이 베기,기병 유효,검
+Twin Blades,쌍날,2회 연속으로 공격한다 (각 공격의 대미지는 80%),검
+Vicious Flash,극일섬,공격 시 (기술÷2)%로 발동. 공격력 +8/12,검
+Windsweep,바람 베기,명중 시 20%로 발동. 반격을 받지 않는다,검
+Wrath Strike,강격,명중이 높다,검
+Bloodletting,혈섬,필살이 매우 높다. 용 유효,검
+Bloodletting+,혈섬+,필살이 매우 높다. 용 유효,검
+Deadly Blade,필살검,필살이 높다,검
+Ennea Fire EX,노나 파이어 EX,마법으로 일정 범위를 공격한다 주는 대미지가 반감된다,검
+Poison Harvest,독 흡수,적이 독 상태라면 준 대미지의 절반만큼 HP를 회복한다,검
+Firestorm,화염 폭풍,위력이 매우 높다,검
+Lightning Strike,뇌격,칼날에서 강력한 번개를 내뿜는다. 마법 공격에 속한다,검
+Moonbreaker,달 부수기,명중과 필살이 매우 높다,검
+Poison Burial,독 매장,적이 독 상태라면 공격력 +8,검
+Prune,절화,공격 시 기술%로 발동. 무기 내구도가 줄어들지 않는다,검
+Siphon Luck,행운 탈취,적 처치 시 행운 +2 (최대 +10까지 증가) (맵이 끝날 때까지),검
+Toxic Wind,독 바람,마법 공격에 속한다. 명중 시 적을 독 상태로 만든다 (추격 불가),검
+Astra,유성,5회 연속으로 공격한다 (각 공격의 대미지는 50%),검
+Dropshadow Blade,낙영의 칼날,적이 유리한 지형에 있으면 해당 지형의 영향을 무시한다,검
+Hidden Birdbane,비전 제비 떨구기,명중 시 적이 비행 속성이면 적의 이동력 -3 (다음 자신의 페이즈 전까지),검
+Hidden Bladerule,비전 절인,필살이 매우 높은 대신 명중이 10%까지 저하 (추격 불가),검
+Hidden Flowform,비전 유수,전투 시 회피 +20. 공속에 상관없이 추격하는 대신 전투 중 주는 대미지가 반감된다,검
+Hidden Giantsbane,비전 거격 파훼,전투 시 적이 대형 유닛이면 자신이 받는 대미지가 반감된다,검
+Hidden Twinblade,비전 필살 흘리기,전투 중 및 전투 후 자신의 필살 회피 +20/30 (다음 자신의 페이즈 전까지),검
+Armored Blow,금강의 일격,적 처치 시 물방 +3 (다음 자신의 페이즈 전까지) (추격 불가),창
+Brilliant Strike,광휘의 일격,적 처치 시 항마 +7 (다음 자신의 페이즈 전까지),창
+Defending Spear,수호 창 찌르기,전투 시 방어력 +3,창
+Double Throw,이연 투척,2회 연속으로 공격한다 (사정 1-2의 창으로만 사용 가능),창
+Flowing Spear,유풍창,전투 시 회피 +10/15,창
+Flying Spear,상섬창,적의 반격보다 먼저 추격한다. /추격 시 필살 +5,창
+Focused Throw,집중 투척,명중이 높다 (사정 1-2의 창으로만 사용 가능),창
+Frozen Spear,빙창,마법 공격에 속한다,창
+Frozen-Spear Slice,바람을 가르는 빙창,마법 공격에 속한다 (사정 1-2의 창으로만 사용 가능),창
+Gale Spear,열풍창,필살이 높다,창
+Graceful Blow,유려한 일격,공격 시 (기술÷2)%로 발동. 무기 내구도가 줄어들지 않는다,창
+Holy Spear,성스러운 창 찌르기,전투 후 자신의 HP를 소량/적당량 회복,창
+Jab,찌르기,위력이 조금 높다,창
+Khamsin,캄신,전투 시 적의 명중이 20/30 이하면 해당 적의 명중이 0이 된다,창
+Knightkneel,기병 매장의 연공,2회 연속으로 공격한다. 적이 기병 속성이면 명중 +10 (각 공격의 대미지는 70/80%),창
+Pivot Strike,Pivot Strike,,창
+Protective Spear,호신창,전투 시 필살 회피 +20/30,창
+Protective Storm,수호 선풍,전투 시 물방 +7,창
+Quick Thrust,속공,전투 시 공속 +3,창
+Raging Tempest,템페스트,위력과 명중이 높다,창
+Stinger,스팅어,명중이 낮지만 위력이 높다,창
+Sword Breaker,Sword Breaker,,창
+Tempest Spear,선풍창,명중이 높다,창
+Vanguard Spear,승부수,공격 시 (힘÷2)%로 발동. 공격력 +5,창
+Yawning Throw,대투척,위력과 명중이 높다 (사정 1-2의 창으로만 사용 가능),창
+Black Roar,흑굉,적 처치 시 물방 +10 (다음 자신의 페이즈 전까지),창
+Blinding Starlight,별빛의 반짝임,명귀 유효. 마법 공격에 속한다 (추격 불가),창
+Brute Throw,괴력 던지기,명중이 낮지만 위력이 매우 높다,창
+Cavalry Ruin,기병 파괴,적이 기병 속성이면 공격력 +15,창
+Deadly Spear,필살창,필살이 높다,창
+Full Moon,진월,전투 후 자신의 HP를 적당량 회복,창
+Leave No Dust,무진,야수 유효 용 유효,창
+Sacred Strike,성격,적 처치 시 자신의 HP를 적당량 회복한다,창
+Sol,태양,준 대미지의 절반만큼 HP를 회복한다,창
+Supreme Serpent,패사,사정거리가 길다 (추격 불가),창
+Windweave,바람 꿰기,명중 시 10%로 발동. 반격을 받지 않느다,창
+Fierce Spear,기사 열창,해당 전투 중 추격을 받지 않는다,창
+Hidden Windpierce,비전 부동관창,적의 공속이 자신보다 4 이상 높으면 명중 +20 (사정 1-2의 창으로만 사용 가능),창
+Battleblade Strike,전인의 일격,전투 후 기술 +2 (최대 +10까지 증가) (멥이 끝날 때까지),도끼
+Bloodbath,혈풍철화,적 처치 시 방어력 +10/20 (1회 전투 후 초기화),도끼
+Careful Attack,세이프 어택,주는 대미지가 반감되는 대신 적이 공격을 회피하면 반격을 받지 않는다 (추격 불가),도끼
+Crash,크래시,명중 시 5/10%의 확률로 적을 혼란 상태로 만든다 (추격 불가),도끼
+Devilwind Flurry,마풍 연격,,도끼
+Discerning Blow,판별의 일격,명중이 매우 높은 대신 주는 대미지가 반감된다,도끼
+Double Attack,Double Attack,,도끼
+Double Swing,Double Swing,,도끼
+Enrage,레이지 업,전투 후 힘 +1 (최대 +5까지 증가) (맵이 끝날 때까지),도끼
+Focused Strike,명경지수,,도끼
+Giant Breaker,거암 파괴,,도끼
+Guard Spike,가드 스파이크,전투 시 물방 +10,도끼
+Half Spike,하프 스파이크,전투 시 회피 +10/15,도끼
+Helm Splitter,투구 부수기,중갑 유효,도끼
+Hurl,투격,명중이 높다 (사정 1-2의 도끼로만 사용 가능),도끼
+Killer Spike,Killer Spike,,도끼
+Lightning Axe,뇌부,마법 공격에 속한다,도끼
+Magic Breaker,메이지 브레이크,,도끼
+Magic Throw,마부 투척,마법 공격에 속한다 (사정 1-2의 도끼로만 사용 가능),도끼
+Power Spike,파워 스파이크,위력과 명중이 높다,도끼
+Power Throw,강완 투척,위력과 명중이 높다 (사정 1-2의 도끼로만 사용 가능),도끼
+Reflecting Dance,역전 난무,,도끼
+Riot,라이엇,추격 시 공격력 +5/8,도끼
+Smash,스매시,필살이 높다,도끼
+Spear Buster,창 부수기,"적이 창을 장비 중이면 공격력 +7, /명중 +20",도끼
+Spike,스파이크,명중이 높다,도끼
+Triple Spike,삼단 스파이크,3회 연속으로 공격한다. 공격이 빗나갈 때마다 명중 +10,도끼
+Wild Abandon,무아지경,명중이 낮지만 위력이 높다,도끼
+Instant Strike,순격,공격 및 추격 시 (속도÷2)%로 발동. 공격력 +5/8,도끼
+Domination,패절,적의 [명부의 가호]를 무시하고 대미지가 적용된다,도끼
+Domination+,패절+,적의 [명부의 가호]를 무시하고 대미지가 적용된다,도끼
+Flame Ring,염환,마력을 실은 일격. 위력이 높다. 마법 공격에 속한다,도끼
+Godly Strike,신격,위력이 매우 높다,도끼
+Magecleaver,마법 찢기,"적이 마법을 장비 중이면 명중 +10, 공격력 +15",도끼
+Magic Strike,마충타,마력을 실은 일격. 마법 공격에 속한다,도끼
+Pulverise,분쇄의 일격,장애물을 파괴할 수 있다,도끼
+Rotation,회선,명중이 매우 높다,도끼
+Stormstep,폭풍 걸음,적 처치 시 공속 +10 (다음 자신의 페이즈 전까지),도끼
+War Master's Strike,전귀의 일격,주는 대미지가 1.5배로 증가한다,도끼
+Hidden Soulrend,비전 혈아,준 대미지의 절반만큼 HP를 회복한다,도끼
+Arrowcrack,브레이크 애로,공격 시 50%로 발동. 공격력 +15,활
+Bowbreaker Arrow,Bowbreaker Arrow,,활
+Breakaway Shot,이탈 사격,전투 후 1칸까지 이동할 수 있다,활
+Calm Call,고요,적 처치 시 회피 +40 (1회 전투 후 초기화),활
+Curved Shot,곡사,명중이 높다,활
+Encloser,봉쇄의 화살,명중 시 해당 적의 이동력 -3 (다음 자신의 페이즈 전까지),활
+Haphazard,난사,4회 연속으로 공격한다 (각 공격의 대미지는 90%),활
+Lead Arrow,납 화살,,활
+Leaden Draw,대강궁,위력과 명중이 높다,활
+Leg Shot,다리 쏘기,명중 시 적의 회피 -20 (1회 전투 후 초기화) (추격 불가),활
+Magic Arrow,마법 화살,,활
+Mighty Shot,Mighty Shot,,활
+Shadow Arrow,그림자 화살,전투 시 회피 +10/20,활
+Sneaky Shot,하이드 샷,"자신이 유리한 지형에 있으면 공격력 +5, 명중 필살 +10/15",활
+Snipe,스나이프,"적의 HP가 절반 이하면 공격력 +3/5, 명중 +10/20",활
+Surprise Shot,기습 화살,적의 HP가 최대치면 30/50%로 발동. 공격력 +5,활
+Spiral Shot,나선 쏘기,공격 시 (기술÷2)%로 발동. 공격력 +5,활
+Spirit Bow,정령궁,전투 시 항마 +7/10,활
+Twin-shot Flow,유려한 사격,2회 연속으로 공격한다 (각 공격의 대미지는 70/80%),활
+Vital Shot,급소 공격,필살이 높다,활
+Warning Shot,경계 사격,전투 시 회피 +10/15,활
+Ward Arrow,봉마의 화살,명중 시 해당 적을 마법 봉인 상태로 만든다,활
+Calamitous Shot,재앙 사격,명중 시 적을 마법 봉인 상태 및 이동 불능 상태로 만든다 (추격 불가),활
+Deadeye,저격,사정거리가 길다 (추격 불가),활
+Drilling Breach,천파,적의 방어력을 무시한다 (추격 불가),활
+Heaven's Wind,천풍,사정거리가 매우 길다 (추격 불가),활
+Holy Flash,성섬,적 처치 시 자신의 HP를 적당량 회복한다,활
+Lightning Star,뇌성,마법 공격에 속한다. 필살이 높다,활
+Poisoner's Talent,독 추적 화살,"적이 독 상태라면 공격력 +8, 명중 +20",활
+Hidden Truesnipe,비전 원뢰,사정거리가 긴 대신 내구 소비가 매우 크다 (추격 불가),활
+Sky Hunter,스카이 헌터,적이 비행 속성이면 명중 +50/?,활
+Hunter's Cross,헌터 크로스,명중과 필살이 높다,활
+Assassin's Fist,암살권,최소 20 이상의 대미지를 준다,격투
+Battle Blow,배틀 블로,자신의 HP가 최대치면 공격력 +3,격투
+Battle Rush,배틀 러시,적의 반격보다 먼저 추격한다,격투
+Beatdown,비트 업,전투 후 속도 +1/2 (최대 +10까지 증가) (맵이 끝날 때까지),격투
+Cautious Blow,신중한 일격,전투 시 회피 +10/15,격투
+Mystic Blow,매직 블로,,격투
+Crush Armor,갑옷 깨기,중갑 유효. /적이 중갑 속성이면 필살 +10,격투
+Curtail Magic,매직 컷,전투 시 항마 +5,격투
+Deal Death,활살 일격,필살이 높다,격투
+Fading Assault,Fading Assault,,격투
+Fading Blow,백 블로,전투 후 1칸까지 이동할 수 있다,격투
+Feint,페인트,전투 후 해당 적의 회피 -20 (1회 전투 후 초기화),격투
+Jack Hit,잭 히트,공격 시 5/10%로 발동. 공격력 +10,격투
+Knockout,녹아웃,,격투
+Magic Combo,Magic Combo,,격투
+Mighty Fist,호권 일격,명중이 높다,격투
+Mind's-Eye Blow,심안의 일격,명중이 매우 높다,격투
+One-on-One,일대일,공격 명중 시 적을 이동 불능 상태로 만든다,격투
+One-Two Punch,카운터,자신이 후공이 된다. 전투 시 회피 +20,격투
+Power Combo,파워 콤보,,격투
+Razor Fist,Razor Fist,,격투
+Revival,Revival,,격투
+Saving Fist,활인권,적의 HP가 2 이상이면 HP를 1 남긴다 (추격 불가),격투
+Spirit Blow,영혼 일격,,격투
+Spirit Fist,Spirit Fist,,격투
+Strike and Heal,블로&힐,전투 후 보조 마법을 사용할 수 있다,격투
+Compressed Laser,과압축 광탄,마법 공격에 속한다,격투
+Deadly Gauntlet,필살갑,필살이 높다,격투
+Flame Drill,Flame Drill,,격투
+Flame Wheel,염륜,적의 반격보다 먼저 추격한다. 마법 공격에 속한다,격투
+Light of Bonds,인연의 광명,"마법 공격에 속한다 공격 시, 인접한 아군 한 명당 공격력 +2",격투
+Mirage,환신,,격투
+Thoron Gauntlet,뇌갑 트론,마법 공격에 속한다,격투
+Violent Claw,폭조,3회 연속으로 공격한다 (각 공격의 대미지는 50%),격투
+Hidden Evilbreak,비전 파사 철권,명중 시 적의 [명부의 가호]를 무효화한다 (1회 전투 후 초기화),격투
