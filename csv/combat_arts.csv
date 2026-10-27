@@ -178,10 +178,10 @@ Mind's-Eye Blow,심안의 일격,명중이 매우 높다,격투
 One-on-One,일대일,공격 명중 시 적을 이동 불능 상태로 만든다,격투
 One-Two Punch,카운터,자신이 후공이 된다. 전투 시 회피 +20,격투
 Power Combo,파워 콤보,,격투
-Razor Fist,Razor Fist,,격투
+Razor Fist,예리한 철권,필살의 일격이 발동한 경우 무기 내구도가 줄어들지 않는다,격투
 Revival,Revival,,격투
 Saving Fist,활인권,적의 HP가 2 이상이면 HP를 1 남긴다 (추격 불가),격투
-Spirit Blow,영혼 일격,,격투
+Spirit Blow,영혼 일격,위력과 명중이 높다,격투
 Spirit Fist,정령권,공격 시 (마방÷2)%로 발동. 공격력 +5/10,격투
 Strike and Heal,블로&힐,전투 후 보조 마법을 사용할 수 있다,격투
 Compressed Laser,과압축 광탄,마법 공격에 속한다,격투
