@@ -90,7 +90,7 @@ Battleblade Strike,전인의 일격,전투 후 기술 +2 (최대 +10까지 증�
 Bloodbath,혈풍철화,적 처치 시 방어력 +10/20 (1회 전투 후 초기화),도끼
 Careful Attack,세이프 어택,주는 대미지가 반감되는 대신 적이 공격을 회피하면 반격을 받지 않는다 (추격 불가),도끼
 Crash,크래시,명중 시 5/10%의 확률로 적을 혼란 상태로 만든다 (추격 불가),도끼
-Devilwind Flurry,마풍 연격,,도끼
+Devilwind Flurry,마풍 연격,전투 시 (마력÷2)%로 발동. 공속에 상관없이 추격한다,도끼
 Discerning Blow,판별의 일격,명중이 매우 높은 대신 주는 대미지가 반감된다,도끼
 Double Attack,Double Attack,,도끼
 Double Swing,Double Swing,,도끼
@@ -182,7 +182,7 @@ Razor Fist,Razor Fist,,격투
 Revival,Revival,,격투
 Saving Fist,활인권,적의 HP가 2 이상이면 HP를 1 남긴다 (추격 불가),격투
 Spirit Blow,영혼 일격,,격투
-Spirit Fist,Spirit Fist,,격투
+Spirit Fist,정령권,공격 시 (마방÷2)%로 발동. 공격력 +5/10,격투
 Strike and Heal,블로&힐,전투 후 보조 마법을 사용할 수 있다,격투
 Compressed Laser,과압축 광탄,마법 공격에 속한다,격투
 Deadly Gauntlet,필살갑,필살이 높다,격투
