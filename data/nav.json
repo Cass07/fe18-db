@@ -70,7 +70,12 @@
     "href" : "",
     "child" : [
       {
-        "title" : "지도",
+        "title" : "인터랙션 맵",
+        "href" : "spot-map.html",
+        "child" : []
+      },
+      {
+        "title" : "사막 바다 지도",
         "href" : "map.html",
         "child" : []
       },

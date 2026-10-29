@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파엠 만자천홍 데이터베이스</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta name="description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:title" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="파엠 만자천홍 데이터베이스">
+    <meta property="og:site_name" content="파엠 만자천홍 데이터베이스">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous">
+
+    <style>
+        #spotMap { height: 60vh; min-height: 320px; background: #2b2b2b; }
+        #spotMap.hide-labels .loc-label { display: none; }
+        .loc-label { font-size: 11px; padding: 0 4px; }
+        .row-selected > td { background-color: #fff3b0 !important; }
+        .row-unplaced > td { color: #adb5bd; }
+        .loc-unplaced { color: #adb5bd; }
+        #filterBar:empty { display: none; }
+        .bootstrap-table tbody tr { cursor: pointer; }
+    </style>
+</head>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+    <div class="container-fluid" style="margin : 0 10px">
+        <a class="navbar-brand" href="index.html">만자천홍 데이터</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class = "container">
+    <br>
+    <div class = "row">
+        <div class = "col">
+            <div id="spotMap"></div>
+        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div class = "col">
+            <div id="filterBar" class="alert alert-secondary py-2 d-flex align-items-center"></div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-info" data-tab="info" data-bs-toggle="tab"
+                            data-bs-target="#pane-info" type="button" role="tab">장소별 정보</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-item" data-tab="item" data-bs-toggle="tab"
+                            data-bs-target="#pane-item" type="button" role="tab">아이템별 장소</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" id="pane-info" role="tabpanel">
+                    <table id="infoTable"
+                           data-search="true"
+                           data-search-formatter="false"
+                           data-pagination="true"
+                           data-page-size="20"
+                           data-page-list="[20, 50, 100, all]"
+                           data-row-style="rowStyle">
+                        <thead>
+                        <tr>
+                            <th data-field="type_kr" data-sortable="true">종류</th>
+                            <th data-field="location_kr" data-sortable="true">장소</th>
+                            <th data-field="item" data-sortable="true">아이템</th>
+                            <th data-field="extra" data-sortable="true">정보</th>
+                            <th data-field="description">설명</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="pane-item" role="tabpanel">
+                    <table id="itemTable"
+                           data-search="true"
+                           data-search-formatter="false"
+                           data-pagination="true"
+                           data-page-size="20"
+                           data-page-list="[20, 50, 100, all]"
+                           data-row-style="rowStyle">
+                        <thead>
+                        <tr>
+                            <th data-field="type_kr" data-sortable="true">종류</th>
+                            <th data-field="item" data-sortable="true">아이템</th>
+                            <th data-field="loc_text" data-formatter="locListFormatter">장소</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col">
+            <br>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script>
+    $(document).ready(function () {
+        NavInitiator.initiate();
+    });
+</script>
+</body>
+</html>
+
+<script>
+    const MAP_IMAGE = "image/UI_Map.png";
+    // 이 줌 레벨 이상에서만 location 라벨 표시
+    const LABEL_MIN_ZOOM = 0.5;
+    // location_info type별 아이템 key와 부가정보 출력 형식 (item이 null이면 item table에서 제외)
+    const INFO_TYPE_CONFIG = {
+        spot: {item: "material", extra: row => row.drop_rate},
+        shop: {item: "weapon", extra: row => row.price},
+        station: {item: null, extra: () => ""},
+    };
+    const MARKER_STYLE = {
+        normal: {radius: 5, fillColor: "#ffffff"},
+        highlight: {radius: 7.5, fillColor: "#dc3545"},
+        disabled: {radius: 5, fillColor: "#9e9e9e"},
+    };
+
+    const TABLES = {info: "#infoTable", item: "#itemTable"};
+
+    let map = null;
+    let locations = new Map();   // id -> location (+ label, interactive)
+    let markers = new Map();     // id -> L.circleMarker
+    let infoRows = [];
+    let itemRows = [];
+    let stationCluster = new Map();   // location id -> 같은 cluster의 station location id 목록
+
+    // 현재 선택 상태 (URL parameter와 동기화)
+    let selectedLoc = null;      // 지도에서 클릭한 location id
+    let selectedRow = null;      // 선택한 row key
+    let activeTab = "info";
+
+    const toLatLng = (x, y) => L.latLng(-y, x);
+
+    function escapeHtml(value) {
+        return String(value ?? "").replace(/[&<>"']/g, c =>
+            ({"&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"}[c]));
+    }
+
+    function fetchJson(url) {
+        return fetch(url).then(res => res.ok ? res.json() : []);
+    }
+
+    function loadImage(src) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = src;
+        });
+    }
+
+    Promise.all([
+        fetchJson("data/interaction_map_type_text.json"),
+        fetchJson("data/location.json"),
+        fetchJson("data/location_edge.json"),
+        loadImage(MAP_IMAGE),
+    ]).then(async ([types, locationData, edgeData, image]) => {
+        const infoData = await Promise.all(types.map(t => fetchJson("data/" + t.filename)));
+        buildData(types, infoData, locationData);
+        initMap(image, edgeData);
+        initTables();
+        restoreFromUrl();
+    }).catch(err => console.error(err));
+
+    /* ---------- 데이터 ---------- */
+    function buildData(types, infoData, locationData) {
+        // type -> location 값 -> 해당 info가 할당된 지도 location id 목록
+        const placed = {};
+        locationData.forEach(loc => {
+            Object.entries(loc.info || {}).forEach(([type, value]) => {
+                placed[type] = placed[type] || {};
+                (placed[type][value] = placed[type][value] || []).push(loc.id);
+            });
+        });
+
+        const itemMap = new Map();
+        const krByLocation = {};
+        types.forEach((t, i) => {
+            const config = INFO_TYPE_CONFIG[t.type] || {item: "item", extra: () => ""};
+            krByLocation[t.type] = {};
+            infoData[i].forEach(row => {
+                const location = String(row.location ?? "").trim();
+                if (!location) return;
+                const locationKr = row.location_kr || location;
+                const item = config.item ? row[config.item] ?? "" : "";
+                const extra = config.extra(row) ?? "";
+                const mapIds = placed[t.type]?.[location] || [];
+                krByLocation[t.type][location] = krByLocation[t.type][location] || row.location_kr;
+
+                infoRows.push({
+                    key: [t.type, location, item].join("|"),
+                    type_kr: t.kr, location_kr: locationKr, item, extra,
+                    description: row.description ?? "", mapIds,
+                });
+
+                if (t.type === "station") {
+                    mapIds.forEach(id => stationCluster.set(id, row.cluster));
+                }
+                if (!config.item) return;
+
+                const itemKey = [t.type, item].join("|");
+                if (!itemMap.has(itemKey)) {
+                    itemMap.set(itemKey, {key: itemKey, type_kr: t.kr, item, entries: [], mapIds: []});
+                }
+                const itemRow = itemMap.get(itemKey);
+                itemRow.entries.push({text: extra !== "" ? `${locationKr} (${extra})` : locationKr, placed: mapIds.length > 0});
+                itemRow.mapIds.push(...mapIds.filter(id => !itemRow.mapIds.includes(id)));
+            });
+        });
+        itemRows = [...itemMap.values()];
+        // cluster 값 -> 같은 cluster의 location id 목록으로 변환
+        const clusterMembers = {};
+        stationCluster.forEach((cluster, id) => (clusterMembers[cluster] = clusterMembers[cluster] || []).push(id));
+        stationCluster.forEach((cluster, id) => stationCluster.set(id, clusterMembers[cluster]));
+        // 검색용 평문
+        itemRows.forEach(row => row.loc_text = row.entries.map(e => e.text).join("\n"));
+
+        locationData.forEach(loc => {
+            const infoTypes = types.map(t => t.type).filter(type => loc.info?.[type]);
+            const fallback = infoTypes.map(type => krByLocation[type]?.[loc.info[type]] || loc.info[type])[0];
+            locations.set(loc.id, {...loc, label: loc.name || fallback || "", interactive: infoTypes.length > 0});
+        });
+    }
+
+    /* ---------- 지도 ---------- */
+    function initMap(image, edgeData) {
+        const width = image.naturalWidth, height = image.naturalHeight;
+        const bounds = L.latLngBounds(toLatLng(0, height), toLatLng(width, 0));
+        map = L.map("spotMap", {
+            crs: L.CRS.Simple, minZoom: -3, maxZoom: 2, zoomSnap: 0.25, zoomDelta: 0.5,
+            attributionControl: false, renderer: L.canvas({tolerance: 6}),
+        });
+        L.imageOverlay(MAP_IMAGE, bounds).addTo(map);
+        map.fitBounds(bounds);
+        map.setMinZoom(map.getZoom() - 0.5);
+        map.setMaxBounds(bounds.pad(0.2));
+
+        edgeData.forEach(edge => {
+            const a = locations.get(edge.loc1), b = locations.get(edge.loc2);
+            if (!a || !b) return;
+            L.polyline([toLatLng(a.x, a.y), toLatLng(b.x, b.y)], {
+                color: "#ffffff", weight: 3, dashArray: edge.type === 2 ? "6 6" : null, interactive: false,
+            }).addTo(map);
+        });
+
+        locations.forEach(loc => {
+            const style = loc.interactive ? MARKER_STYLE.normal : MARKER_STYLE.disabled;
+            const marker = L.circleMarker(toLatLng(loc.x, loc.y), {
+                ...style, color: "#444444", weight: 1, fillOpacity: 1, interactive: loc.interactive,
+            }).addTo(map);
+            if (loc.label) {
+                marker.bindTooltip(escapeHtml(loc.label), {
+                    permanent: true, direction: "top", offset: [0, -6], className: "loc-label",
+                });
+            }
+            if (loc.interactive) {
+                marker.on("click", e => {
+                    L.DomEvent.stopPropagation(e);
+                    onLocationClick(loc.id);
+                });
+            }
+            markers.set(loc.id, marker);
+        });
+
+        map.on("click", clearSelection);
+        map.on("zoomend", updateLabels);
+        updateLabels();
+    }
+
+    function updateLabels() {
+        $("#spotMap").toggleClass("hide-labels", map.getZoom() < LABEL_MIN_ZOOM);
+    }
+
+    function highlightedIds() {
+        if (selectedRow !== null) return findRow(activeTab, selectedRow)?.mapIds || [];
+        if (selectedLoc === null) return [];
+        // station이면 같은 cluster의 station 전체를 강조
+        return stationCluster.get(selectedLoc) || [selectedLoc];
+    }
+
+    function renderMarkers() {
+        const highlighted = new Set(highlightedIds());
+        markers.forEach((marker, id) => {
+            const loc = locations.get(id);
+            const style = highlighted.has(id) ? MARKER_STYLE.highlight
+                : loc.interactive ? MARKER_STYLE.normal : MARKER_STYLE.disabled;
+            marker.setStyle({fillColor: style.fillColor});
+            marker.setRadius(style.radius);
+            if (highlighted.has(id)) marker.bringToFront();
+        });
+    }
+
+    function zoomToHighlighted() {
+        const ids = highlightedIds();
+        if (ids.length === 0) return;
+        const points = ids.map(id => locations.get(id)).map(loc => toLatLng(loc.x, loc.y));
+        map.fitBounds(L.latLngBounds(points), {padding: [60, 60], maxZoom: 1});
+    }
+
+    /* ---------- 테이블 ---------- */
+    function rowStyle(row) {
+        const classes = [];
+        if (row.key === selectedRow) classes.push("row-selected");
+        if (row.mapIds.length === 0) classes.push("row-unplaced");
+        return {classes: classes.join(" ")};
+    }
+
+    function locListFormatter(value, row) {
+        return row.entries
+            .map(e => `<span class="${e.placed ? "" : "loc-unplaced"}">${escapeHtml(e.text)}</span>`)
+            .join("<br>");
+    }
+
+    function findRow(tab, key) {
+        return (tab === "info" ? infoRows : itemRows).find(row => row.key === key);
+    }
+
+    function filteredRows(rows) {
+        return selectedLoc === null ? rows : rows.filter(row => row.mapIds.includes(selectedLoc));
+    }
+
+    function initTables() {
+        $(TABLES.info).bootstrapTable({data: infoRows, onClickRow: row => onRowClick("info", row)});
+        $(TABLES.item).bootstrapTable({data: itemRows, onClickRow: row => onRowClick("item", row)});
+
+        $("button[data-bs-toggle='tab']").on("shown.bs.tab", function () {
+            const tab = $(this).data("tab");
+            // 숨겨진 상태에서 그려진 테이블의 레이아웃 보정
+            $(TABLES[tab]).bootstrapTable("resetView");
+            if (tab === activeTab) return;
+            activeTab = tab;
+            selectedRow = null;
+            render();
+        });
+        $("#filterBar").on("click", "button", clearSelection);
+    }
+
+    function renderTables() {
+        // load는 검색어를 유지한 채 데이터와 row 스타일을 다시 그림
+        $(TABLES.info).bootstrapTable("load", filteredRows(infoRows));
+        $(TABLES.item).bootstrapTable("load", filteredRows(itemRows));
+
+        const loc = locations.get(selectedLoc);
+        $("#filterBar").html(loc ? `
+            <span class="me-auto"><i class="bi bi-geo-alt-fill"></i> <b>${escapeHtml(loc.label)}</b>의 정보만 표시 중</span>
+            <button type="button" class="btn btn-sm btn-outline-secondary">필터 해제</button>` : "");
+    }
+
+    /* ---------- 인터랙션 ---------- */
+    function onLocationClick(id) {
+        if (selectedLoc === id && selectedRow === null) return clearSelection();
+        selectedLoc = id;
+        selectedRow = null;
+        render();
+    }
+
+    function onRowClick(tab, row) {
+        if (selectedRow === row.key) {
+            selectedRow = null;
+        } else {
+            // 지도에 location이 없으면 아무것도 하지 않음
+            if (row.mapIds.length === 0) return;
+            selectedRow = row.key;
+        }
+        render();
+        zoomToHighlighted();
+    }
+
+    function clearSelection() {
+        selectedLoc = null;
+        selectedRow = null;
+        render();
+    }
+
+    function render() {
+        renderMarkers();
+        renderTables();
+        updateUrl();
+    }
+
+    /* ---------- URL parameter ---------- */
+    function updateUrl() {
+        const params = new URLSearchParams(location.search);
+        const set = (key, value) => value === null ? params.delete(key) : params.set(key, value);
+        set("loc", selectedLoc);
+        set("tab", activeTab === "info" ? null : activeTab);
+        set("row", selectedRow);
+        const query = params.toString();
+        history.replaceState(null, "", location.pathname + (query ? "?" + query : "") + location.hash);
+    }
+
+    function restoreFromUrl() {
+        const params = new URLSearchParams(location.search);
+        const loc = Number(params.get("loc"));
+        if (locations.get(loc)?.interactive) selectedLoc = loc;
+        if (params.get("tab") === "item") activeTab = "item";
+
+        const row = findRow(activeTab, params.get("row"));
+        if (row && row.mapIds.length > 0 && (selectedLoc === null || row.mapIds.includes(selectedLoc))) {
+            selectedRow = row.key;
+        }
+
+        bootstrap.Tab.getOrCreateInstance(document.getElementById("tab-" + activeTab)).show();
+        render();
+        if (selectedRow !== null) zoomToHighlighted();
+    }
+</script>
