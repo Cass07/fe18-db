@@ -2,3 +2,4 @@ filename,type,kr
 spot.json,spot,채집
 shop.json,shop,상점
 station.json,station,역
+animal_spot.json,animal_spot,동물
