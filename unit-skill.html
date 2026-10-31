@@ -162,7 +162,7 @@
                 map[name] = desc || '';
             }
         };
-        skills.forEach(s => add(s.kr, s.desc));
+        skills.forEach(s => add(s.name, s.desc));
         arts.forEach(a => add(a.name, a.desc));
         magics.forEach(m => add(m.name, m.desc));
         descMap = map;
