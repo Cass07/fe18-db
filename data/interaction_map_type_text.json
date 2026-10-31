@@ -1,1 +1,1 @@
-[{"filename": "spot.json", "type": "spot", "kr": "채집"}, {"filename": "shop.json", "type": "shop", "kr": "상점"}, {"filename": "station.json", "type": "station", "kr": "역"}, {"filename": "animal_spot.json", "type": "animal_spot", "kr": "동물"}]
+[{"filename": "spot.json", "type": "spot", "kr": "채집", "color": "#2a9d8f"}, {"filename": "shop.json", "type": "shop", "kr": "상점", "color": "#e76f51"}, {"filename": "station.json", "type": "station", "kr": "역", "color": "#2879b3"}, {"filename": "animal_spot.json", "type": "animal_spot", "kr": "동물", "color": "#e9c46a"}]
