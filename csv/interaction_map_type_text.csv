@@ -1,5 +1,5 @@
-filename,type,kr
-spot.json,spot,채집
-shop.json,shop,상점
-station.json,station,역
-animal_spot.json,animal_spot,동물
+filename,type,kr,color
+spot.json,spot,채집,#2a9d8f
+shop.json,shop,상점,#e76f51
+station.json,station,역,#2879b3
+animal_spot.json,animal_spot,동물,#e9c46a
