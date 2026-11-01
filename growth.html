@@ -204,9 +204,16 @@
     }
 
     function detailFormatter(index, row) {
+        const lb = "<br>";
         const statTable = '<div class="table-responsive"><table class="table table-sm table-bordered text-center mb-2">'
             + '<tr>' + STAT_LABELS.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
             + '<tr>' + STAT_LABELS.map(s => '<td>' + row[s[0]] + '</td>').join("") + '</tr></table></div>';
+
+        const initialStatTitle = '<br><p class="mb-2"><b>1레벨 초기 스탯</b><br><small class="text-muted">특정 유닛은 1레벨 초기 스탯에 레벨 스케일러를 적용하지 않고 고정된 스탯으로 영입됨.</small></p>';
+
+        const initialStatTable = '<div class="table-responsive"><table class="table table-sm table-bordered text-center mb-2">'
+            + '<tr>' + STAT_LABELS.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
+            + '<tr>' + STAT_LABELS.map(s => '<td>' + row[s[0] + '_s'] + '</td>').join("") + '</tr></table></div>';
 
         const aptitudeTable = '<div class="table-responsive"><table class="table table-sm table-bordered text-center mb-2">'
             + '<tr>' + APTITUDE_KINDS.map(k => '<th>' + k[1] + '</th>').join("") + '</tr>'
@@ -217,7 +224,7 @@
         const sums = '<p class="mb-2">성장률 합계 : ' + total + '<br>행운&매력 제외 합계 : ' + totalExceptLckCha + '</p>';
 
         const skills = '<p class="mb-2"><b>개인스킬</b><br>' + (row.p_skill || "-")
-            + '<br><b>유니크 스킬</b><br>' + (row.u_skill || "-") + '</p>';
+            + lb + '<br><b>유니크 스킬</b><br>' + (row.u_skill || "-") + '</p>';
 
         let learn;
         if (unitSkills === null) {
@@ -233,6 +240,7 @@
             learn = lines.length > 0 ? lines.join("<br><br>") : "습득하는 기술이 없습니다.";
         }
 
-        return statTable + aptitudeTable + sums + skills + '<p class="mb-0"><b>습득 기술</b><br>' + learn + '</p>';
+        return statTable + aptitudeTable + sums + initialStatTitle + initialStatTable + lb
+            + skills + lb + '<p class="mb-0"><b>습득 기술</b><br>' + learn + '</p>';
     }
 </script>
