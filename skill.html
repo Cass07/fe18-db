@@ -102,6 +102,9 @@
     const RANK_ORDER = ["E", "D", "D+", "C", "C+", "B", "B+", "A", "A+", "S"];
     const KIND_ORDER = ["전체", "검", "창", "도끼", "활", "격투", "지휘", "보행", "기병", "중갑", "비행"];
     const UNIT_FILES = ["armor", "authority", "axe", "bow", "faith", "flying", "gauntlet", "infantry", "lance", "reason", "riding", "sword"];
+    const COMBAT_ARTS_STATS_HEADER = ["cost", "might", "hit", "crit", "range"];
+    const COMBAT_ARTS_STATS_HEADER_KR = ["내구 소비", "위력", "명중", "필살", "사정"];
+
     let allSkills = [];
     let unitSkills = null;
 
@@ -117,7 +120,10 @@
         $("#mainTable").bootstrapTable("load", kind === "전체" ? allSkills : allSkills.filter(s => s.kind === kind));
     });
 
-    Promise.all([fetchJson("data/skills.json"), fetchJson("data/combat_arts.json")]).then(([skills, arts]) => {
+    Promise.all([fetchJson("data/skills.json"), fetchJson("data/combat_arts.json"), fetchJson("data/combat_arts_stats.json")]).then(([skills, arts, stats]) => {
+        const statsByEn = {};
+        stats.forEach(s => statsByEn[s.en] = s);
+        arts.forEach(art => art.stats = statsByEn[art.en] || null);
         allSkills = skills.concat(arts);
         $("#kind").trigger("change");
     });
@@ -125,6 +131,19 @@
     Promise.all(UNIT_FILES.map(f => fetchJson("data/unit_" + f + ".json"))).then(lists => {
         unitSkills = lists.flat();
     });
+
+    function statsTable(row) {
+        if (!row.stats) return "";
+        const escape = v => $("<div>").text(v).html();
+        const cells = COMBAT_ARTS_STATS_HEADER.map(key => {
+            const base = row.stats[key];
+            const plus = row.stats[key + "+"];
+            return "<td>" + escape(plus === "" || base === plus ? base : base + " / " + plus) + "</td>";
+        });
+        return "<table class='table table-bordered table-sm mb-0 w-auto'>"
+            + "<thead><tr>" + COMBAT_ARTS_STATS_HEADER_KR.map(h => "<th class='p-1'>" + h + "</th>").join("") + "</tr></thead>"
+            + "<tbody><tr>" + cells.join("") + "</tr></tbody></table><br>";
+    }
 
     function detailFormatter(index, row) {
         if (unitSkills === null) {
@@ -151,6 +170,6 @@
             .filter(rank => byRank[rank])
             .map(rank => rank + " : " + byRank[rank].sort((a, b) => a.localeCompare(b, "ko")).join(", "));
 
-        return row.desc + "<br><br>" + (lines.length > 0 ? lines.join("<br>") : "습득하는 유닛이 없습니다.");
+        return statsTable(row)+  row.desc + "<br><br>" + (lines.length > 0 ? lines.join("<br>") : "습득하는 유닛이 없습니다.");
     }
 </script>

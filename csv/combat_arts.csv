@@ -5,7 +5,7 @@ Chop,내려찍기,명중이 낮지만 위력이 높다,검
 Crosswise Cut,크로스와이즈,전투 후 기술 +2 (최대 10까지 증가) (맵이 끝날 때까지),검
 Dark Ray,다크 레이즈,전투 시 적의 명중 회피 필살 -20,검
 Destreza,데스트레사,"적의 HP가 절반 이하면 공격력 +5/7, 필살 +10/15",검
-Fateful Strike,Fateful Strike,공격 시 (행운÷2)%로 발동. 공격력 +10/15,검
+Fateful Strike,운명의 일격,공격 시 (행운÷2)%로 발동. 공격력 +10/15,검
 Finesse Blade,비검,최소 10 이상의 대미지를 준다,검
 Flash Blow,필섬의 일격,공격 시 (기술÷2)%로 발동. 공격력 +5,검
 Furious Strike,대강격,위력과 명중이 높다,검
@@ -63,13 +63,13 @@ Holy Spear,성스러운 창 찌르기,전투 후 자신의 HP를 소량/적당�
 Jab,찌르기,위력이 조금 높다,창
 Khamsin,캄신,전투 시 적의 명중이 20/30 이하면 해당 적의 명중이 0이 된다,창
 Knightkneel,기병 매장의 연공,2회 연속으로 공격한다. 적이 기병 속성이면 명중 +10 (각 공격의 대미지는 70/80%),창
-Pivot Strike,Pivot Strike,(자신이 후공이 된다. / 전투 시 방어력 +4),창
+Pivot Strike,공수 교대,자신이 후공이 된다./ 전투 시 방어력 +4,창
 Protective Spear,호신창,전투 시 필살 회피 +20/30,창
 Protective Storm,수호 선풍,전투 시 물방 +7,창
 Quick Thrust,속공,전투 시 공속 +3,창
 Raging Tempest,템페스트,위력과 명중이 높다,창
 Stinger,스팅어,명중이 낮지만 위력이 높다,창
-Sword Breaker,Sword Breaker,"적이 검을 장비 중이면 공격력 +8/, 명중 +20",창
+Sword Breaker,소드 브레이크,"적이 검을 장비 중이면 공격력 +8/, 명중 +20",창
 Tempest Spear,선풍창,명중이 높다,창
 Vanguard Spear,승부수,공격 시 (힘÷2)%로 발동. 공격력 +5,창
 Yawning Throw,대투척,위력과 명중이 높다 (사정 1-2의 창으로만 사용 가능),창
@@ -93,7 +93,7 @@ Crash,크래시,명중 시 5/10%의 확률로 적을 혼란 상태로 만든다 
 Devilwind Flurry,마풍 연격,전투 시 (마력÷2)%로 발동. 공속에 상관없이 추격한다,도끼
 Discerning Blow,판별의 일격,명중이 매우 높은 대신 주는 대미지가 반감된다,도끼
 Double Attack,더블 어택,2회 연속으로 공격한다 (각 공격의 대미지는 90%),도끼
-Double Swing,Double Swing,2회 연속으로 공격한다 (사정 1-2의 도끼로만 사용 가능) (각 공격의 대미지는 90%),도끼
+Double Swing,더블 이글,2회 연속으로 공격한다 (사정 1-2의 도끼로만 사용 가능) (각 공격의 대미지는 90%),도끼
 Enrage,레이지 업,전투 후 힘 +1 (최대 +5까지 증가) (맵이 끝날 때까지),도끼
 Focused Strike,명경지수,명중이 매우 높다,도끼
 Giant Breaker,거암 파괴,"전투 시 적이 대형 유닛이면, 공격력 +7 / 명중 +20",도끼
@@ -101,7 +101,7 @@ Guard Spike,가드 스파이크,전투 시 물방 +10,도끼
 Half Spike,하프 스파이크,전투 시 회피 +10/15,도끼
 Helm Splitter,투구 부수기,중갑 유효,도끼
 Hurl,투격,명중이 높다 (사정 1-2의 도끼로만 사용 가능),도끼
-Killer Spike,Killer Spike,위력과 필살이 높다,도끼
+Killer Spike,킬러 스파이크,위력과 필살이 높다,도끼
 Lightning Axe,뇌부,마법 공격에 속한다,도끼
 Magic Breaker,메이지 브레이크,적이 마법을 장비 중이면 공격력 +12 / 명중 +20,도끼
 Magic Throw,마부 투척,마법 공격에 속한다 (사정 1-2의 도끼로만 사용 가능),도끼
@@ -127,7 +127,7 @@ Stormstep,폭풍 걸음,적 처치 시 공속 +10 (다음 자신의 페이즈 �
 War Master's Strike,전귀의 일격,주는 대미지가 1.5배로 증가한다,도끼
 Hidden Soulrend,비전 혈아,준 대미지의 절반만큼 HP를 회복한다,도끼
 Arrowcrack,브레이크 애로,공격 시 50%로 발동. 공격력 +15,활
-Bowbreaker Arrow,Bowbreaker Arrow,(적이 활을 장비 중이면 2회 연속으로 공격한다 (각 공격의 대미지는 90%)),활
+Bowbreaker Arrow,활 킬러의 화살,적이 활을 장비 중이면 2회 연속으로 공격한다 (각 공격의 대미지는 90%),활
 Breakaway Shot,이탈 사격,전투 후 1칸까지 이동할 수 있다,활
 Calm Call,고요,적 처치 시 회피 +40 (1회 전투 후 초기화),활
 Curved Shot,곡사,명중이 높다,활
@@ -137,7 +137,7 @@ Lead Arrow,납 화살,중갑 유효. /적이 중갑 속성이면 필살 +10,활
 Leaden Draw,대강궁,위력과 명중이 높다,활
 Leg Shot,다리 쏘기,명중 시 적의 회피 -20 (1회 전투 후 초기화) (추격 불가),활
 Magic Arrow,마법 화살,마법 공격에 속한다,활
-Mighty Shot,Mighty Shot,명중이 낮지만 위력이 매우 높다,활
+Mighty Shot,전력의 한 발,명중이 낮지만 위력이 매우 높다,활
 Shadow Arrow,그림자 화살,전투 시 회피 +10/20,활
 Sneaky Shot,하이드 샷,"자신이 유리한 지형에 있으면 공격력 +5, 명중 필살 +10/15",활
 Snipe,스나이프,"적의 HP가 절반 이하면 공격력 +3/5, 명중 +10/20",활
@@ -156,7 +156,7 @@ Holy Flash,성섬,적 처치 시 자신의 HP를 적당량 회복한다,활
 Lightning Star,뇌성,마법 공격에 속한다. 필살이 높다,활
 Poisoner's Talent,독 추적 화살,"적이 독 상태라면 공격력 +8, 명중 +20",활
 Hidden Truesnipe,비전 원뢰,사정거리가 긴 대신 내구 소비가 매우 크다 (추격 불가),활
-Sky Hunter,스카이 헌터,적이 비행 속성이면 명중 +50/?,활
+Sky Hunter,스카이 헌터,적이 비행 속성이면 명중 +50,활
 Hunter's Cross,헌터 크로스,명중과 필살이 높다,활
 Assassin's Fist,암살권,최소 20 이상의 대미지를 준다,격투
 Battle Blow,배틀 블로,자신의 HP가 최대치면 공격력 +3,격투
@@ -167,19 +167,19 @@ Mystic Blow,매직 블로,마법 공격에 속한다,격투
 Crush Armor,갑옷 깨기,중갑 유효. /적이 중갑 속성이면 필살 +10,격투
 Curtail Magic,매직 컷,전투 시 항마 +5,격투
 Deal Death,활살 일격,필살이 높다,격투
-Fading Assault,Fading Assault,전투 후 2칸까지 이동할 수 있다,격투
+Fading Assault,백 어솔트,전투 후 2칸까지 이동할 수 있다,격투
 Fading Blow,백 블로,전투 후 1칸까지 이동할 수 있다,격투
 Feint,페인트,전투 후 해당 적의 회피 -20 (1회 전투 후 초기화),격투
 Jack Hit,잭 히트,공격 시 5/10%로 발동. 공격력 +10,격투
 Knockout,녹아웃,명중 시 5%의 확률로 적을 혼란 상태로 만든다 (추격 불가),격투
-Magic Combo,Magic Combo,2회 연속으로 공격한다. 마법 공격에 속한다 (각 공격의 대미지는 80%),격투
+Magic Combo,매직 콤보,2회 연속으로 공격한다. 마법 공격에 속한다 (각 공격의 대미지는 80%),격투
 Mighty Fist,호권 일격,명중이 높다,격투
 Mind's-Eye Blow,심안의 일격,명중이 매우 높다,격투
 One-on-One,일대일,공격 명중 시 적을 이동 불능 상태로 만든다,격투
 One-Two Punch,카운터,자신이 후공이 된다. 전투 시 회피 +20,격투
 Power Combo,파워 콤보,(2회 연속으로 공격하는 대신 자신의 명중이 반감된다),격투
 Razor Fist,예리한 철권,필살의 일격이 발동한 경우 무기 내구도가 줄어들지 않는다,격투
-Revival,Revival,(적 처치 시 자신의 HP를 많이 회복한다),격투
+Revival,리바이벌,적 처치 시 자신의 HP를 대량 회복한다,격투
 Saving Fist,활인권,적의 HP가 2 이상이면 HP를 1 남긴다 (추격 불가),격투
 Spirit Blow,영혼 일격,위력과 명중이 높다,격투
 Spirit Fist,정령권,공격 시 (마방÷2)%로 발동. 공격력 +5/10,격투
