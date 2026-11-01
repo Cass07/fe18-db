@@ -96,7 +96,7 @@
                    data-show-columns="true"
                    data-detail-view="true"
                    data-detail-view-by-click="true"
-                   data-detail-formatter="detailFormatter">
+                   data-detail-formatter="detailFormatterTable">
                 <thead>
                 <tr>
                     <th data-field="name" data-sortable="true" data-width="12" data-width-unit="%">이름</th>
@@ -148,23 +148,39 @@
         return String(value).split(',').map(v => v.trim()).join('<br>');
     }
 
+    const COMBAT_ARTS_STATS_HEADER = ['cost', 'might', 'hit', 'crit', 'range'];
+    const COMBAT_ARTS_STATS_HEADER_KR = ['내구', '위력', '명중', '필살', '사정'];
+
     let descMap = null;
+    // 전투기술 이름 -> combat_arts_stats.json 데이터
+    let artStatsMap = {};
 
     // 스킬, 전투기술, 마법의 설명 로드. 이름이 겹치면 skills > combat_arts > magic 순으로 우선
     Promise.all([
         fetch('data/skills.json').then(res => res.json()),
         fetch('data/combat_arts.json').then(res => res.json()),
+        fetch('data/combat_arts_stats.json').then(res => res.ok ? res.json() : []).catch(() => []),
         fetch('data/magic.json').then(res => res.json())
-    ]).then(([skills, arts, magics]) => {
+    ]).then(([skills, arts, stats, magics]) => {
         const map = {};
         const add = (name, desc) => {
             if (name && !(name in map)) {
                 map[name] = desc || '';
+                return true;
             }
+            return false;
         };
+        const statsByEn = {};
+        stats.forEach(s => statsByEn[s.en] = s);
+        const artStats = {};
         skills.forEach(s => add(s.name, s.desc));
-        arts.forEach(a => add(a.name, a.desc));
+        arts.forEach(a => {
+            if (add(a.name, a.desc) && statsByEn[a.en]) {
+                artStats[a.name] = statsByEn[a.en];
+            }
+        });
         magics.forEach(m => add(m.name, m.desc));
+        artStatsMap = artStats;
         descMap = map;
     }).catch(err => {
         console.error(err);
@@ -193,6 +209,44 @@
             });
         });
         return items.length > 0 ? items.join('<br>') : '습득하는 기술이 없습니다.';
+    }
+
+    // 랭크 / 이름 / 효과 / (스탯) 4개 column 테이블. 스탯은 전투기술일 때만 출력
+    function detailFormatterTable(index, row) {
+        if (descMap === null) {
+            return '불러오는 중...';
+        }
+        const rows = [];
+        let hasStats = false;
+        RANK_ORDER.forEach(rank => {
+            if (!row[rank]) return;
+            String(row[rank]).split(',').forEach(entry => {
+                const match = entry.trim().match(/^(.*?)\s*(\(.*\))?$/);
+                if (!match[1]) return;
+                const stats = artStatsMap[match[1]];
+                let statText = '';
+                if (stats) {
+                    hasStats = true;
+                    statText = COMBAT_ARTS_STATS_HEADER.map((key, i) => {
+                        const base = stats[key];
+                        const plus = stats[key + '+'];
+                        return COMBAT_ARTS_STATS_HEADER_KR[i] + ' ' + (plus === "" || base === plus ? base : base + '/' + plus);
+                    }).join(', ');
+                }
+                rows.push('<td>' + escapeHtml(rank) + '</td>'
+                    + '<td><b>' + escapeHtml(match[1] + (match[2] || '')) + '</b></td>'
+                    + '<td>' + escapeHtml(descMap[match[1]] || '') + '</td>'
+                    + '<td>' + escapeHtml(statText) + '</td>');
+            });
+        });
+        if (rows.length === 0) {
+            return '습득하는 기술이 없습니다.';
+        }
+        const header = ['랭크', '이름', '효과'].concat(hasStats ? ['스탯'] : []);
+        const body = rows.map(r => '<tr>' + (hasStats ? r : r.replace(/<td><\/td>$/, '')) + '</tr>');
+        return '<table class="table table-bordered table-sm mb-0 w-auto">'
+                    + '<thead><tr>' + header.map(h => '<th class="p-1">' + h + '</th>').join('') + '</tr></thead>'
+            + '<tbody>' + body.join('') + '</tbody></table>';
     }
 
     $(function () {

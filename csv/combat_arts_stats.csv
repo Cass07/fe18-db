@@ -1,0 +1,195 @@
+en,cost,might,hit,crit,range,cost+,might+,hit+,crit+,range+
+Blade Slam,5,13,50% 고정,0,1,5,13,60% 고정,0,1
+Blaze Blow,5,7,0,0,1,5,10,0,0,1
+Chop,4,8,-30,0,1,4,10,-30,0,1
+Crosswise Cut,4,5,0,0,1,4,5,10,5,1
+Dark Ray,7,8,0,0,1,7,12,0,0,1
+Destreza,3,5,0,0,1,3,7,0,0,1
+Fateful Strike,7,5,0,0,1,7,5,0,0,1
+Finesse Blade,2,0,0,0,1,2,0,20,0,1
+Flash Blow,5,7,0,0,1,5,10,0,0,1
+Furious Strike,8,12,10,0,1,8,15,20,0,1
+Gale Blow,5,7,0,0,1,5,10,0,0,1
+Greater Hexblade,8,12,10,0,1,8,15,20,0,1
+Grounder,3,3,0,0,1,3,5,0,0,1
+Haze Slice,2,3,0,0,1,2,3,0,0,1
+Heat Haze,3,3,0,0,1,3,3,20,0,1
+Hexblade,5,7,0,0,1,5,10,0,0,1
+Lunging Gale,7,0,0,0,1,7,0,0,0,1
+Mist Reaper,6,2,0,0,1,6,5,0,0,1
+Rend Armor,3,3,0,0,1,3,5,0,0,1
+Ripple Slash,5,-3,0,0,1,5,-3,0,0,1
+Shadow Gambit,2,3,0,0,1,1,3,0,0,1
+Single Sunder,4,12,-50,0,1,2,12,-50,0,1
+Skysplit,5,1,0,0,1,5,4,0,0,1
+Subdue,1,0,0,0,1,1,0,10,0,1
+Sunder,2,4,0,10,1,2,4,0,15,1
+Tiger Slash,3,3,0,0,1,3,5,0,0,1
+Twin Blades,10,0,0,0,1,8,0,0,0,1
+Vicious Flash,1,2,0,0,1,1,2,0,0,1
+Windsweep,10,5,0,0,1,10,8,0,0,1
+Wrath Strike,2,4,10,0,1,2,4,15,0,1
+Astra,10,0,0,0,1,10,0,20,0,1
+Dropshadow Blade,7,10,0,0,1,7,12,0,10,1
+Deadly Blade,2,0,0,15,1,,,,,
+Poison Harvest,2,2,0,0,1,,,,,
+Siphon Luck,1,3,0,0,1,,,,,
+Bloodletting,2,3,0,20,1,,,,,
+Bloodletting+,2,10,0,20,1,,,,,
+Toxic Wind,2,5,0,0,1-2,,,,,
+Lightning Strike,5,8,20,0,1-2,,,,,
+Ennea Fire EX,10,-5,0,0,-,,,,,
+Firestorm,-,20,0,0,1,,,,,
+Moonbreaker,1,5,30,15,1,,,,,
+Poison Burial,5,8,0,0,1,,,,,
+Prune,10,15,20,0,1,,,,,
+Hidden Birdbane,3,0,0,0,1,3,0,20,0,1
+Hidden Bladerule,3,10,10% 고정,100,1,3,15,10% 고정,100,1
+Hidden Flowform,6,0,0,0,1,4,0,0,0,1
+Hidden Giantsbane,5,2,0,0,1,5,5,0,0,1
+Hidden Twinblade,4,5,0,0,1,4,5,0,0,1
+Armored Blow,4,3,0,0,1,4,4,10,0,1
+Brilliant Strike,5,5,0,0,1,5,8,0,0,1
+Defending Spear,4,3,0,0,1,3,3,0,0,1
+Double Throw,5,0,-30,0,2,5,2,-30,0,2
+Flowing Spear,2,3,0,0,1,2,3,0,0,1
+Flying Spear,7,0,0,0,1,7,0,0,0,1
+Focused Throw,3,3,20,0,2,2,3,20,0,2
+Frozen Spear,5,7,0,0,1,5,10,0,0,1
+Frozen-Spear Slice,6,7,0,0,2,6,10,0,0,2
+Gale Spear,2,4,0,5,0,2,4,0,10,0
+Graceful Blow,5,7,0,0,1,5,10,0,0,1
+Holy Spear,6,8,0,0,1,6,8,0,0,1
+Jab,1,3,0,0,1,1,3,10,5,1
+Khamsin,5,7,0,0,1,5,7,0,0,1
+Knightkneel,10,0,0,0,1,8,0,0,0,1
+Pivot Strike,5,12,0,0,1,5,12,0,0,1
+Protective Spear,4,5,0,0,1,4,5,0,0,1
+Protective Storm,6,5,0,0,1,6,8,0,0,1
+Quick Thrust,2,0,0,0,1,2,1,0,0,1
+Raging Tempest,8,12,20,0,1,8,15,20,0,1
+Stinger,3,7,-20,0,1,3,9,-20,0,1
+Sword Breaker,4,4,0,0,1,4,4,0,0,1
+Tempest Spear,2,4,10,0,1,2,4,15,0,1
+Vanguard Spear,5,7,0,0,1,5,10,0,0,1
+Yawning Throw,7,10,10,0,2,7,13,20,0,2
+Fierce Spear,10,0,0,0,1,10,3,0,0,1
+Black Roar,5,10,0,0,1,,,,,
+Blinding Starlight,10,10,0,0,1-2,,,,,
+Brute Throw,7,10,10,0,2,,,,,
+Cavalry Ruin,5,1,0,0,1,,,,,
+Deadly Spear,2,0,0,15,1,,,,,
+Full Moon,3,5,0,0,1,,,,,
+Leave No Dust,5,10,0,0,1,,,,,
+Sacred Strike,1,0,0,0,1,,,,,
+Sol,10,5,0,0,1,,,,,
+Supreme Serpent,10,7,0,0,2-5,,,,,
+Windweave,1,2,0,0,1,,,,,
+Hidden Windpierce,5,7,0,0,2,5,10,0,0,2
+Battleblade Strike,5,7,0,0,1,5,10,0,0,1
+Bloodbath,7,5,0,0,1,7,6,10,0,1
+Careful Attack,2,0,0,0,1,1,0,0,0,1
+Crash,6,9,0,0,1,6,9,0,0,1
+Devilwind Flurry,5,7,0,0,1,5,10,0,0,1
+Discerning Blow,3,0,50,0,1,2,0,50,0,1
+Double Attack,5,0,-30,0,1,5,2,-30,0,1
+Double Swing,7,0,-20,0,2,7,3,-20,0,2
+Enrage,4,0,0,0,1,4,1,10,0,1
+Focused Strike,7,5,40,0,1,7,8,50,0,1
+Giant Breaker,5,5,0,0,1,5,5,0,0,1
+Guard Spike,6,7,0,0,1,6,10,0,0,1
+Half Spike,2,3,0,0,1,2,3,0,0,1
+Helm Splitter,3,3,0,0,1,3,5,0,0,1
+Hurl,3,3,20,0,2,2,3,20,0,2
+Instant Strike,2,2,0,0,1,2,2,0,0,1
+Killer Spike,7,10,0,15,1,7,13,0,15,1
+Lightning Axe,5,7,0,0,1,5,10,0,0,1
+Magic Breaker,5,3,0,0,1,5,3,0,0,1
+Magic Throw,3,1,0,0,2,3,3,0,0,2
+Power Spike,8,12,10,0,1,8,15,20,0,1
+Power Throw,7,10,10,0,2,7,13,20,0,2
+Reflecting Dance,10,-10,-20,0,1,8,-10,-20,0,1
+Riot,4,5,0,0,1,4,5,0,0,1
+Smash,2,4,0,5,1,2,4,0,10,1
+Spear Buster,3,3,0,0,1,3,3,0,0,1
+Spike,2,4,10,0,1,2,4,15,0,1
+Triple Spike,10,0,-50,0,1,8,0,-50,0,1
+Wild Abandon,4,8,-30,0,1,4,10,-30,0,1
+War Master's Strike,9,0,0,0,1,7,0,0,0,1
+Domination,6,5,0,0,1,,,,,
+Domination+,6,12,0,0,1,,,,,
+Flame Ring,5,10,0,0,1,,,,,
+Godly Strike,10,30,0,0,1,,,,,
+Magecleaver,3,0,0,0,1,,,,,
+Magic Strike,1,4,0,0,1,,,,,
+Pulverise,2,3,0,0,1,,,,,
+Rotation,-,8,40,0,2,,,,,
+Stormstep,3,5,20,0,1,,,,,
+War Master's Strike,9,0,0,0,1,7,0,0,0,1
+Arrowcrack,5,0,0,0,2,4,0,0,0,2
+Bowbreaker Arrow,6,0,0,0,2,6,0,20,0,2
+Breakaway Shot,10,-5,0,0,2,8,-5,0,0,2
+Calm Call,3,1,0,0,2,3,4,0,0,2
+Curved Shot,2,4,10,0,2,2,4,15,0,2
+Encloser,3,0,0,0,2,3,0,15,0,2
+Haphazard,10,0,-50,0,2,7,0,-50,0,2
+Lead Arrow,4,5,0,0,2,4,5,0,0,2
+Leaden Draw,8,12,10,0,2,8,15,20,0,2
+Leg Shot,2,0,0,0,2,2,0,20,0,2
+Magic Arrow,5,7,0,0,2,5,10,0,0,2
+Mighty Shot,4,12,-30,0,2,4,15,-30,0,2
+Shadow Arrow,7,7,0,0,2,7,10,0,0,2
+Sneaky Shot,4,5,0,0,2,4,5,0,0,2
+Snipe,4,5,0,0,2,4,5,0,0,2
+Spiral Shot,5,7,0,0,2,5,10,0,0,2
+Spirit Bow,6,8,0,0,2,6,8,0,0,2
+Surprise Shot,2,3,0,0,2,2,3,0,0,2
+Twin-Shot Flow,10,0,0,0,2,8,0,0,0,2
+Vital Shot,2,4,0,5,2,2,4,0,10,2
+Warning Shot,2,3,0,0,2,2,3,0,0,2
+Ward Arrow,6,0,-40,0,2,4,0,-40,0,2
+Hunter's Cross,6,8,20,10,2,6,8,30,20,2
+Sky Hunter,5,7,0,0,2,5,10,0,0,2
+Calamitous Shot,5,0,-50,0,2,,,,,
+Deadeye,5,0,-30,0,3-5,,,,,
+Drilling Breach,-,0,0,0,2,,,,,
+Heaven's Wind,10,0,0,0,3-10,,,,,
+Holy Flash,1,3,0,0,2,,,,,
+Lightning Star,-,10,0,30,2,,,,,
+Poisoner's Talent,2,0,0,0,2,,,,,
+Hidden Truesnipe,30,0,-20,0,3-5,30,4,-20,0,3-5
+Assassin's Fist,6,0,0,0,1,5,0,20,0,1
+Battle Blow,4,4,0,0,1,3,4,0,0,1
+Battle Rush,7,-2,0,0,1,7,0,0,0,1
+Beatdown,3,3,0,0,1,3,3,0,0,1
+Cautious Blow,2,3,0,0,1,2,3,0,0,1
+Crush Armor,4,5,0,0,1,4,5,0,0,1
+Curtail Magic,3,0,0,0,1,2,0,0,0,1
+Deal Death,2,4,0,5,1,2,4,0,10,1
+Fading Assault,8,0,0,0,1,8,2,0,0,1
+Fading Blow,10,-5,0,0,1,8,-5,0,0,1
+Feint,2,0,-50,0,1,1,0,-50,0,1
+Jack Hit,1,1,0,0,1,1,1,0,0,1
+Knockout,5,7,0,0,1,5,10,0,0,1
+Magic Combo,10,0,0,0,1,8,0,0,0,1
+Mighty Fist,2,4,10,0,1,2,4,15,0,1
+Mind's-Eye Blow,5,7,30,0,1,5,10,30,0,1
+Mystic Blow,5,7,0,0,1,5,10,0,0,1
+One-on-One,3,0,-50,0,1,2,0,-50,0,1
+One-Two Punch,5,10,20,0,1,5,13,30,0,1
+Power Combo,7,7,0,0,1,5,7,0,0,1
+Razor Fist,6,8,0,0,1,6,10,0,0,1
+Revival,6,5,0,0,1,6,8,0,0,1
+Saving Fist,4,12,0,0,1,4,12,0,20,1
+Spirit Blow,8,12,10,0,1,8,15,20,0,1
+Spirit Fist,5,7,0,0,1,5,10,0,0,1
+Strike and Heal,10,0,0,0,1,8,0,0,0,1
+Compressed Laser,2,10,20,0,1-2,,,,,
+Deadly Gauntlet,2,0,0,20,1,,,,,
+Flame Drill,,,,,,,,,,
+Flame Wheel,5,5,0,0,1-2,,,,,
+Light of Bonds,5,2,0,0,1-2,,,,,
+Mirage,-,10,0,0,1,,,,,
+Thoron Gauntlet,5,10,0,0,1-2,,,,,
+Violent Claw,10,0,0,0,1,,,,,
+Hidden Evilbreak,5,1,0,0,1,5,5,0,0,1
