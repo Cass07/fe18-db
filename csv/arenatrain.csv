@@ -1,0 +1,483 @@
+label,name,text,type
+MID_SV_ArenaTrain_Ism_m01_01,이스마르,전력을 다해야겠군.,약함
+MID_SV_ArenaTrain_Kai0_m01_01,카이,내 실력을 시험해 볼 기회네. 전력을 다하겠어!,약함
+MID_SV_ArenaTrain_Kai1_m01_01,카이,내가 배운 것을 모두 쏟아붓겠어!,약함
+MID_SV_ArenaTrain_Dit_m01_01,디트리히,끓어오르는군…… 간다!,약함
+MID_SV_ArenaTrain_Seo_m01_01,세오도라,어린 시절의 훈련이 떠오르는군.,약함
+MID_SV_ArenaTrain_Led_m01_01,레다,이것저것 시험해 볼까.,약함
+MID_SV_ArenaTrain_Bel_m01_01,베르트랑,더 강한 자와의 훈련인가. 고마운 일이군.,약함
+MID_SV_ArenaTrain_Tal_m01_01,타리문,강한 녀석이 상대인가. 재미있는 훈련이 될 것 같군.,약함
+MID_SV_ArenaTrain_Orh_m01_01,오르헬,이번 기회에 많이 배워야겠네!,약함
+MID_SV_ArenaTrain_Anh_m01_01,아나톨리아,초심으로 돌아가서 진지하게 임해야겠네요.,약함
+MID_SV_ArenaTrain_Tia0_m01_01,티아라,많이 배울 수 있는 절호의 기회야!,약함
+MID_SV_ArenaTrain_Tia1_m01_01,티아라,지금까지의 성과를 시험해 보겠어!,약함
+MID_SV_ArenaTrain_Pet0_m01_01,피터르,"히익……! 사, 살살 해 줬으면 하는데……",약함
+MID_SV_ArenaTrain_Pet1_m01_01,피터르,강해지기 위해…… 전력을 다하겠어!,약함
+MID_SV_ArenaTrain_Hur_m01_01,울턴드,좀처럼 없는 기회니 전력을 다하겠어!,약함
+MID_SV_ArenaTrain_Max_m01_01,맥심,강한 사람은 왜 강한지 이 훈련을 통해 배우겠어!,약함
+MID_SV_ArenaTrain_Jes_m01_01,제스터,강한 녀석일수록 쓰러뜨리는 보람이 있는 법이지!,약함
+MID_SV_ArenaTrain_Gol_m01_01,골라이어스,강한 녀석인가! 돌기둥보다 좋은 훈련이 될 것 같군!,약함
+MID_SV_ArenaTrain_Gat_m01_01,게이츠,고통을 견디고 노력해야만 높은 경지에 오를 수 있지.,약함
+MID_SV_ArenaTrain_Dan_m01_01,단테,마치 영웅 브레저가 오거스 산에서 했던 수행 같군!,약함
+MID_SV_ArenaTrain_Fab_m01_01,파비오,꽤 만만찮아 보이는 상대군요.,약함
+MID_SV_ArenaTrain_Esm_m01_01,에스메랄다,거친 바다처럼 강해 보이네.,약함
+MID_SV_ArenaTrain_Mic_m01_01,미카엘라,"자, 끝까지 해 보자고.",약함
+MID_SV_ArenaTrain_Urs_m01_01,우술라,조심하지 않으면 다치겠네요……,약함
+MID_SV_ArenaTrain_Sim_m01_01,시몬,이 녀석은 침착하게 상대해야겠군.,약함
+MID_SV_ArenaTrain_Lou_m01_01,루루디아,많이 배워서 내 것으로 만들어야지……!,약함
+MID_SV_ArenaTrain_Fia_m01_01,피아나,저를 상대해 봤자…… 훈련이 안 되지 않을까요……,약함
+MID_SV_ArenaTrain_Die_m01_01,디에고,까다로운 상대지만…… 기술을 훔칠 수 있겠군.,약함
+MID_SV_ArenaTrain_Lor0_m01_01,로레타,"헤헷, 여유 부리다간 큰코다칠 거야!",약함
+MID_SV_ArenaTrain_Lor1_m01_01,로레타,내가 얼마나 성장했는지 보여 주겠어!,약함
+MID_SV_ArenaTrain_Set_m01_01,세테스,강해 보이는군. 전력을 다하도록 하지.,약함
+MID_SV_ArenaTrain_Nin_m01_01,리네,초심으로 돌아가서 사력을 다하겠어.,약함
+MID_SV_ArenaTrain_Bon_m01_01,보나파르트,배우는 보람이 있을 것 같군……!,약함
+MID_SV_ArenaTrain_Tob_m01_01,토비아스,크하하하! 상대가 강하면 신난다니까!,약함
+MID_SV_ArenaTrain_Lil_m01_01,릴리안,한 수 배워 볼까~,약함
+MID_SV_ArenaTrain_Lys_m01_01,라이선더,이 대련은 좋은 경험이 될 것 같군.,약함
+MID_SV_ArenaTrain_Buc_m01_01,버커니어,꽤 강해 보이는군. 한 수 배워 볼까.,약함
+MID_SV_ArenaTrain_Sci_m01_01,시로코,어렸을 때 받았던 엄격한 지도가 떠오르는군.,약함
+MID_SV_ArenaTrain_Moo0_m01_01,무우,엄청 강해 보이지만…… 지지 않을 거야!,약함
+MID_SV_ArenaTrain_Moo1_m01_01,무우,"좋아, 가 볼까! 지지 않겠어!",약함
+MID_SV_ArenaTrain_Oly_m01_01,올림피아,혹독한 연습이 더 좋은 결과를 낳는 법이죠.,약함
+MID_SV_ArenaTrain_Naz_m01_01,나타,"헤헷, 상대로서 부족함이 없네……!",약함
+MID_SV_ArenaTrain_Sar_m01_01,사란,지금 내가 할 수 있는 모든 것을 다하자.,약함
+MID_SV_ArenaTrain_Dai_m01_01,대도,재미있네. 나도 전력을 다하겠어!,약함
+MID_SV_ArenaTrain_Hal_m01_01,하르빈,히이익…… 살살 해 줬으면……!,약함
+MID_SV_ArenaTrain_Guj_m01_01,그자람,"꽤 강해 보이는군. 뭐, 내 적수는 못 되지만.",약함
+MID_SV_ArenaTrain_Yan_m01_01,양계,내 수행을 도와주게!,약함
+MID_SV_ArenaTrain_Iio_m01_01,이오,실력을 늘리기에 더할 나위 없이 좋은 상대군.,약함
+MID_SV_ArenaTrain_Pep_m01_01,페페,강자와의 대련인가. 어서 솜씨를 보고 싶구나!,약함
+MID_SV_ArenaTrain_Noc_m01_01,녹투라,실력을 시험해 보기에 딱 좋네! 그럼 간다!,약함
+MID_SV_ArenaTrain_Sop_m01_01,소피아,할 수 있는 데까지 해 보겠어!,약함
+MID_SV_ArenaTrain_Cat_m01_01,카타냐,저보다 강한 분이 상대라니…… 기대되네요!,약함
+MID_SV_ArenaTrain_Ned_m01_01,누디누,그 뛰어난 기술을 직접 보고 배우도록 해야겠어.,약함
+MID_SV_ArenaTrain_Zac_m01_01,자코네,"히익…… 사, 살살 좀 부탁드립니다요……",약함
+MID_SV_ArenaTrain_Maj_m01_01,마지데,나보다 강한 녀석은 없다!,약함
+MID_SV_ArenaTrain_Ven_m01_01,밴디츠,"흐, 흥. 이런 녀석은 한주먹 거리도 안 되지……",약함
+MID_SV_ArenaTrain_Ini_m01_01,이니오니,강한 상대와 훈련할 수 있다니…… 기쁘네……,약함
+MID_SV_ArenaTrain_Jas_m01_01,자스민,상대가 강할수록 좋은 연습이 되는 법이지!,약함
+MID_SV_ArenaTrain_Ale_m01_01,알렉산드라,전력을 다하겠어요!,약함
+MID_SV_ArenaTrain_Nat_m01_01,네이선,강자가 상대인가. 가슴이 뛰는군.,약함
+MID_SV_ArenaTrain_Hri_m01_01,키릭,방심할 수 없는 상대군. 전력을 다하겠다.,약함
+MID_SV_ArenaTrain_Tro_m01_01,트로이아,이 녀석은 진심으로 상대해야겠네……!,약함
+MID_SV_ArenaTrain_Cen_m01_01,센트리온,빨리 붙어 보고 싶군. 한 수 배워 볼까.,약함
+MID_SV_ArenaTrain_Asw_m01_01,아스완,갈고닦은 실력을 시험해 보겠어……!,약함
+MID_SV_ArenaTrain_Kou_m01_01,홍화,만만치 않은 상대군.,약함
+MID_SV_ArenaTrain_Nuz_m01_01,누조,나로서도 쉽지 않은 상대군……,약함
+MID_SV_ArenaTrain_Kir_m01_01,키로이카,헹! 이 키로이카님이 겁낼까 보냐!,약함
+MID_SV_ArenaTrain_Ism_m02_01,이스마르,방심하지 말자.,보통
+MID_SV_ArenaTrain_Kai0_m02_01,카이,지금까지 해 온 단련의 성과를 확인할 때야!,보통
+MID_SV_ArenaTrain_Kai1_m02_01,카이,즐거운 대련이 되겠어.,보통
+MID_SV_ArenaTrain_Dit_m02_01,디트리히,진심으로 덤벼라……!,보통
+MID_SV_ArenaTrain_Seo_m02_01,세오도라,알찬 수련이 될 것 같군.,보통
+MID_SV_ArenaTrain_Led_m02_01,레다,훈련이라고 해서 방심하면 안 되겠어.,보통
+MID_SV_ArenaTrain_Bel_m02_01,베르트랑,이번 단련이 미래의 승리로 이어졌으면 좋겠군.,보통
+MID_SV_ArenaTrain_Tal_m02_01,타리문,유익한 훈련이 되도록 해야겠군.,보통
+MID_SV_ArenaTrain_Orh_m02_01,오르헬,봐주지 않아야 할 텐데.,보통
+MID_SV_ArenaTrain_Anh_m02_01,아나톨리아,매일매일 연습을 게을리하지 않도록……,보통
+MID_SV_ArenaTrain_Tia0_m02_01,티아라,지금까지 배운 것들을 보여 주겠어.,보통
+MID_SV_ArenaTrain_Tia1_m02_01,티아라,서로 최선을 다해야겠네!,보통
+MID_SV_ArenaTrain_Pet0_m02_01,피터르,"으으, 히, 힘내자!",보통
+MID_SV_ArenaTrain_Pet1_m02_01,피터르,수련의 성과를 남김없이 보여 줄 때야!,보통
+MID_SV_ArenaTrain_Hur_m02_01,울턴드,이번 기회에 이것저것 시험해 봐야겠어!,보통
+MID_SV_ArenaTrain_Max_m02_01,맥심,더 훌륭한 기사가 될 수 있도록 노력해야지!,보통
+MID_SV_ArenaTrain_Jes_m02_01,제스터,키히히! 좋은 장난감이 될 것 같네.,보통
+MID_SV_ArenaTrain_Gol_m02_01,골라이어스,얻어맞아도 불평하지 말라고!,보통
+MID_SV_ArenaTrain_Gat_m02_01,게이츠,서로 절차탁마할 수 있으면 좋겠군.,보통
+MID_SV_ArenaTrain_Dan_m02_01,단테,칼은 갈지 않으면 무뎌질 뿐이지.,보통
+MID_SV_ArenaTrain_Fab_m02_01,파비오,"뭐, 얻는 것도 있겠죠.",보통
+MID_SV_ArenaTrain_Esm_m02_01,에스메랄다,힘만 센 게 아니라는 걸 보여 주겠어!,보통
+MID_SV_ArenaTrain_Mic_m02_01,미카엘라,단련하고 단련해서 지금의 나를 뛰어넘어야 해.,보통
+MID_SV_ArenaTrain_Urs_m02_01,우술라,모처럼의 단련 시간을 헛되이 보내면 안 되겠네요.,보통
+MID_SV_ArenaTrain_Sim_m02_01,시몬,살아남기 위해서는 훈련도 필요하지.,보통
+MID_SV_ArenaTrain_Lou_m02_01,루루디아,호위 업무도 있으니 제대로 단련해야지.,보통
+MID_SV_ArenaTrain_Fia_m02_01,피아나,열심히 할 테니 잘 부탁드려요.,보통
+MID_SV_ArenaTrain_Die_m02_01,디에고,서로 봐줄 필요는 없겠지. 간다.,보통
+MID_SV_ArenaTrain_Lor0_m02_01,로레타,내 진짜 실력을 보여 줄게!,보통
+MID_SV_ArenaTrain_Lor1_m02_01,로레타,"좋아, 전력으로 덤비라고!",보통
+MID_SV_ArenaTrain_Set_m02_01,세테스,유익한 훈련이 되었으면 좋겠군.,보통
+MID_SV_ArenaTrain_Nin_m02_01,리네,실력은 호각인 것 같네…… 리네도 대충 할 순 없겠어.,보통
+MID_SV_ArenaTrain_Bon_m02_01,보나파르트,서로에게 많은 것을 배울 수 있겠군.,보통
+MID_SV_ArenaTrain_Tob_m02_01,토비아스,즐거운 훈련이 될 것 같구먼~!,보통
+MID_SV_ArenaTrain_Lil_m02_01,릴리안,실력은 비슷한 것 같으니 전력을 다할까나~,보통
+MID_SV_ArenaTrain_Lys_m02_01,라이선더,절차탁마해서 더욱 강해지겠다.,보통
+MID_SV_ArenaTrain_Buc_m02_01,버커니어,상대로서 부족함이 없군……,보통
+MID_SV_ArenaTrain_Sci_m02_01,시로코,항상 힘차게 부는 바람이 될 수 있도록 훈련해야겠지.,보통
+MID_SV_ArenaTrain_Moo0_m02_01,무우,"좋아, 함께 실력을 향상시켜 보는 거야!",보통
+MID_SV_ArenaTrain_Moo1_m02_01,무우,서로 최선을 다해야겠는걸!,보통
+MID_SV_ArenaTrain_Oly_m02_01,올림피아,태만은 발전의 적이죠. 열심히 하겠어요!,보통
+MID_SV_ArenaTrain_Naz_m02_01,나타,진심으로 간다~!,보통
+MID_SV_ArenaTrain_Sar_m02_01,사란,서로 최선을 다해야겠지……,보통
+MID_SV_ArenaTrain_Dai_m02_01,대도,누가 더 강한지 알게 해 주겠어!,보통
+MID_SV_ArenaTrain_Hal_m02_01,하르빈,서로에게 지금까지의 성과를 보여 주는 거야!,보통
+MID_SV_ArenaTrain_Guj_m02_01,그자람,한 수 한 수 확인하면서 대련하도록 할까.,보통
+MID_SV_ArenaTrain_Yan_m02_01,양계,봐줄 필요는 없다! 자!,보통
+MID_SV_ArenaTrain_Iio_m02_01,이오,서로 떠볼 필요는 없겠군.,보통
+MID_SV_ArenaTrain_Pep_m02_01,페페,서로 거리낌없이 실력을 시험해 보자꾸나!,보통
+MID_SV_ArenaTrain_Noc_m02_01,녹투라,즐거운 훈련이 되겠는걸!,보통
+MID_SV_ArenaTrain_Sop_m02_01,소피아,서로 부딪치면서 강해지는 거 아니겠어?,보통
+MID_SV_ArenaTrain_Cat_m02_01,카타냐,실력이 어느 정도인지 봐 드리죠!,보통
+MID_SV_ArenaTrain_Ned_m02_01,누디누,상대로서 부족함이 없군.,보통
+MID_SV_ArenaTrain_Zac_m02_01,자코네,"이봐, 너무 진지하게 하지는 말라고.",보통
+MID_SV_ArenaTrain_Maj_m02_01,마지데,서로 뒤끝 없이 싸워 보자고!,보통
+MID_SV_ArenaTrain_Ven_m02_01,밴디츠,나와의 훈련을 영광으로 여기겠지. 말 안 해도 안다고.,보통
+MID_SV_ArenaTrain_Ini_m02_01,이니오니,좋은 훈련이 되겠어…… 기대되네……,보통
+MID_SV_ArenaTrain_Jas_m02_01,자스민,좋은 훈련이 될 것 같네!,보통
+MID_SV_ArenaTrain_Ale_m02_01,알렉산드라,서로에게 유익한 훈련이 되었으면 좋겠네요……,보통
+MID_SV_ArenaTrain_Nat_m02_01,네이선,서로 떠볼 필요는 없겠지. 전력을 다하겠다.,보통
+MID_SV_ArenaTrain_Hri_m02_01,키릭,재미있는 대련이 될 것 같군.,보통
+MID_SV_ArenaTrain_Tro_m02_01,트로이아,실력이 어느 정도인지 확인해 볼까.,보통
+MID_SV_ArenaTrain_Cen_m02_01,센트리온,함께 성장할 수 있는 대련이 되었으면 좋겠군.,보통
+MID_SV_ArenaTrain_Asw_m02_01,아스완,훈련이라고 해도 방심하지 않겠어.,보통
+MID_SV_ArenaTrain_Kou_m02_01,홍화,함께 성장할 수 있는 기회가 되었으면 좋겠군.,보통
+MID_SV_ArenaTrain_Nuz_m02_01,누조,할 하리족의 힘을 똑똑히 보여 주지……,보통
+MID_SV_ArenaTrain_Kir_m02_01,키로이카,"뭐, 즐거우면 된 거 아냐?",보통
+MID_SV_ArenaTrain_Ism_m03_01,이스마르,상대해 주지.,강함
+MID_SV_ArenaTrain_Kai0_m03_01,카이,"좋아, 덤벼!",강함
+MID_SV_ArenaTrain_Kai1_m03_01,카이,방심하지 않겠어!,강함
+MID_SV_ArenaTrain_Dit_m03_01,디트리히,……죽고 싶은 건가?,강함
+MID_SV_ArenaTrain_Seo_m03_01,세오도라,가르침을 주는 것도 왕의 역할이지.,강함
+MID_SV_ArenaTrain_Led_m03_01,레다,훈련이니까 다쳐도 책임질 필요 없겠지.,강함
+MID_SV_ArenaTrain_Bel_m03_01,베르트랑,훈련이니 조금 거칠어도 괜찮겠지.,강함
+MID_SV_ArenaTrain_Tal_m03_01,타리문,다치면 약값은 내 주지.,강함
+MID_SV_ArenaTrain_Orh_m03_01,오르헬,다치게 하지 않도록……,강함
+MID_SV_ArenaTrain_Anh_m03_01,아나톨리아,낙법으로 몸을 보호하는 걸 잊지 마세요.,강함
+MID_SV_ArenaTrain_Tia0_m03_01,티아라,도전을 마다하진 않지!,강함
+MID_SV_ArenaTrain_Tia1_m03_01,티아라,"좋아, 상대해 볼까!",강함
+MID_SV_ArenaTrain_Pet0_m03_01,피터르,"다, 다치게 하는 일 없도록 조심해야겠어……",강함
+MID_SV_ArenaTrain_Pet1_m03_01,피터르,"좋아, 도전을 받아 줄게.",강함
+MID_SV_ArenaTrain_Hur_m03_01,울턴드,어떤 공격이든 받아 주겠어!,강함
+MID_SV_ArenaTrain_Max_m03_01,맥심,평화를 지키기 위해서라도 열심히 훈련해야겠지.,강함
+MID_SV_ArenaTrain_Jes_m03_01,제스터,크크크…… 갖고 놀아 줄게.,강함
+MID_SV_ArenaTrain_Gol_m03_01,골라이어스,언제든 덤비라고!,강함
+MID_SV_ArenaTrain_Gat_m03_01,게이츠,예의를 갖춰 훈련에 임하도록 하지.,강함
+MID_SV_ArenaTrain_Dan_m03_01,단테,적어도 이야깃거리 정도는 될 만한 훈련이었으면……,강함
+MID_SV_ArenaTrain_Fab_m03_01,파비오,이건 시간 낭비 아닌가요?,강함
+MID_SV_ArenaTrain_Esm_m03_01,에스메랄다,"미리 말해 두는데, 난 힘 조절을 잘 못해.",강함
+MID_SV_ArenaTrain_Mic_m03_01,미카엘라,뭐든 받아 줄 테니까 마음대로 공격해 봐!,강함
+MID_SV_ArenaTrain_Urs_m03_01,우술라,남을 지도하는 데는 익숙해요.,강함
+MID_SV_ArenaTrain_Sim_m03_01,시몬,대충 상대해 줄까.,강함
+MID_SV_ArenaTrain_Lou_m03_01,루루디아,아버지처럼 엄격하게 지도해야지!,강함
+MID_SV_ArenaTrain_Fia_m03_01,피아나,저…… 다치게 하는 일 없도록 조심할게요.,강함
+MID_SV_ArenaTrain_Die_m03_01,디에고,적당히 봐주면서 하지. 와라.,강함
+MID_SV_ArenaTrain_Lor0_m03_01,로레타,"이봐, 다쳐도 몰라.",강함
+MID_SV_ArenaTrain_Lor1_m03_01,로레타,전력으로 덤비지 않으면 다칠지도 모른다고.,강함
+MID_SV_ArenaTrain_Set_m03_01,세테스,언제든 오게. 지도해 주지.,강함
+MID_SV_ArenaTrain_Nin_m03_01,리네,리네가 단련시켜 줄까……,강함
+MID_SV_ArenaTrain_Bon_m03_01,보나파르트,가르치면서 배우는 것도 많지.,강함
+MID_SV_ArenaTrain_Tob_m03_01,토비아스,남을 지도하는 데는 익숙하다고~,강함
+MID_SV_ArenaTrain_Lil_m03_01,릴리안,다쳐도 모른답니다~,강함
+MID_SV_ArenaTrain_Lys_m03_01,라이선더,봐주면서 해야 하나……?,강함
+MID_SV_ArenaTrain_Buc_m03_01,버커니어,넘어질 때 낙법을 하는 걸 잊지 않았길 바라야겠군.,강함
+MID_SV_ArenaTrain_Sci_m03_01,시로코,바람을 잡고 싶다면 있는 힘을 다해야지.,강함
+MID_SV_ArenaTrain_Moo0_m03_01,무우,전력으로 덤벼들어도 문제없어!,강함
+MID_SV_ArenaTrain_Moo1_m03_01,무우,대련하고 싶다면 상대해 줘야겠지!,강함
+MID_SV_ArenaTrain_Oly_m03_01,올림피아,혹시 내가 다치게 하더라도 용서해 주세요.,강함
+MID_SV_ArenaTrain_Naz_m03_01,나타,"이봐, 다쳐도 모른다고.",강함
+MID_SV_ArenaTrain_Sar_m03_01,사란,다쳐도 치료해 줄 수 있으니 괜찮겠지.,강함
+MID_SV_ArenaTrain_Dai_m03_01,대도,봐주면서 할 테니 걱정 마.,강함
+MID_SV_ArenaTrain_Hal_m03_01,하르빈,언제든지 시작할 수 있어!,강함
+MID_SV_ArenaTrain_Guj_m03_01,그자람,"이 ""불사의 그자람""이 상대해 줘야겠지.",강함
+MID_SV_ArenaTrain_Yan_m03_01,양계,"자, 한 수 가르쳐 주지!",강함
+MID_SV_ArenaTrain_Iio_m03_01,이오,"자, 실력을 확인해 볼까.",강함
+MID_SV_ArenaTrain_Pep_m03_01,페페,기개 있는 자여! 오너라!,강함
+MID_SV_ArenaTrain_Noc_m03_01,녹투라,다쳐도 불평하지 마!,강함
+MID_SV_ArenaTrain_Sop_m03_01,소피아,언제든 자신 있어!,강함
+MID_SV_ArenaTrain_Cat_m03_01,카타냐,저와 단련한 것을 모두에게 자랑해도 된다고요.,강함
+MID_SV_ArenaTrain_Ned_m03_01,누디누,이번엔 내가 가르쳐 줘야겠군.,강함
+MID_SV_ArenaTrain_Zac_m03_01,자코네,"자, 어떻게 괴롭혀 줄까?",강함
+MID_SV_ArenaTrain_Maj_m03_01,마지데,어쩔 수 없지. 한 수 가르쳐 줄까.,강함
+MID_SV_ArenaTrain_Ven_m03_01,밴디츠,내 지도를 받을 수 있어서 기쁘겠지?,강함
+MID_SV_ArenaTrain_Ini_m03_01,이니오니,너무 진지해지지 않도록 조심해야지……,강함
+MID_SV_ArenaTrain_Jas_m03_01,자스민,상대가 누구든 봐주지 않아!,강함
+MID_SV_ArenaTrain_Ale_m03_01,알렉산드라,얼마든지 상대해 드릴게요!,강함
+MID_SV_ArenaTrain_Nat_m03_01,네이선,과연 내 기술을 훔칠 수 있을까.,강함
+MID_SV_ArenaTrain_Hri_m03_01,키릭,싸움이 뭔지 가르쳐 줘야겠군.,강함
+MID_SV_ArenaTrain_Tro_m03_01,트로이아,"자, 덤벼 보렴. 한 수 가르쳐 줄게.",강함
+MID_SV_ArenaTrain_Cen_m03_01,센트리온,자신보다 강한 상대와 싸우는 법을 배우도록……,강함
+MID_SV_ArenaTrain_Asw_m03_01,아스완,다치게 하는 일 없도록 조심해야지……,강함
+MID_SV_ArenaTrain_Kou_m03_01,홍화,상대해 보도록 할까.,강함
+MID_SV_ArenaTrain_Nuz_m03_01,누조,봐주는 건 없다. 각오해라.,강함
+MID_SV_ArenaTrain_Kir_m03_01,키로이카,"뭐야, 잔챙이인가. 대충 상대해 줘야겠군.",강함
+MID_SV_ArenaTrain_Anh_Sar_m01_01,사란,훈련 중에 다치면 참지 말고<br>바로 말해야 해. 알았지?,상호
+MID_SV_ArenaTrain_Anh_Sar_m01_02,아나톨리아,사란이야말로 바로 말해 주세요.<br>당신은 제가 지켜야 할 사람이니까요.,상호
+MID_SV_ArenaTrain_Anh_Naz_m01_01,나타,간다! 아나톨리아!<br>절대 봐주지 말라고!,상호
+MID_SV_ArenaTrain_Anh_Naz_m01_02,아나톨리아,"당연하죠, 나타.<br>저는 항상 진심을 다합니다.",상호
+MID_SV_ArenaTrain_Urs_Sim_m01_01,우술라,대충 끝내려는 생각은 하지 마세요.<br>그럼 훈련하는 의미가 없으니까요.,상호
+MID_SV_ArenaTrain_Urs_Sim_m01_02,시몬,그런 생각은 해 본 적도 없어.<br>지배인님 앞에서 일을 대충 할 수는 없잖아.,상호
+MID_SV_ArenaTrain_Hur_Gol_m01_01,골라이어스,"푸하하하하, 오늘의 상대는 누님인가!<br>좋은 훈련이 될 것 같구먼!",상호
+MID_SV_ArenaTrain_Hur_Gol_m01_02,울턴드,"""우살자""에게 그런 말을 듣다니 영광이네.<br>좋아, 간다!",상호
+MID_SV_ArenaTrain_Hur_Cen_m01_01,센트리온,자신뿐만 아니라 소중한 사람도 지킬 수 있도록……<br>봐주는 것 없이 제대로 하겠다.,상호
+MID_SV_ArenaTrain_Hur_Cen_m01_02,울턴드,"그럼 평소와 다름없다는 뜻이잖아요……<br>아뇨, 열심히 할게요!",상호
+MID_SV_ArenaTrain_Esm_Kir_m01_01,에스메랄다,서로를 귀신이라고 생각하고 훈련하자.<br>그러면 두려움을 극복할 수 있을지도 모르잖아!,상호
+MID_SV_ArenaTrain_Esm_Kir_m01_02,키로이카,무슨 소리냐!? 그런 게 가능할 리가 없잖아!<br>망령이라고 생각하는 것만으로도 기절할 것 같다고!,상호
+MID_SV_ArenaTrain_Esm_Lys_m01_01,에스메랄다,그 잘난 얼굴이 일그러질 정도로<br>있는 힘껏 때려 주겠어!,상호
+MID_SV_ArenaTrain_Esm_Lys_m01_02,라이선더,그렇다면 나도<br>혼신의 힘을 다해 상대해 주지!,상호
+MID_SV_ArenaTrain_Orh_Bon_m01_01,보나파르트,상대가 누구든 간에<br>훈련할 때는 봐주지 않는 것이 예의겠지……,상호
+MID_SV_ArenaTrain_Orh_Bon_m01_02,오르헬,"어머, 감사해요. 우후후.<br>저도 전력을 다하겠어요.",상호
+MID_SV_ArenaTrain_Kai0_Esm_m01_01,카이,"훈련에 어울려 줘서 고마워, 누나!<br>이것저것 시험해 보고 싶었거든!",상호
+MID_SV_ArenaTrain_Kai0_Esm_m01_02,에스메랄다,"그럼 시작할까, 카이!<br>처음부터 전력을 다할 테니 각오해!",상호
+MID_SV_ArenaTrain_Kai0_Tia0_m01_01,티아라,"카이, 내가 얼마나 강해졌는지<br>보여 줄게!",상호
+MID_SV_ArenaTrain_Kai0_Tia0_m01_02,카이,그거 기대되는걸!<br>하지만 나도 질 생각은 없어!,상호
+MID_SV_ArenaTrain_Kai0_Nin_m01_01,카이,리네씨가 상대라면 진심을 다해야겠네!<br>아버지에게 전수받은 기술을 보여 주겠어.,상호
+MID_SV_ArenaTrain_Kai0_Nin_m01_02,리네,"""폭풍""에게 전수받은 기술……<br>리네도 긴장을 늦출 수 없겠네.",상호
+MID_SV_ArenaTrain_Jes_Noc_m01_01,제스터,"히힛, 빨리 널 난도질하고 싶은걸……<br>유쾌한 비명을 들려달라고.",상호
+MID_SV_ArenaTrain_Jes_Noc_m01_02,녹투라,그런 말 할 시간에 덤비는 게 어때?<br>안 오면 내가 간다!,상호
+MID_SV_ArenaTrain_Sci_Moo1_m01_01,시로코,"아아, 투기장에 핀 단아한 꽃이여.<br>이 바람에 나부끼지 않겠는가……?",상호
+MID_SV_ArenaTrain_Sci_Moo1_m01_02,무우,"자, 자, 지금은 대련에 집중해.<br>작업을 걸면서도 빈틈을 안 보이는 건 대단하지만……",상호
+MID_SV_ArenaTrain_Seo_Tia1_m01_01,티아라,훈련이기는 하지만……<br>제가 가진 지략을 총동원해서 싸우겠어요!,상호
+MID_SV_ArenaTrain_Seo_Tia1_m01_02,세오도라,"하하하, 좋은 마음가짐이군!<br>그럼 즐겨 보도록 할까.",상호
+MID_SV_ArenaTrain_Seo_Tob_m01_01,세오도라,말하지 않아도 알겠지만 봐줄 필요는 없다.<br>전력을 다해 싸우지 않으면 기분 전환도 안 되니까.,상호
+MID_SV_ArenaTrain_Seo_Tob_m01_02,토비아스,크하하하! 옛날의 그 쪼그맣던 아기씨가<br>이제는 이런 말을 할 수 있게 됐구먼~!,상호
+MID_SV_ArenaTrain_Seo_Bon_m01_01,보나파르트,이렇게 마주 보고 있으니 어린 시절의 폐하와<br>함께 보냈던 날들이 불현듯 떠오르는군요.,상호
+MID_SV_ArenaTrain_Seo_Bon_m01_02,세오도라,넌 별로 달라진 게 없지만 말이지.<br>앞으로도 나를 믿고 따라와라.,상호
+MID_SV_ArenaTrain_Set_Dai_m01_01,세테스,"시작하게, 대도.<br>좀처럼 없는 기회이니 자네의 전력을 보고 싶군.",상호
+MID_SV_ArenaTrain_Set_Dai_m01_02,대도,그렇게 기대하니 어쩔 수 없네!<br>봐주지 않을 테니까 후회하지 마!,상호
+MID_SV_ArenaTrain_Tal_Mic_m01_01,타리문,"""철혈의 미카엘라""가 상대인가.<br>재미있는 훈련을 기대해도 되겠지?",상호
+MID_SV_ArenaTrain_Tal_Mic_m01_02,미카엘라,"하하하, 물론이지!<br>전력을 다할 테니 걱정 말라고!",상호
+MID_SV_ArenaTrain_Tal_Lou_m01_01,루루디아,가진 힘을 다 쏟아붓겠어요!<br>타리문씨도 봐주지 마세요!,상호
+MID_SV_ArenaTrain_Tal_Lou_m01_02,타리문,"그것도 좋지만, 둘 다 해야 할 일이 있으니<br>다치지 않을 정도로 하자고.",상호
+MID_SV_ArenaTrain_Tia0_Ven_m01_01,밴디츠,남의 꿈을 짓밟아 놓고 미안해하는 기색도 없는 거냐!<br>이래서 요즘 젊은것들은 안 되는 거다. 나 때는……,상호
+MID_SV_ArenaTrain_Tia0_Ven_m01_02,티아라,……길어질 것 같네.<br>나중에 들을 테니 지금은 훈련하면 안 될까요?,상호
+MID_SV_ArenaTrain_Dit_Fab_m01_01,디트리히,네 힘은…… 재미있다……<br>여기서 모든 힘을 보여 봐라……!,상호
+MID_SV_ArenaTrain_Dit_Fab_m01_02,파비오,당신을 만족시킬 수 있을지는 모르겠지만……<br>그렇게 기대해 주시니 기분이 좋군요.,상호
+MID_SV_ArenaTrain_Dit_Mic_m01_01,미카엘라,훈련이니까 죽일 듯이 달려들지는 마.<br>알겠지?,상호
+MID_SV_ArenaTrain_Dit_Mic_m01_02,디트리히,"……?<br>뭐, 됐다…… 목을 노리도록 할까……",상호
+MID_SV_ArenaTrain_Die_Nin_m01_01,디에고,실력을 겨룰 수 있는 좋은 기회군.<br>……안 오면 내가 간다.,상호
+MID_SV_ArenaTrain_Die_Nin_m01_02,리네,"정령들이 웅성거리고 있어……<br>진심으로 덤빌 생각이구나, 디에고.",상호
+MID_SV_ArenaTrain_Tob_Lil_m01_01,릴리안,"저 같은 일개 병사를 훈련시켜 주시다니<br>정말 ""살라미스의 맹장""은 상냥하시네요~",상호
+MID_SV_ArenaTrain_Tob_Lil_m01_02,토비아스,크하하하!<br>그렇게 칭찬해 주니 조금 쑥스럽구먼!,상호
+MID_SV_ArenaTrain_Naz_Dai_m01_01,나타,대도! 우리 둘 중 누가 더 강한지<br>오늘이야말로 결판을 내자!,상호
+MID_SV_ArenaTrain_Naz_Dai_m01_02,대도,바라던 바야!<br>그 건방진 입을 다물게 해 주겠어!,상호
+MID_SV_ArenaTrain_Nat_Iio_m01_01,이오,이렇게 마주 보고 있으니 아라고에서 훈련하던 시절이<br>떠오르는군요. 그때처럼 또 한 수 부탁드립니다.,상호
+MID_SV_ArenaTrain_Nat_Iio_m01_02,네이선,그 이상에 불타는 눈빛은 여전하군.<br>좋다. 실력이 얼마나 늘었는지 확인해 주지!,상호
+MID_SV_ArenaTrain_Buc_Sci_m01_01,시로코,"코엔디어가의 자랑인 ""귀웅""님이 상대인가……<br>너무 쉽게 쓰러지지는 말라고.",상호
+MID_SV_ArenaTrain_Buc_Sci_m01_02,버커니어,"제법 허세를 부리는군, ""은우박"".<br>그렇다면 기대 이상의 것을 보여 주지.",상호
+MID_SV_ArenaTrain_Pet0_Sop_m01_01,소피아,"이따가 같이 밥 먹자, 우리 피터르.<br>훈련하다 보면 배고파지잖아.",상호
+MID_SV_ArenaTrain_Pet0_Sop_m01_02,피터르,"응! 좋아!<br>나, 열심히 할게!",상호
+MID_SV_ArenaTrain_Pet1_Nin_m01_01,피터르,역시 리네씨는 빈틈이 없네……<br>신중하게 가야겠어……!,상호
+MID_SV_ArenaTrain_Pet1_Nin_m01_02,리네,피터르도 실력이 많이 늘었네.<br>리네도 전력을 다하겠어.,상호
+MID_SV_ArenaTrain_Fab_Mys_m01_01,파비오,당신이 있어서 다행이에요. 저와 동등한 관점과<br>역량을 가진 자는 당신 외에 아무도 없으니까요.,상호
+MID_SV_ArenaTrain_Fab_Mys_m01_02,ミュソン,칭찬으로 받아들이겠다……<br>그런데 날 이용해 먹으려는 건 아니겠지?,상호
+MID_SV_ArenaTrain_Fia_Lys_m01_01,라이선더,만약 내가 다치게 하면<br>책임지고 치료해 주지.,상호
+MID_SV_ArenaTrain_Fia_Lys_m01_02,피아나,"가, 감사합니다……<br>그럼 당신의 상처는 제가 치료해 드릴게요.",상호
+MID_SV_ArenaTrain_Bel_Hri_m01_01,키릭,"""투기장의 백발귀""가 상대라니 황송하군.<br>살살 부탁하지.",상호
+MID_SV_ArenaTrain_Bel_Hri_m01_02,베르트랑,"훗, 마음에도 없는 소리를…… 나야말로<br>""흑표""에게 잡아먹히지 않도록 전력을 다해야겠군.",상호
+MID_SV_ArenaTrain_Bel_Naz_m01_01,나타,봐주는 것 없이 제대로 해 줘!<br>안 그러면 강해질 수 없다고!,상호
+MID_SV_ArenaTrain_Bel_Naz_m01_02,베르트랑,물론이지. 나도 강해져야 한다.<br>그러니 너도 날 때려눕힐 각오로 와라!,상호
+MID_SV_ArenaTrain_Bon_Lil_m01_01,릴리안,보나파르트씨를 쓰러뜨리면<br>포상을 받을 수 있나요~?,상호
+MID_SV_ArenaTrain_Bon_Lil_m01_02,보나파르트,"허허, 대단한 자신감이다만……<br>그런 말은 날 이기고 나서 하도록!",상호
+MID_SV_ArenaTrain_Mic_Guj_m01_01,그자람,아무래도 내 공적이 과소평가되는 것 같아서 말이야.<br>여기서 널 쓰러뜨려서 새로운 무용담을 만들어 볼까!,상호
+MID_SV_ArenaTrain_Mic_Guj_m01_02,미카엘라,은퇴했던 나를 높이 평가해 주는 건 기쁜데<br>이야깃거리가 될 생각은 없다고!,상호
+MID_SV_ArenaTrain_Mic_Sim_m01_01,미카엘라,"자, 전력으로 덤벼!<br>이 스승이 제자가 얼마나 성장했는지 확인해 줄게!",상호
+MID_SV_ArenaTrain_Mic_Sim_m01_02,시몬,"어쩔 수 없지, 만족할 때까지 어울려 줄까.<br>싫다고 하면 오히려 더 귀찮아지니 말이야.",상호
+MID_SV_ArenaTrain_Moo0_Oly_m01_01,무우,"올림피아씨, 간다!<br>내 진짜 실력을 보여 주겠어!",상호
+MID_SV_ArenaTrain_Moo0_Oly_m01_02,올림피아,"네, 오세요!<br>""카엘루스의 푸른 장미""가 상대해 드리죠!",상호
+MID_SV_ArenaTrain_Lil_Ned_m01_01,릴리안,누디누 언니가 상대라면 든든하지~<br>그럼 진심으로 갈게~!,상호
+MID_SV_ArenaTrain_Lil_Ned_m01_02,누디누,"좋은 기개다, 릴리안.<br>나도 진지하게 임하도록 하지.",상호
+MID_SV_ArenaTrain_Led_Sci_m01_01,시로코,"아아, 칼라님께도 인정받은 아름다운 장미를……<br>내 손으로 꺾어야 한다니 마음이 편치 않군.",상호
+MID_SV_ArenaTrain_Led_Sci_m01_02,레다,어디 한번 해 봐.<br>내 가시는 엄청 아프다고.,상호
+MID_SV_ArenaTrain_Led_Die_m01_01,레다,당신과 훈련할 수 있어서 기뻐.<br>당신의 움직임을 보면 공부가 많이 되거든.,상호
+MID_SV_ArenaTrain_Led_Die_m01_02,디에고,나도 너에게 배울 점이 많다.<br>유익한 훈련이 되겠군.,상호
+MID_SV_ArenaTrain_Ism_m04_01,이스마르,이 힘으로 세상을 밝히자.,대성공
+MID_SV_ArenaTrain_Kai0_m04_01,카이,이 기세로 계속 힘내자!,대성공
+MID_SV_ArenaTrain_Kai1_m04_01,카이,단련의 성과가 느껴져!,대성공
+MID_SV_ArenaTrain_Dit_m04_01,디트리히,새로운 경지에 더 가까워졌나……,대성공
+MID_SV_ArenaTrain_Seo_m04_01,세오도라,아직 더 강해질 수 있겠군.,대성공
+MID_SV_ArenaTrain_Led_m04_01,레다,숙원에 한 발짝 더 가까워졌어.,대성공
+MID_SV_ArenaTrain_Bel_m04_01,베르트랑,비약적인 성장을 이루긴 했지만 아직 부족하다.,대성공
+MID_SV_ArenaTrain_Tal_m04_01,타리문,더욱더 강해졌군!,대성공
+MID_SV_ArenaTrain_Orh_m04_01,오르헬,모두를 더 안전하게 지킬 수 있겠어.,대성공
+MID_SV_ArenaTrain_Anh_m04_01,아나톨리아,사람들을 이끌 만한 자격을 갖춰 가고 있는 걸까요.,대성공
+MID_SV_ArenaTrain_Tia0_m04_01,티아라,더 열심히 해야지!,대성공
+MID_SV_ArenaTrain_Tia1_m04_01,티아라,계속 성장해 가겠어!,대성공
+MID_SV_ArenaTrain_Pet0_m04_01,피터르,"좋아, 계속 이대로만 가면……!",대성공
+MID_SV_ArenaTrain_Pet1_m04_01,피터르,계속해서 실력을 늘려 가겠어!,대성공
+MID_SV_ArenaTrain_Hur_m04_01,울턴드,더 강해진 것 같아!,대성공
+MID_SV_ArenaTrain_Max_m04_01,맥심,이상적인 힘에 더 가까워졌어!,대성공
+MID_SV_ArenaTrain_Jes_m04_01,제스터,내가 바로 주인공이야!,대성공
+MID_SV_ArenaTrain_Gol_m04_01,골라이어스,지금이라면 이 주먹으로 땅도 쪼갤 수 있겠는데!,대성공
+MID_SV_ArenaTrain_Gat_m04_01,게이츠,실력이 더 향상됐군.,대성공
+MID_SV_ArenaTrain_Dan_m04_01,단테,이제 어디로든 취재하러 갈 수 있을 것 같다!,대성공
+MID_SV_ArenaTrain_Fab_m04_01,파비오,더 강인해졌네요.,대성공
+MID_SV_ArenaTrain_Esm_m04_01,에스메랄다,마치 대어를 잡은 듯한 기분이야!,대성공
+MID_SV_ArenaTrain_Mic_m04_01,미카엘라,이 정도로 단련했으니 무슨 일이 있어도 괜찮겠지!,대성공
+MID_SV_ArenaTrain_Urs_m04_01,우술라,더 강해졌네요.,대성공
+MID_SV_ArenaTrain_Sim_m04_01,시몬,실력이 더 늘었군.,대성공
+MID_SV_ArenaTrain_Lou_m04_01,루루디아,대모험을 떠날 수 있을 만큼 강해진 것 같아!,대성공
+MID_SV_ArenaTrain_Fia_m04_01,피아나,이 힘을 활용하면 더 많은 도움이 될 수 있겠어요.,대성공
+MID_SV_ArenaTrain_Die_m04_01,디에고,어떤 위협으로부터도 지켜 내겠다.,대성공
+MID_SV_ArenaTrain_Lor0_m04_01,로레타,어디서든 살아남을 수 있을 만큼 강해지겠어!,대성공
+MID_SV_ArenaTrain_Lor1_m04_01,로레타,만족스러운 움직임이었어!,대성공
+MID_SV_ArenaTrain_Set_m04_01,세테스,부단한 노력의 성과군.,대성공
+MID_SV_ArenaTrain_Nin_m04_01,리네,힘이 더 강해진 것 같아.,대성공
+MID_SV_ArenaTrain_Bon_m04_01,보나파르트,"허허, 더 강해진 것 같군.",대성공
+MID_SV_ArenaTrain_Tob_m04_01,토비아스,또 강해진 것 같구먼~!,대성공
+MID_SV_ArenaTrain_Lil_m04_01,릴리안,더 강해질 거라구~,대성공
+MID_SV_ArenaTrain_Lys_m04_01,라이선더,힘이 더 강해진 것 같군!,대성공
+MID_SV_ArenaTrain_Buc_m04_01,버커니어,지금이 전성기라고 해도 될 정도군.,대성공
+MID_SV_ArenaTrain_Sci_m04_01,시로코,폭풍도 일으킬 수 있을 것 같은 힘이 생겼군.,대성공
+MID_SV_ArenaTrain_Moo0_m04_01,무우,"좋아, 이대로 계속 성장해 나가자!",대성공
+MID_SV_ArenaTrain_Moo1_m04_01,무우,더 강해질 거야!,대성공
+MID_SV_ArenaTrain_Oly_m04_01,올림피아,이 기세를 이어 커다란 꽃을 피워 내겠어요!,대성공
+MID_SV_ArenaTrain_Naz_m04_01,나타,누구보다도 강해져야 해!,대성공
+MID_SV_ArenaTrain_Sar_m04_01,사란,지킬 수 있을 정도로 강해져야 해.,대성공
+MID_SV_ArenaTrain_Dai_m04_01,대도,어떠냐! 난 최강이라고!,대성공
+MID_SV_ArenaTrain_Hal_m04_01,하르빈,"더 강해진 것 같네, 잘 모르겠지만!",대성공
+MID_SV_ArenaTrain_Guj_m04_01,그자람,실제 전장에 비하면 아무것도 아니군.,대성공
+MID_SV_ArenaTrain_Yan_m04_01,양계,뭔가 감을 잡은 것 같군!,대성공
+MID_SV_ArenaTrain_Iio_m04_01,이오,이상적인 기사라는 목표에 한 걸음 더 가까워졌군.,대성공
+MID_SV_ArenaTrain_Pep_m04_01,페페,왕의 그릇이 더 커졌구나!,대성공
+MID_SV_ArenaTrain_Noc_m04_01,녹투라,힘이라면 지지 않아!,대성공
+MID_SV_ArenaTrain_Sop_m04_01,소피아,실력이 확 는 것 같아!,대성공
+MID_SV_ArenaTrain_Cat_m04_01,카타냐,아직 만나지 못한 미래의 주군! 전 최고의 기사랍니다.,대성공
+MID_SV_ArenaTrain_Ned_m04_01,누디누,의미 있는 훈련이었다.,대성공
+MID_SV_ArenaTrain_Zac_m04_01,자코네,봤냐! 이 몸을 당해 낼 녀석은 없다고!,대성공
+MID_SV_ArenaTrain_Maj_m04_01,마지데,다른 녀석들과는 차원이 다르다고!,대성공
+MID_SV_ArenaTrain_Ven_m04_01,밴디츠,완벽! 강대! 위대! 그게 바로 나다!,대성공
+MID_SV_ArenaTrain_Ini_m04_01,이니오니,더 강해진 느낌이 들어……,대성공
+MID_SV_ArenaTrain_Jas_m04_01,자스민,뭔가 감을 잡은 것 같은데!,대성공
+MID_SV_ArenaTrain_Ale_m04_01,알렉산드라,무예를 갈고닦아 온 결과예요!,대성공
+MID_SV_ArenaTrain_Nat_m04_01,네이선,"""의열의 맹우""다운 힘을 보여 줬군.",대성공
+MID_SV_ArenaTrain_Hri_m04_01,키릭,"이게 바로 ""선풍의 흑표""의 진면목이다.",대성공
+MID_SV_ArenaTrain_Tro_m04_01,트로이아,지금도 남들 못지않아!,대성공
+MID_SV_ArenaTrain_Cen_m04_01,센트리온,"""강옥""은 아직 늙지 않았다.",대성공
+MID_SV_ArenaTrain_Asw_m04_01,아스완,자만하지 않고 열심히 연습해야지.,대성공
+MID_SV_ArenaTrain_Kou_m04_01,홍화,나는 더 강해져야 한다……,대성공
+MID_SV_ArenaTrain_Nuz_m04_01,누조,무력에 한계란 없다.,대성공
+MID_SV_ArenaTrain_Kir_m04_01,키로이카,다난해의 패권을 다시 잡을 수 있겠군!,대성공
+MID_SV_ArenaTrain_Ism_m05_01,이스마르,경험은 성장의 밑거름이 되지.,성공
+MID_SV_ArenaTrain_Kai0_m05_01,카이,즐거운 훈련이었어.,성공
+MID_SV_ArenaTrain_Kai1_m05_01,카이,기분 좋게 땀을 흘렸네.,성공
+MID_SV_ArenaTrain_Dit_m05_01,디트리히,시시하군……,성공
+MID_SV_ArenaTrain_Seo_m05_01,세오도라,좋은 경험이 됐다.,성공
+MID_SV_ArenaTrain_Led_m05_01,레다,나쁘지 않은 훈련이었어.,성공
+MID_SV_ArenaTrain_Bel_m05_01,베르트랑,더욱 강해져야 한다.,성공
+MID_SV_ArenaTrain_Tal_m05_01,타리문,"뭐, 어느 정도 도움이 됐나.",성공
+MID_SV_ArenaTrain_Orh_m05_01,오르헬,힘 조절 하는 방법을 알 것 같아.,성공
+MID_SV_ArenaTrain_Anh_m05_01,아나톨리아,확실히 강해졌군요.,성공
+MID_SV_ArenaTrain_Tia0_m05_01,티아라,감 잡은 것 같아.,성공
+MID_SV_ArenaTrain_Tia1_m05_01,티아라,경험이 지식을 따라잡았어.,성공
+MID_SV_ArenaTrain_Pet0_m05_01,피터르,조금은 강해졌을까?,성공
+MID_SV_ArenaTrain_Pet1_m05_01,피터르,이 감각을 잊지 말아야겠어.,성공
+MID_SV_ArenaTrain_Hur_m05_01,울턴드,덕분에 좋은 훈련이 됐네.,성공
+MID_SV_ArenaTrain_Max_m05_01,맥심,꾸준히 실력을 늘려 가자.,성공
+MID_SV_ArenaTrain_Jes_m05_01,제스터,"히히히, 즐겁고 신나는 춤이었어!",성공
+MID_SV_ArenaTrain_Gol_m05_01,골라이어스,재미있는 훈련이었다!,성공
+MID_SV_ArenaTrain_Gat_m05_01,게이츠,무사 수행에 끝이란 없다.,성공
+MID_SV_ArenaTrain_Dan_m05_01,단테,꾸준히 강해지고 있군.,성공
+MID_SV_ArenaTrain_Fab_m05_01,파비오,이 정도면 불만 없습니다.,성공
+MID_SV_ArenaTrain_Esm_m05_01,에스메랄다,해수를 상대하는 것보다 쉬웠어.,성공
+MID_SV_ArenaTrain_Mic_m05_01,미카엘라,점점 힘이 붙고 있어.,성공
+MID_SV_ArenaTrain_Urs_m05_01,우술라,유익한 훈련이었어요.,성공
+MID_SV_ArenaTrain_Sim_m05_01,시몬,꽤 괜찮았던 것 같은데.,성공
+MID_SV_ArenaTrain_Lou_m05_01,루루디아,루루는 더 강해질 거니까!,성공
+MID_SV_ArenaTrain_Fia_m05_01,피아나,조금은 강해진 것 같아요……,성공
+MID_SV_ArenaTrain_Die_m05_01,디에고,더 강해져야 한다.,성공
+MID_SV_ArenaTrain_Lor0_m05_01,로레타,꽤 강해진 것 같은데?,성공
+MID_SV_ArenaTrain_Lor1_m05_01,로레타,오늘은 이 정도인가.,성공
+MID_SV_ArenaTrain_Set_m05_01,세테스,계속 힘을 키워 나가야겠군.,성공
+MID_SV_ArenaTrain_Nin_m05_01,리네,나쁘지 않았어.,성공
+MID_SV_ArenaTrain_Bon_m05_01,보나파르트,좋은 경험은 많은 도움이 되지.,성공
+MID_SV_ArenaTrain_Tob_m05_01,토비아스,이대로 계속해도 괜찮아~,성공
+MID_SV_ArenaTrain_Lil_m05_01,릴리안,감은 잡은 것 같아~,성공
+MID_SV_ArenaTrain_Lys_m05_01,라이선더,대련을 더 해 보고 싶군.,성공
+MID_SV_ArenaTrain_Buc_m05_01,버커니어,뒤처질 수는 없지.,성공
+MID_SV_ArenaTrain_Sci_m05_01,시로코,훈련 중에도 바람의 흐름을 잘 읽은 것 같군.,성공
+MID_SV_ArenaTrain_Moo0_m05_01,무우,더 강해질 수 있을 것 같아.,성공
+MID_SV_ArenaTrain_Moo1_m05_01,무우,이 기세를 몰아 더 열심히 해야지.,성공
+MID_SV_ArenaTrain_Oly_m05_01,올림피아,좋은 훈련이었어요.,성공
+MID_SV_ArenaTrain_Naz_m05_01,나타,아직 끝이 아니라고!,성공
+MID_SV_ArenaTrain_Sar_m05_01,사란,조금은 강해진 것 같아.,성공
+MID_SV_ArenaTrain_Dai_m05_01,대도,이 정도는 나한테 식은 죽 먹기지.,성공
+MID_SV_ArenaTrain_Hal_m05_01,하르빈,이 감각을 잊지 말아야지.,성공
+MID_SV_ArenaTrain_Guj_m05_01,그자람,아직 성장할 여지가 있는 것 같군.,성공
+MID_SV_ArenaTrain_Yan_m05_01,양계,이것 또한 수행의 일환이지.,성공
+MID_SV_ArenaTrain_Iio_m05_01,이오,훈련은 배신하지 않는다.,성공
+MID_SV_ArenaTrain_Pep_m05_01,페페,꾸준히 힘을 키워 나가야겠군.,성공
+MID_SV_ArenaTrain_Noc_m05_01,녹투라,좋은 훈련이 됐어!,성공
+MID_SV_ArenaTrain_Sop_m05_01,소피아,도움이 되는 훈련이었어.,성공
+MID_SV_ArenaTrain_Cat_m05_01,카타냐,더 높은 경지에 이르렀어.,성공
+MID_SV_ArenaTrain_Ned_m05_01,누디누,더 높은 경지에 도달해야 한다.,성공
+MID_SV_ArenaTrain_Zac_m05_01,자코네,훈련에 대한 보수는 없나?,성공
+MID_SV_ArenaTrain_Maj_m05_01,마지데,"뭐, 몸풀기는 됐군.",성공
+MID_SV_ArenaTrain_Ven_m05_01,밴디츠,점점 더 멋진 장군이 되어 가는군.,성공
+MID_SV_ArenaTrain_Ini_m05_01,이니오니,괜찮은 결과인 것 같아……,성공
+MID_SV_ArenaTrain_Jas_m05_01,자스민,좋은 경험이 됐어.,성공
+MID_SV_ArenaTrain_Ale_m05_01,알렉산드라,좋은 수련이 됐어요.,성공
+MID_SV_ArenaTrain_Nat_m05_01,네이선,땀을 흘린 만큼 피를 덜 흘리는 법이다.,성공
+MID_SV_ArenaTrain_Hri_m05_01,키릭,"흠, 이 감각은 도움이 되겠군.",성공
+MID_SV_ArenaTrain_Tro_m05_01,트로이아,늙은이에게는 딱 좋은 몸풀기였어.,성공
+MID_SV_ArenaTrain_Cen_m05_01,센트리온,단련에 끝이란 없다.,성공
+MID_SV_ArenaTrain_Asw_m05_01,아스완,요령은 터득한 것 같아.,성공
+MID_SV_ArenaTrain_Kou_m05_01,홍화,이 정도로 만족할 수는 없다.,성공
+MID_SV_ArenaTrain_Nuz_m05_01,누조,영혼이 더 단련됐나……,성공
+MID_SV_ArenaTrain_Kir_m05_01,키로이카,강해진다는 건 기분 좋은 일이군.,성공
+MID_SV_ArenaTrain_Ism_m06_01,이스마르,이런 데서 멈춰 있을 수는……,실패
+MID_SV_ArenaTrain_Kai0_m06_01,카이,아야야…… 몸 상태가 별로였나 보네……,실패
+MID_SV_ArenaTrain_Kai1_m06_01,카이,움직임이 안 좋았어……,실패
+MID_SV_ArenaTrain_Dit_m06_01,디트리히,………………어째서지?,실패
+MID_SV_ArenaTrain_Seo_m06_01,세오도라,한심한 훈련이 되어 버렸군……,실패
+MID_SV_ArenaTrain_Led_m06_01,레다,이런 데서 멈춰 있을 수는 없는데……!,실패
+MID_SV_ArenaTrain_Bel_m06_01,베르트랑,이래서는 희망이 멀어질 뿐이다……,실패
+MID_SV_ArenaTrain_Tal_m06_01,타리문,잠이 부족해서 몸 상태가 별로였나……,실패
+MID_SV_ArenaTrain_Orh_m06_01,오르헬,몸 상태가 안 좋았나……,실패
+MID_SV_ArenaTrain_Anh_m06_01,아나톨리아,자신의 한심함에 화가 납니다……,실패
+MID_SV_ArenaTrain_Tia0_m06_01,티아라,몸이 따라가지 못했어……,실패
+MID_SV_ArenaTrain_Tia1_m06_01,티아라,본실력이 안 나오네……,실패
+MID_SV_ArenaTrain_Pet0_m06_01,피터르,"헉, 헉…… 사, 살려 줘……",실패
+MID_SV_ArenaTrain_Pet1_m06_01,피터르,몸의 축이 흔들렸어……,실패
+MID_SV_ArenaTrain_Hur_m06_01,울턴드,평소 실력이 전혀 안 나올 줄이야……,실패
+MID_SV_ArenaTrain_Max_m06_01,맥심,……돌아가서 반성해야지.,실패
+MID_SV_ArenaTrain_Jes_m06_01,제스터,칫! 훈련하고 싶은 마음이 없었을 뿐이야!,실패
+MID_SV_ArenaTrain_Gol_m06_01,골라이어스,"어, 어째서!?",실패
+MID_SV_ArenaTrain_Gat_m06_01,게이츠,마음이 흐트러졌나……,실패
+MID_SV_ArenaTrain_Dan_m06_01,단테,밤을 새우긴 했어도 괜찮을 줄 알았는데……!,실패
+MID_SV_ArenaTrain_Fab_m06_01,파비오,"칫, 너무 대충 했군요……",실패
+MID_SV_ArenaTrain_Esm_m06_01,에스메랄다,배도 뒤집힐 때가 있지.,실패
+MID_SV_ArenaTrain_Mic_m06_01,미카엘라,뭐가 문제였을까……,실패
+MID_SV_ArenaTrain_Urs_m06_01,우술라,원인이 뭔지 생각해 봐야겠네요.,실패
+MID_SV_ArenaTrain_Sim_m06_01,시몬,"""전투의 장인""의 체면이 말이 아니군……",실패
+MID_SV_ArenaTrain_Lou_m06_01,루루디아,실력에는 자신 있었는데……,실패
+MID_SV_ArenaTrain_Fia_m06_01,피아나,소중한 기회였는데 제대로 하지 못했어요……,실패
+MID_SV_ArenaTrain_Die_m06_01,디에고,"젠장, 한심하군……!",실패
+MID_SV_ArenaTrain_Lor0_m06_01,로레타,젠장~ 안 풀리네~!,실패
+MID_SV_ArenaTrain_Lor1_m06_01,로레타,"젠장, 뭔가 상태가 안 좋은데……",실패
+MID_SV_ArenaTrain_Set_m06_01,세테스,굴욕적인 결과군……!,실패
+MID_SV_ArenaTrain_Nin_m06_01,리네,힘을 제대로 발휘하지 못한 것 같아.,실패
+MID_SV_ArenaTrain_Bon_m06_01,보나파르트,별로 얻은 것 없이 끝날 줄이야……,실패
+MID_SV_ArenaTrain_Tob_m06_01,토비아스,"으음, 이상하게도 상태가 안 좋구먼~",실패
+MID_SV_ArenaTrain_Lil_m06_01,릴리안,이대로는 안 돼……,실패
+MID_SV_ArenaTrain_Lys_m06_01,라이선더,다음엔 본실력을 발휘할 수 있도록 하자……,실패
+MID_SV_ArenaTrain_Buc_m06_01,버커니어,나도 늙었나……?,실패
+MID_SV_ArenaTrain_Sci_m06_01,시로코,한심하군. 이래서는 그분을 지킬 수 없다……,실패
+MID_SV_ArenaTrain_Moo0_m06_01,무우,역시 난 미숙해……,실패
+MID_SV_ArenaTrain_Moo1_m06_01,무우,움직임이 둔했어……,실패
+MID_SV_ArenaTrain_Oly_m06_01,올림피아,더 노력하겠어요……!,실패
+MID_SV_ArenaTrain_Naz_m06_01,나타,젠장! 역시 난……,실패
+MID_SV_ArenaTrain_Sar_m06_01,사란,나 자신이 한심해……,실패
+MID_SV_ArenaTrain_Dai_m06_01,대도,몸 상태가 좀 안 좋았던 것뿐이야.,실패
+MID_SV_ArenaTrain_Hal_m06_01,하르빈,"후, 훈련을 더 해야겠네……!",실패
+MID_SV_ArenaTrain_Guj_m06_01,그자람,음…… 술기운이 좀 남아 있었나?,실패
+MID_SV_ArenaTrain_Yan_m06_01,양계,……아무 의미도 없는 고행이군.,실패
+MID_SV_ArenaTrain_Iio_m06_01,이오,아직 배울 게 많군……,실패
+MID_SV_ArenaTrain_Pep_m06_01,페페,추태를 보이고 말았군……,실패
+MID_SV_ArenaTrain_Noc_m06_01,녹투라,정신을 더 바짝 차리지 않으면 안 되겠네……,실패
+MID_SV_ArenaTrain_Sop_m06_01,소피아,소중한 기회였는데…… 한심하네……,실패
+MID_SV_ArenaTrain_Cat_m06_01,카타냐,……성공할 때까지 계속하면 실패가 아니야.,실패
+MID_SV_ArenaTrain_Ned_m06_01,누디누,제자리걸음이라니 한심하군……,실패
+MID_SV_ArenaTrain_Zac_m06_01,자코네,"다칠 뻔했잖아, 젠장!",실패
+MID_SV_ArenaTrain_Maj_m06_01,마지데,너무 봐줬군.,실패
+MID_SV_ArenaTrain_Ven_m06_01,밴디츠,나이 탓인지 무릎이 안 좋아서…… 아이고……,실패
+MID_SV_ArenaTrain_Ini_m06_01,이니오니,자신의 부족함에 화가 나……!,실패
+MID_SV_ArenaTrain_Jas_m06_01,자스민,"칫, 안 풀리네……",실패
+MID_SV_ArenaTrain_Ale_m06_01,알렉산드라,더 집중해야겠네……,실패
+MID_SV_ArenaTrain_Nat_m06_01,네이선,자신의 한심함에 화가 난다……!,실패
+MID_SV_ArenaTrain_Hri_m06_01,키릭,잡념에 빠져 있었나.,실패
+MID_SV_ArenaTrain_Tro_m06_01,트로이아,나도 늙었네……,실패
+MID_SV_ArenaTrain_Cen_m06_01,센트리온,내 부족함이 드러났나……,실패
+MID_SV_ArenaTrain_Asw_m06_01,아스완,이 정도로 포기할 수는 없어……!,실패
+MID_SV_ArenaTrain_Kou_m06_01,홍화,멈춰 있을 시간은 없는데……!,실패
+MID_SV_ArenaTrain_Nuz_m06_01,누조,이래서는 나 자신도 지킬 수 없다……,실패
+MID_SV_ArenaTrain_Kir_m06_01,키로이카,훈련 도중에 의욕이 사라져서 그래.,실패

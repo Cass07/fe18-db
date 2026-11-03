@@ -1,0 +1,405 @@
+label,name,text,type
+MID_SV_Thermae_Ism_m01_01,이스마르,지금만은…… 안식을.,입장
+MID_SV_Thermae_Ism_m01_02,이스마르,하늘에라도 오를 것 같은 기분이군.,입장
+MID_SV_Thermae_Ism_m01_03,이스마르,기분이 진정되는군.,입장
+MID_SV_Thermae_Kai0_m01_01,카이,후우~ 몸이 녹는 것 같아……,입장
+MID_SV_Thermae_Kai0_m01_02,카이,왠지 졸음이 오네……,입장
+MID_SV_Thermae_Kai0_m01_03,카이,여기 있는 것만으로도 진정돼.,입장
+MID_SV_Thermae_Kai1_m01_01,카이,굳은 몸이 풀려……,입장
+MID_SV_Thermae_Kai1_m01_02,카이,"후우, 마음이 편해지네~",입장
+MID_SV_Thermae_Kai1_m01_03,카이,느긋하게 지낼 수 있을 것 같네.,입장
+MID_SV_Thermae_Dit_m01_01,디트리히,튄 피가 잘 닦이는군……,입장
+MID_SV_Thermae_Dit_m01_02,디트리히,목욕은 마음을 진정시키는군……,입장
+MID_SV_Thermae_Dit_m01_03,디트리히,명상하기에 좋군.<br>………………,입장
+MID_SV_Thermae_Seo_m01_01,세오도라,한숨 돌릴까.,입장
+MID_SV_Thermae_Seo_m01_02,세오도라,몸 안쪽부터 따뜻해지는군.,입장
+MID_SV_Thermae_Seo_m01_03,세오도라,큰일을 하려면 때로는 쉬어야지.,입장
+MID_SV_Thermae_Led_m01_01,레다,수증기 덕분에 목이 촉촉해지네……,입장
+MID_SV_Thermae_Led_m01_02,레다,녹아 버릴 것 같아……,입장
+MID_SV_Thermae_Led_m01_03,레다,손발도 제대로 풀어 둬야지.,입장
+MID_SV_Thermae_Bel_m01_01,베르트랑,근육의 긴장이 풀리는군.,입장
+MID_SV_Thermae_Bel_m01_02,베르트랑,머리와 몸을 둔하게 만드는 피로는 적이나 다름없지.,입장
+MID_SV_Thermae_Bel_m01_03,베르트랑,가끔은 심신을 안정시켜야겠지.,입장
+MID_SV_Thermae_Tal_m01_01,타리문,몸이 개운해지네.,입장
+MID_SV_Thermae_Tal_m01_02,타리문,온도가 딱 좋아.,입장
+MID_SV_Thermae_Tal_m01_03,타리문,이런 장소에서 좋은 생각이 난다니까.,입장
+MID_SV_Thermae_Anh_m01_01,아나톨리아,좋은 휴식이 될 것 같네요.,입장
+MID_SV_Thermae_Anh_m01_02,아나톨리아,따뜻해…… 인공 자궁이 떠오르네요.,입장
+MID_SV_Thermae_Anh_m01_03,아나톨리아,정신을 통일하기에는 좋은 장소네요.,입장
+MID_SV_Thermae_Tia0_m01_01,티아라,하아~ 기분 좋다~,입장
+MID_SV_Thermae_Tia0_m01_02,티아라,온기가 전신을 타고 퍼지네……,입장
+MID_SV_Thermae_Tia0_m01_03,티아라,가끔은 아무 생각 없이 쉬는 것도 좋지.,입장
+MID_SV_Thermae_Tia1_m01_01,티아라,피로가 풀리는걸……,입장
+MID_SV_Thermae_Tia1_m01_02,티아라,기분 좋아…… 고민도 전부 잊어버릴 것 같아……,입장
+MID_SV_Thermae_Tia1_m01_03,티아라,여기라면 한숨 돌릴 수 있겠네.,입장
+MID_SV_Thermae_Pet0_m01_01,피터르,후우~ 기분 좋다……,입장
+MID_SV_Thermae_Pet0_m01_02,피터르,녹아 버릴 것 같을 정도로 진정돼……,입장
+MID_SV_Thermae_Pet0_m01_03,피터르,진정되는 곳이네.,입장
+MID_SV_Thermae_Pet1_m01_01,피터르,아~ 행복해……,입장
+MID_SV_Thermae_Pet1_m01_02,피터르,몸도 마음도 노곤해져……,입장
+MID_SV_Thermae_Pet1_m01_03,피터르,마음껏 빈둥거릴 수 있겠네.,입장
+MID_SV_Thermae_Hur_m01_01,울턴드,아…… 기분 좋아!,입장
+MID_SV_Thermae_Hur_m01_02,울턴드,피로가 풀리는 것 같네.,입장
+MID_SV_Thermae_Hur_m01_03,울턴드,왠지 기분이 편안해져……,입장
+MID_SV_Thermae_Max_m01_01,맥심,화장을 신경 쓰지 않고 들어올 수 있어서 좋네.,입장
+MID_SV_Thermae_Max_m01_02,맥심,욕탕에 들어갈 때 긴장하게 되네……,입장
+MID_SV_Thermae_Max_m01_03,맥심,제대로 쉬어야지……,입장
+MID_SV_Thermae_Jes_m01_01,제스터,피는 지워져도 화장은 안 지워지는 법이지.,입장
+MID_SV_Thermae_Jes_m01_02,제스터,쳇! 수증기가 거슬려!,입장
+MID_SV_Thermae_Jes_m01_03,제스터,"뭐, 가끔은 느긋하게 지내는 것도 좋겠지.",입장
+MID_SV_Thermae_Gol_m01_01,골라이어스,……꾸벅꾸벅 졸게 되는구먼.,입장
+MID_SV_Thermae_Gol_m01_02,골라이어스,단련 후의 목욕은 참 기분이 좋군……,입장
+MID_SV_Thermae_Gol_m01_03,골라이어스,조금만 더 넓었으면 좋았을 텐데……,입장
+MID_SV_Thermae_Gat_m01_01,게이츠,사이의 나라의 욕탕은 불처럼 뜨거웠지……,입장
+MID_SV_Thermae_Gat_m01_02,게이츠,아주 편하고 느긋한 기분이군……,입장
+MID_SV_Thermae_Gat_m01_03,게이츠,안개 덮인 숲이 떠오르는 기분 좋은 수증기군.,입장
+MID_SV_Thermae_Dan_m01_01,단테,황막한 눈이 수증기로 젖어 드는군……!,입장
+MID_SV_Thermae_Dan_m01_02,단테,심신이 녹아 하나가 되는 감각이야……,입장
+MID_SV_Thermae_Dan_m01_03,단테,으음…… 꿈속으로 빠져드는군……,입장
+MID_SV_Thermae_Fab_m01_01,파비오,이 습기는 메마른 피부에 좋군요.,입장
+MID_SV_Thermae_Fab_m01_02,파비오,키가 크면 계속 내려다봐야 해서 목이 결리죠.,입장
+MID_SV_Thermae_Fab_m01_03,파비오,이 가죽도 가끔 관리를 해 줘야겠군요.,입장
+MID_SV_Thermae_Esm_m01_01,에스메랄다,……수영하면 혼나겠지?,입장
+MID_SV_Thermae_Esm_m01_02,에스메랄다,바다만큼 넓었으면 좋았을 텐데……,입장
+MID_SV_Thermae_Esm_m01_03,에스메랄다,제대로 관리해서 예뻐질 거야.,입장
+MID_SV_Thermae_Mic_m01_01,미카엘라,아이와 목욕하는 건 좋은 추억이지.,입장
+MID_SV_Thermae_Mic_m01_02,미카엘라,다양한 사람이 들어가면 욕탕 청소도 힘들겠네.,입장
+MID_SV_Thermae_Mic_m01_03,미카엘라,일을 위해서라도 몸은 제대로 풀어야지.,입장
+MID_SV_Thermae_Urs_m01_01,우술라,눈의 피로도 풀리네요.,입장
+MID_SV_Thermae_Urs_m01_02,우술라,몸을 깨끗이 씻어 둬야겠죠……,입장
+MID_SV_Thermae_Urs_m01_03,우술라,몸을 관리하는 것도 일에 포함되죠.,입장
+MID_SV_Thermae_Sim_m01_01,시몬,아~ 좋다……,입장
+MID_SV_Thermae_Sim_m01_02,시몬,일하고 난 후의 휴식은 최고군……,입장
+MID_SV_Thermae_Sim_m01_03,시몬,이럴 때 몸의 피로를 풀어 둬야지.,입장
+MID_SV_Thermae_Lou_m01_01,루루디아,일의 피로가 풀리는 것 같아……,입장
+MID_SV_Thermae_Lou_m01_02,루루디아,언제 어디서든 목욕할 수 있다면 좋을 텐데……,입장
+MID_SV_Thermae_Lou_m01_03,루루디아,몸을 구석구석 깨끗이 씻어야지!,입장
+MID_SV_Thermae_Fia_m01_01,피아나,"후우…… 아, 어지러워지지 않게 조심해야……",입장
+MID_SV_Thermae_Fia_m01_02,피아나,"너무 뜨겁지도, 미지근하지도 않아서 좋은 온도네요.",입장
+MID_SV_Thermae_Fia_m01_03,피아나,이 상처는 앞으로 오래가겠죠……,입장
+MID_SV_Thermae_Die_m01_01,디에고,몸 안쪽부터 풀리는 것 같군……,입장
+MID_SV_Thermae_Die_m01_02,디에고,"훗, 나쁘지 않아……",입장
+MID_SV_Thermae_Die_m01_03,디에고,뭉친 어깨가 풀리는군.,입장
+MID_SV_Thermae_Lor0_m01_01,로레타,후우~ 몸이 가벼워지네……,입장
+MID_SV_Thermae_Lor0_m01_02,로레타,이 안에 평생 있을 수 있을 것 같아……,입장
+MID_SV_Thermae_Lor0_m01_03,로레타,느긋하게 있을 수 있겠네.,입장
+MID_SV_Thermae_Lor1_m01_01,로레타,후우~ 몸 안쪽까지 노곤노곤해지네……,입장
+MID_SV_Thermae_Lor1_m01_02,로레타,따뜻해서 안심돼……,입장
+MID_SV_Thermae_Lor1_m01_03,로레타,마음껏 빈둥거릴 수 있겠어.,입장
+MID_SV_Thermae_Set_m01_01,세테스,마음까지 깨끗해지는군……,입장
+MID_SV_Thermae_Set_m01_02,세테스,후우…… 여행의 피로도 풀리는군.,입장
+MID_SV_Thermae_Set_m01_03,세테스,열기가 기분 좋군.,입장
+MID_SV_Thermae_Nin_m01_01,리네,기분 좋아…… 잠들어 버릴 것 같아.,입장
+MID_SV_Thermae_Nin_m01_02,리네,후우…… 정령들도 쉬고 있어.,입장
+MID_SV_Thermae_Nin_m01_03,리네,몸을 풀어 둬야지……,입장
+MID_SV_Thermae_Bon_m01_01,보나파르트,늙은 몸에 스며드는군……,입장
+MID_SV_Thermae_Bon_m01_02,보나파르트,후우…… 보양되는군……,입장
+MID_SV_Thermae_Bon_m01_03,보나파르트,흐음…… 기분 좋은 장소로군……,입장
+MID_SV_Thermae_Tob_m01_01,토비아스,점점 졸려 오는구먼……,입장
+MID_SV_Thermae_Tob_m01_02,토비아스,힘이 쭉 빠지네……,입장
+MID_SV_Thermae_Tob_m01_03,토비아스,후우……,입장
+MID_SV_Thermae_Lil_m01_01,릴리안,하아~ 살겠다……,입장
+MID_SV_Thermae_Lil_m01_02,릴리안,뭔가 힘이 빠져……,입장
+MID_SV_Thermae_Lil_m01_03,릴리안,쉬는 것도 중요하지~,입장
+MID_SV_Thermae_Lys_m01_01,라이선더,몸이 편해지는군.,입장
+MID_SV_Thermae_Lys_m01_02,라이선더,심신이 풀리는군……,입장
+MID_SV_Thermae_Lys_m01_03,라이선더,기분이 편해지는군……,입장
+MID_SV_Thermae_Buc_m01_01,버커니어,오랫동안 뭉쳐 있던 부분도 풀리는 것 같군……,입장
+MID_SV_Thermae_Buc_m01_02,버커니어,나도 모르는 새 피로가 쌓여 있었나 보군……,입장
+MID_SV_Thermae_Buc_m01_03,버커니어,한숨 돌리기에 딱 좋은 장소군.,입장
+MID_SV_Thermae_Sci_m01_01,시로코,쉼터는 기분을 가볍게 해 주지.,입장
+MID_SV_Thermae_Sci_m01_02,시로코,모래 먼지를 씻어 내야겠군.,입장
+MID_SV_Thermae_Sci_m01_03,시로코,수증기도 포근해서 졸음이 올 것 같군.,입장
+MID_SV_Thermae_Moo0_m01_01,무우,어렸을 때는 엄마랑 같이 목욕했었지……,입장
+MID_SV_Thermae_Moo0_m01_02,무우,몸이 둥실둥실 떠 있는 것 같아……,입장
+MID_SV_Thermae_Moo0_m01_03,무우,여기는 왠지 진정되네.,입장
+MID_SV_Thermae_Moo1_m01_01,무우,녹아 버릴 만큼 기분 좋아……,입장
+MID_SV_Thermae_Moo1_m01_02,무우,이런 욕탕이 있는 집도 멋지겠네……,입장
+MID_SV_Thermae_Moo1_m01_03,무우,진정되는 장소야……,입장
+MID_SV_Thermae_Oly_m01_01,올림피아,목욕이 끝난 후에 쓸 향유를 고르는 게 기대되네요.,입장
+MID_SV_Thermae_Oly_m01_02,올림피아,수증기로 전신이 촉촉해지네요.,입장
+MID_SV_Thermae_Oly_m01_03,올림피아,계속 화려하게 피어 있기 위해서 관리를 잘 해야 하죠.,입장
+MID_SV_Thermae_Naz_m01_01,나타,아~ 이대로 자고 싶다……,입장
+MID_SV_Thermae_Naz_m01_02,나타,피로가 풀리네……,입장
+MID_SV_Thermae_Naz_m01_03,나타,강해지기 위해서는 몸을 잘 풀어야겠지.,입장
+MID_SV_Thermae_Sar_m01_01,사란,후우…… 피부에 스며들어 오네……,입장
+MID_SV_Thermae_Sar_m01_02,사란,몸도 마음도 풀리네.,입장
+MID_SV_Thermae_Sar_m01_03,사란,마음껏 물을 쓸 수 있다니 멋지네.,입장
+MID_SV_Thermae_Dai_m01_01,대도,후우~ 몸이 편해지네……,입장
+MID_SV_Thermae_Dai_m01_02,대도,피로가 풀리는 것 같아.,입장
+MID_SV_Thermae_Dai_m01_03,대도,왠지 잠이 오는데……,입장
+MID_SV_Thermae_Hal_m01_01,하르빈,후아…… 몸이 떠 있는 것 같아……,입장
+MID_SV_Thermae_Hal_m01_02,하르빈,아무 생각도 안 들 정도로 기분 좋아……,입장
+MID_SV_Thermae_Hal_m01_03,하르빈,후우…… 힘이 빠지네.,입장
+MID_SV_Thermae_Guj_m01_01,그자람,후우~ 오래된 상처에도 스며드는군……,입장
+MID_SV_Thermae_Guj_m01_02,그자람,여기서 술을 마실 수 있다면 최고일 텐데.,입장
+MID_SV_Thermae_Guj_m01_03,그자람,일류 용병은 휴식도 빼먹지 않지.,입장
+MID_SV_Thermae_Yan_m01_01,양계,좋은 목욕 후에는 좋은 술을 마셔야 하는 법이지!,입장
+MID_SV_Thermae_Yan_m01_02,양계,이 물 온도…… 아주 좋군.,입장
+MID_SV_Thermae_Yan_m01_03,양계,이런 시간도 참 좋군.,입장
+MID_SV_Thermae_Iio_m01_01,이오,몸도 마음도 편안해지는군.,입장
+MID_SV_Thermae_Iio_m01_02,이오,정신이 정돈되는군……,입장
+MID_SV_Thermae_Iio_m01_03,이오,평온한 시간이 될 것 같군.,입장
+MID_SV_Thermae_Pep_m01_01,페페,휴식도 필요하겠지……,입장
+MID_SV_Thermae_Pep_m01_02,페페,원기를 회복하기에 딱 좋은 여유군……,입장
+MID_SV_Thermae_Pep_m01_03,페페,쉼터라니 감사하군.,입장
+MID_SV_Thermae_Noc_m01_01,녹투라,훈련의 피로가 풀리네……,입장
+MID_SV_Thermae_Noc_m01_02,녹투라,이 정도 온도라면 계속 있을 수 있어……,입장
+MID_SV_Thermae_Noc_m01_03,녹투라,본가랑 다르게 깨끗한 욕탕이네!,입장
+MID_SV_Thermae_Sop_m01_01,소피아,이대로 자 버리고 싶어……,입장
+MID_SV_Thermae_Sop_m01_02,소피아,목욕을 하면 왜 배가 고파지는 걸까.,입장
+MID_SV_Thermae_Sop_m01_03,소피아,수증기에 맛이 있다면 좋을 텐데……,입장
+MID_SV_Thermae_Cat_m01_01,카타냐,일류는 몸가짐도 단정해야 하는 법이죠.,입장
+MID_SV_Thermae_Cat_m01_02,카타냐,좋은 물로 목욕하면 피부도 더 좋아지겠네요.,입장
+MID_SV_Thermae_Cat_m01_03,카타냐,후우~ 심신이 모두 안정되네요.,입장
+MID_SV_Thermae_Ned_m01_01,누디누,오래된 상처도 치유되는 것 같군.,입장
+MID_SV_Thermae_Ned_m01_02,누디누,전장에서의 피로가 풀리는군……,입장
+MID_SV_Thermae_Ned_m01_03,누디누,설비가 갖추어져 있어서 다행이군.,입장
+MID_SV_Thermae_Zac_m01_01,자코네,후우~ 기분이 최고야……,입장
+MID_SV_Thermae_Zac_m01_02,자코네,이 몸의 성을 지을 때도 이런 욕탕을 만들어야겠어!,입장
+MID_SV_Thermae_Zac_m01_03,자코네,한숨 돌릴까……,입장
+MID_SV_Thermae_Maj_m01_01,마지데,일당십인 나로서는 열 배 더 뜨거워도 된다고.,입장
+MID_SV_Thermae_Maj_m01_02,마지데,언젠가 「마지데님의 욕탕」을 만들고 싶군……,입장
+MID_SV_Thermae_Maj_m01_03,마지데,몸이 따뜻해져 오는군.,입장
+MID_SV_Thermae_Ven_m01_01,밴디츠,옛날에는 피부가 물을 튕겨 낼 정도였는데……,입장
+MID_SV_Thermae_Ven_m01_02,밴디츠,하아~ 이런……,입장
+MID_SV_Thermae_Ven_m01_03,밴디츠,나이를 먹으니 목욕이 귀찮군……,입장
+MID_SV_Thermae_Ini_m01_01,이니오니,따뜻해서…… 진정돼……,입장
+MID_SV_Thermae_Ini_m01_02,이니오니,몸이 점점 풀리는 것 같아……,입장
+MID_SV_Thermae_Ini_m01_03,이니오니,제대로 주물러서 풀어 둬야지……,입장
+MID_SV_Thermae_Jas_m01_01,자스민,목욕은 몸도 마음도 치유해 주네……,입장
+MID_SV_Thermae_Jas_m01_02,자스민,전신의 긴장이 풀려.,입장
+MID_SV_Thermae_Jas_m01_03,자스민,이런 시간도 좋네……,입장
+MID_SV_Thermae_Ale_m01_01,알렉산드라,"후우, 기분 좋다……",입장
+MID_SV_Thermae_Ale_m01_02,알렉산드라,몸의 긴장이 풀려……,입장
+MID_SV_Thermae_Ale_m01_03,알렉산드라,쾌적한 곳이네요.,입장
+MID_SV_Thermae_Nat_m01_01,네이선,이런 휴식도 가끔은 필요하지.,입장
+MID_SV_Thermae_Nat_m01_02,네이선,꿈꾸는 듯한 기분이군.,입장
+MID_SV_Thermae_Nat_m01_03,네이선,평소의 피로를 잊을 수 있을 것 같군.,입장
+MID_SV_Thermae_Hri_m01_01,키릭,심신이 모두 가벼워지는군.,입장
+MID_SV_Thermae_Hri_m01_02,키릭,목욕물이 좋아서 마음까지 풀리는군.,입장
+MID_SV_Thermae_Hri_m01_03,키릭,따뜻해서 기분이 진정되는군.,입장
+MID_SV_Thermae_Tro_m01_01,트로이아,아아…… 젊어지는 것 같아.,입장
+MID_SV_Thermae_Tro_m01_02,트로이아,후우~ 나도 모르게 목소리가 새어 나왔네.,입장
+MID_SV_Thermae_Tro_m01_03,트로이아,한숨 돌리기에는 딱 좋은 장소야.,입장
+MID_SV_Thermae_Cen_m01_01,센트리온,아무리 기분이 좋아도 방심하지는 않겠다.,입장
+MID_SV_Thermae_Cen_m01_02,센트리온,오오…… 온몸에 스며드는군……,입장
+MID_SV_Thermae_Cen_m01_03,센트리온,이건 좋은 휴양이 되겠군.,입장
+MID_SV_Thermae_Asw_m01_01,아스완,평소의 피로를 풀어야겠어……,입장
+MID_SV_Thermae_Asw_m01_02,아스완,지금은 전부 잊고 쉬어야지……,입장
+MID_SV_Thermae_Asw_m01_03,아스완,이곳만 시간이 천천히 흐르는 것 같네.,입장
+MID_SV_Thermae_Kou_m01_01,홍화,마음이 치유되는군……,입장
+MID_SV_Thermae_Kou_m01_02,홍화,"……이런, 방심할 뻔했군.",입장
+MID_SV_Thermae_Kou_m01_03,홍화,여기서 한숨 돌려야겠군.,입장
+MID_SV_Thermae_Nuz_m01_01,누조,심신을 정돈하겠다……,입장
+MID_SV_Thermae_Nuz_m01_02,누조,영혼이 떠오르는 것 같은 기분이군……,입장
+MID_SV_Thermae_Nuz_m01_03,누조,공기가 나뭇잎 사이로 비치는 햇빛처럼 부드럽군.,입장
+MID_SV_Thermae_Kir_m01_01,키로이카,욕탕에 들어오니 노래하고 싶어지는군.,입장
+MID_SV_Thermae_Kir_m01_02,키로이카,이대로 자 버려도 괜찮겠지.,입장
+MID_SV_Thermae_Kir_m01_03,키로이카,"히익!<br>뭐야, 수증기인가. 귀신인 줄 알았네……",입장
+MID_SV_Thermae_Iio_Pep_m01_01,페페,이상적인 주군을 찾고 있나? 짐이 바로 그 주군이다!<br>관직을 원한다면 브리기트로 오너라.,상호
+MID_SV_Thermae_Iio_Pep_m01_02,이오,거절한다. ……하지만 언젠가 다그다의 땅 밖으로<br>가 보는 것도 나쁘지 않겠군.,상호
+MID_SV_Thermae_Ism_Anh_m01_01,아나톨리아,당신하고는 앞으로도<br>친하게 지내고 싶어요.,상호
+MID_SV_Thermae_Ism_Anh_m01_02,아나톨리아,느긋하게 피로를 풀도록 하죠.<br>모처럼 평온한 시간이니까요.,상호
+MID_SV_Thermae_Ism_Kai1_m01_01,카이,앞으로의 싸움을 생각하면<br>잠이 안 올 때가 있어……,상호
+MID_SV_Thermae_Ism_Kai1_m01_02,카이,하지만 당신도 함께 싸우고 있다<br>생각하면 힘이 솟아나!,상호
+MID_SV_Thermae_Ism_Seo_m01_01,세오도라,왕 옆이라고 해서 신경 쓰지 말고<br>좀 더 편히 쉬어라.,상호
+MID_SV_Thermae_Ism_Seo_m01_02,세오도라,우리 사이에 사양할 필요 없다.<br>네가 그 사실을 잊어버리면 몇 번이고 다시 말해 주지.,상호
+MID_SV_Thermae_Ism_Tal_m01_01,타리문,심각한 표정이군.<br>너무 많은 생각은 몸에 안 좋다.,상호
+MID_SV_Thermae_Ism_Tal_m01_02,타리문,가끔은 밝게 살자고.<br>이 몸을 보고 세상을 즐기는 법을 배우는 게 어때?,상호
+MID_SV_Thermae_Ism_Dit_m01_01,디트리히,넌…… 모든 것이 맑군.<br>누구도 더럽힐 수 없는 고결함이 느껴진다……,상호
+MID_SV_Thermae_Ism_Dit_m01_02,디트리히,절대 탁해지지 마라.<br>혼탁함은 사투에 방해된다……,상호
+MID_SV_Thermae_Ism_Bel_m01_01,베르트랑,잠깐이지만 이렇게<br>너와 피로를 풀 수 있는 시간이 있어서 다행이군.,상호
+MID_SV_Thermae_Ism_Bel_m01_02,베르트랑,아직 싸움은 끝나지 않았다. 함께 살아남아<br>사람들을 위해 세상을 구하자.,상호
+MID_SV_Thermae_Ism_Led_m01_01,레다,이 싸움에서 이겨야 한다는 걸 알고는 있지만……<br>가끔 너무 부담스러울 때도 있죠.,상호
+MID_SV_Thermae_Ism_Led_m01_02,레다,"그래도 당신과 함께라면 힘낼 수 있어요……<br>앞으로도 잘 부탁드려요, 구세주님.",상호
+MID_SV_Thermae_Urs_Jas_m01_01,자스민,"당신, 지금도 멋지지만……<br>살을 좀 붙이면 더 매력적으로 보이지 않을까?",상호
+MID_SV_Thermae_Urs_Jas_m01_02,우술라,현재에 만족합니다.<br>과유불급이니까요.,상호
+MID_SV_Thermae_Urs_Fia_m01_01,우술라,차분히 이야기할 수 있는 시간이 있어서 다행이에요.<br>시집에 대한 이야기를 하고 싶었거든요.,상호
+MID_SV_Thermae_Urs_Fia_m01_02,피아나,그럼…… 서로 최근에 읽은 작품 중 좋았던 것을<br>소개하는 건 어떨까요?,상호
+MID_SV_Thermae_Kai0_Gol_m01_01,골라이어스,"푸하하하하, 어때, 카이!<br>어느 쪽이 더 오래 버티는지 대결하지 않겠냐?",상호
+MID_SV_Thermae_Kai0_Gol_m01_02,카이,"좋아, 아저씨!<br>지는 쪽이 청소 당번을 맡는 거야!",상호
+MID_SV_Thermae_Gat_Yan_m01_01,게이츠,그러고 보니 사이의 나라에는<br>술을 탕이라 부르는 이도 있었다더군.,상호
+MID_SV_Thermae_Gat_Yan_m01_02,양계,둘 다 몸을 녹여 주고 황홀한 기분을 느끼게 해 주니<br>정말 적절한 비유로구나!,상호
+MID_SV_Thermae_Sar_Kou_m01_01,홍화,아들하고도 이런 시간을 함께 보내고 싶었다……<br>괜찮다면 내가 너의 등을 씻어 줘도 되겠나?,상호
+MID_SV_Thermae_Sar_Kou_m01_02,사란,"홍화…… 응, 물론이지.<br>대신 그다음에 나도 당신 등을 씻어 줄게.",상호
+MID_SV_Thermae_Sar_Hal_m01_01,하르빈,사란씨의 피부는 비단처럼 엄청 곱네!<br>부럽다……!,상호
+MID_SV_Thermae_Sar_Hal_m01_02,사란,"네 피부도 좋아.<br>여기 덕분인가, 후후.",상호
+MID_SV_Thermae_Sim_Zac_m01_01,시몬,……왜 그래? 엄청 움츠러들었잖아.<br>오랜만의 목욕인데 긴장 좀 풀라고.,상호
+MID_SV_Thermae_Sim_Zac_m01_02,자코네,"히, 히히. 그, 그래야지.<br>……""우레의 시몬""이 있는데 긴장을 풀 수 있겠냐.",상호
+MID_SV_Thermae_Seo_Tro_m01_01,트로이아,옛날에는 세오도라도 욕조에 빠져서<br>할머니~! 하며 울어 댔었지.,상호
+MID_SV_Thermae_Seo_Tro_m01_02,세오도라,넌 그 이야기를 정말 좋아하는군.<br>『할머니』는 욕조에 빠질 일이 없으니 안심이다.,상호
+MID_SV_Thermae_Seo_Lil_m01_01,세오도라,"어깨에 힘이 들어가 있군, 릴리안.<br>목욕탕에서는 왕도 병사도 없으니 편히 쉬어라.",상호
+MID_SV_Thermae_Seo_Lil_m01_02,릴리안,……역시 세오도라님이세요~<br>그럼 분부대로 할까요~,상호
+MID_SV_Thermae_Dai_Ini_m01_01,대도,흐암…… 만약 기분 좋아서 잠들어도<br>내가 깨워 줄 테니 안심하라고!,상호
+MID_SV_Thermae_Dai_Ini_m01_02,이니오니,"고, 고마워……<br>당신이 먼저 잠들 것 같지만……",상호
+MID_SV_Thermae_Tal_Ini_m01_01,타리문,이런 기회에 피로를 풀어야 한다 아이가.<br>푹 쉬라.,상호
+MID_SV_Thermae_Tal_Ini_m01_02,이니오니,다른 사람도 있어가 오히려 긴장해 가꼬<br>피로가 쌓일 것 같은데…… 노력해 보께.,상호
+MID_SV_Thermae_Tal_Sim_m01_01,시몬,대장 이야기는 재미있어.<br>일이든 모험이든 매번 규모가 엄청나니 말이야.,상호
+MID_SV_Thermae_Tal_Sim_m01_02,타리문,하하하!<br>앞으로도 기대해도 된다고!,상호
+MID_SV_Thermae_Dan_Ned_m01_01,단테,너의 육체를 자세히 관찰할 수 있는<br>둘도 없는 기회군……!,상호
+MID_SV_Thermae_Dan_Ned_m01_02,누디누,보는 건 상관없다. 하지만……<br>그래도 역시 좀 부끄럽군……,상호
+MID_SV_Thermae_Dan_Lou_m01_01,단테,"흠, 시시각각으로 날씨가 변하는 것처럼<br>목욕물 맛도 변하는군. 하하, 재미있어!",상호
+MID_SV_Thermae_Dan_Lou_m01_02,루루디아,으아…… 이런 물 마셔도<br>정말 괜찮은 거예요!?,상호
+MID_SV_Thermae_Tia0_Hur_m01_01,티아라,"으음, 안경이 뿌예지네……<br>하지만 벗으면 발밑이 잘 안 보이는데……",상호
+MID_SV_Thermae_Tia0_Hur_m01_02,울턴드,"그럼 내가<br>손을 잡아 줄게, 티아라.",상호
+MID_SV_Thermae_Dit_Set_m01_01,디트리히,말이 길군…… 난 먼저 나가겠다.<br>너무 오래 있지 않도록 조심해라.,상호
+MID_SV_Thermae_Dit_Set_m01_02,세테스,아직 본론으로 들어가지도 않았다만.<br>어쩔 수 없군. 다음 이야기는 나가서 하지.,상호
+MID_SV_Thermae_Die_Set_m01_01,세테스,이런 곳에서도<br>자네는 경계를 풀지 않는군. 피곤하지 않나?,상호
+MID_SV_Thermae_Die_Set_m01_02,디에고,암살자들에게는 절호의 기회이니 경계를 늦출 순 없다.<br>당신은 나보다 본인을 먼저 걱정하는 게 어때.,상호
+MID_SV_Thermae_Tob_Lys_m01_01,토비아스,기분 좋구먼……<br>이대로 잠들고 싶다……,상호
+MID_SV_Thermae_Tob_Lys_m01_02,라이선더,저도…… 헉! 안 됩니다!<br>용사가 여기서 자는 건 꼴불견입니다!,상호
+MID_SV_Thermae_Naz_Maj_m01_01,마지데,"야, 신나서 헤엄치지는 마라.<br>꼬맹이들은 시끄러워서 문제라니까……",상호
+MID_SV_Thermae_Naz_Maj_m01_02,나타,그런 짓 안 해!<br>지금 조용히 있잖아! 꼬맹이 취급 하지 말라고!,상호
+MID_SV_Thermae_Nat_Hri_m01_01,네이선,"오랜만의 목욕탕인데<br>좀 더 긴장을 풀고 즐겨도 괜찮지 않나, 키릭.",상호
+MID_SV_Thermae_Nat_Hri_m01_02,키릭,"여기 물 온도는 생각에 잠기기 딱 좋군……<br>뭐, 이래 보여도 충분히 즐기고 있다.",상호
+MID_SV_Thermae_Fab_Esm_m01_01,에스메랄다,빨리 나가. 비아냥대기만 하니<br>느긋하게 쉴 수가 없잖아.,상호
+MID_SV_Thermae_Fab_Esm_m01_02,파비오,"이게 비아냥으로밖에 들리지 않는다면, 해변에서<br>해수와 노는 것이 딱 당신 수준에 맞을 것 같군요.",상호
+MID_SV_Thermae_Fab_Cle_m01_01,파비오,정말이지…… 천박한 당신과 함께라니<br>오랜만의 목욕이 엉망이 되었군요.,상호
+MID_SV_Thermae_Fab_Cle_m01_02,クレオブロス,구시렁구시렁하지 마!<br>막 끓인 물을 확 끼얹어 버릴까 보다!,상호
+MID_SV_Thermae_Fia_Oly_m01_01,올림피아,당신의 아름다움은 영원히 빛날 거예요.<br>더더욱 그 아름다움을 갈고닦으세요!,상호
+MID_SV_Thermae_Fia_Oly_m01_02,피아나,"가, 감사합니다.<br>그런데 너무 큰 소리로 말씀하지 말아 주세요……",상호
+MID_SV_Thermae_Bel_Gat_m01_01,게이츠,이 온기 속에서 심신을 편안히 하여 무의 상태로……<br>정신 수양이 돼서 좋군………………,상호
+MID_SV_Thermae_Bel_Gat_m01_02,베르트랑,강해지기 위해서는 어떤 상황에서도 수련을<br>빼먹을 수 없지. 나도 해 볼까………………,상호
+MID_SV_Thermae_Bel_Gol_m01_01,골라이어스,"모처럼 왔으니 여유롭게 즐기자고!<br>아, 근데 내가 들어가면 좁으려나?",상호
+MID_SV_Thermae_Bel_Gol_m01_02,베르트랑,그런 건 신경 안 써도 된다.<br>느긋하게 피로를 풀자고.,상호
+MID_SV_Thermae_Max_Gat_m01_01,맥심,게이츠씨의 무사 수행 이야기를 들으면<br>저도 동방의 나라에 가 보고 싶어집니다.,상호
+MID_SV_Thermae_Max_Gat_m01_02,게이츠,그럼 언제라도 갈 수 있도록<br>더 많은 이야기를 들려주지.,상호
+MID_SV_Thermae_Lou_Fia_m01_01,루루디아,이거 끝나고 같이 차 한잔 어때요?<br>우연히 좋은 찻잎을 손에 넣었거든요!,상호
+MID_SV_Thermae_Lou_Fia_m01_02,피아나,저라도 괜찮다면 기꺼이……<br>기대하고 있을게요.,상호
+MID_SV_Thermae_Led_Oly_m01_01,올림피아,싸우다 보면 춤을 추는 데 불필요한 근육이 붙어서<br>몸매 관리에 시간이 걸려요.,상호
+MID_SV_Thermae_Led_Oly_m01_02,레다,그러게 말이야. 점토처럼<br>떼었다 붙였다 할 수 있으면 좋을 텐데……,상호
+MID_SV_Thermae_Lor1_Nin_m01_01,리네,정령들도 기분 좋은가 봐……<br>지금이라면 리네도 함께 날아갈 수 있을 것 같아……,상호
+MID_SV_Thermae_Lor1_Nin_m01_02,로레타,"자, 잠깐, 리네! 괜찮은 거야!?<br>그러게 물 마시라고 했잖아!",상호
+MID_SV_Thermae_Ism_m02_01,이스마르,몸의 움직임이 부드러워졌다.,대성공
+MID_SV_Thermae_Kai0_m02_01,카이,기운이 솟아나는 것 같아!,대성공
+MID_SV_Thermae_Kai1_m02_01,카이,몸도 마음도 개운해졌어!,대성공
+MID_SV_Thermae_Dit_m02_01,디트리히,상쾌한 기분이군……,대성공
+MID_SV_Thermae_Seo_m02_01,세오도라,물 온도가 딱 좋아서 나도 모르게 오래 있을 뻔했군.,대성공
+MID_SV_Thermae_Led_m02_01,레다,이대로 잠들고 싶어.,대성공
+MID_SV_Thermae_Bel_m02_01,베르트랑,오래 있고 싶을 정도로 기분 좋았다.,대성공
+MID_SV_Thermae_Tal_m02_01,타리문,기분이 상쾌하군!,대성공
+MID_SV_Thermae_Anh_m02_01,아나톨리아,아직도 황홀한 기분이에요.,대성공
+MID_SV_Thermae_Tia0_m02_01,티아라,좀 더 여운에 잠겨 있고 싶어……,대성공
+MID_SV_Thermae_Tia1_m02_01,티아라,후우…… 상쾌해!,대성공
+MID_SV_Thermae_Pet0_m02_01,피터르,힘이 솟아나는 것 같아!,대성공
+MID_SV_Thermae_Pet1_m02_01,피터르,몸이 가벼워진 것 같아!,대성공
+MID_SV_Thermae_Hur_m02_01,울턴드,하아…… 행복한 시간이었어.,대성공
+MID_SV_Thermae_Max_m02_01,맥심,몸이 가벼워져서 상쾌하군!,대성공
+MID_SV_Thermae_Jes_m02_01,제스터,"자, 다시 피를 뒤집어쓰러 가 볼까.",대성공
+MID_SV_Thermae_Gol_m02_01,골라이어스,오오! 온몸에 기운이 넘친다!,대성공
+MID_SV_Thermae_Gat_m02_01,게이츠,몸도 마음도 개운해서 매우 만족스럽군.,대성공
+MID_SV_Thermae_Dan_m02_01,단테,온몸이 황금빛으로 빛나는 듯한 기분이다!,대성공
+MID_SV_Thermae_Fab_m02_01,파비오,몸 상태가 좋아졌군요.,대성공
+MID_SV_Thermae_Esm_m02_01,에스메랄다,피부도 머릿결도 매끈매끈해졌어!,대성공
+MID_SV_Thermae_Mic_m02_01,미카엘라,몸이 많이 가벼워졌어.,대성공
+MID_SV_Thermae_Urs_m02_01,우술라,몸이 많이 가벼워졌어요.,대성공
+MID_SV_Thermae_Sim_m02_01,시몬,완전히 몸이 풀렸군.,대성공
+MID_SV_Thermae_Lou_m02_01,루루디아,기분 좋아서 잠들 것 같아……,대성공
+MID_SV_Thermae_Fia_m02_01,피아나,피로도 때도 싹 씻겨 나갔네요.,대성공
+MID_SV_Thermae_Die_m02_01,디에고,몸이 가벼워…… 기분 좋군.,대성공
+MID_SV_Thermae_Lor0_m02_01,로레타,몸이 바뀐 것 같아!,대성공
+MID_SV_Thermae_Lor1_m02_01,로레타,몸의 움직임이 부드러워졌어!,대성공
+MID_SV_Thermae_Set_m02_01,세테스,다시 살아난 기분이군!,대성공
+MID_SV_Thermae_Nin_m02_01,리네,몸이 가벼워. 새가 된 기분이야.,대성공
+MID_SV_Thermae_Bon_m02_01,보나파르트,왠지 피부에 윤기가 나는 것 같군.,대성공
+MID_SV_Thermae_Tob_m02_01,토비아스,후아~! 이제 좀 살겠네!,대성공
+MID_SV_Thermae_Lil_m02_01,릴리안,다음 일도 힘내자~,대성공
+MID_SV_Thermae_Lys_m02_01,라이선더,피로가 싹 사라졌군!,대성공
+MID_SV_Thermae_Buc_m02_01,버커니어,10년은 젊어진 기분이다……!,대성공
+MID_SV_Thermae_Sci_m02_01,시로코,상쾌한 바람이 몸을 스쳐 지나간 듯한 기분이군.,대성공
+MID_SV_Thermae_Moo0_m02_01,무우,개운해~! 다시 살아난 기분이야!,대성공
+MID_SV_Thermae_Moo1_m02_01,무우,날개가 생긴 것처럼 몸이 가벼워!,대성공
+MID_SV_Thermae_Oly_m02_01,올림피아,더 아름다워졌어요.,대성공
+MID_SV_Thermae_Naz_m02_01,나타,새 몸이 된 것 같아!,대성공
+MID_SV_Thermae_Sar_m02_01,사란,힘이 넘쳐흘러!,대성공
+MID_SV_Thermae_Dai_m02_01,대도,더 있고 싶을 정도로 기분 좋았어!,대성공
+MID_SV_Thermae_Hal_m02_01,하르빈,몸의 움직임이 부드러워졌을지도!? 잘 모르겠지만!,대성공
+MID_SV_Thermae_Guj_m02_01,그자람,엄청 사치스러운 시간이었군.,대성공
+MID_SV_Thermae_Yan_m02_01,양계,영혼까지 깨끗해진 기분이로다!,대성공
+MID_SV_Thermae_Iio_m02_01,이오,힘이 넘쳐흐르는군.,대성공
+MID_SV_Thermae_Pep_m02_01,페페,그야말로 꿈만 같았다!,대성공
+MID_SV_Thermae_Noc_m02_01,녹투라,기분이 가벼워졌어!,대성공
+MID_SV_Thermae_Sop_m02_01,소피아,기운이 넘쳐! 기분도 최고야!,대성공
+MID_SV_Thermae_Cat_m02_01,카타냐,음~ 개운해! 몸 상태 최고야!,대성공
+MID_SV_Thermae_Ned_m02_01,누디누,다시 태어난 기분이다……!,대성공
+MID_SV_Thermae_Zac_m02_01,자코네,개운해졌으니…… 또 한바탕 날뛰어 볼까!,대성공
+MID_SV_Thermae_Maj_m02_01,마지데,힘이 넘쳐흐른다…… 기분 째지는데!,대성공
+MID_SV_Thermae_Ven_m02_01,밴디츠,미남이었던 젊은 시절로 돌아간 기분이다!,대성공
+MID_SV_Thermae_Ini_m02_01,이니오니,기분이 억수로 좋네……,대성공
+MID_SV_Thermae_Jas_m02_01,자스민,하늘로 날아오를 것 같은 기분이었어!,대성공
+MID_SV_Thermae_Ale_m02_01,알렉산드라,몸도 마음도 개운해서 만족스러워요!,대성공
+MID_SV_Thermae_Nat_m02_01,네이선,더없이 만족스럽군.,대성공
+MID_SV_Thermae_Hri_m02_01,키릭,기분 좋아서 나도 모르게 오래 있었군.,대성공
+MID_SV_Thermae_Tro_m02_01,트로이아,피부의 윤기가 돌아온 느낌이야.,대성공
+MID_SV_Thermae_Cen_m02_01,센트리온,몸도 마음도 가벼워졌군.,대성공
+MID_SV_Thermae_Asw_m02_01,아스완,새로운 마음으로 여왕의 책무를 다하겠어.,대성공
+MID_SV_Thermae_Kou_m02_01,홍화,계속 있고 싶을 정도로 좋은 목욕탕이었다.,대성공
+MID_SV_Thermae_Nuz_m02_01,누조,영혼이 깨끗해진 느낌이다……,대성공
+MID_SV_Thermae_Kir_m02_01,키로이카,괴조가 미조로 변해 버렸군!,대성공
+MID_SV_Thermae_Ism_m03_01,이스마르,기분 좋은 곳이었다.,성공
+MID_SV_Thermae_Kai0_m03_01,카이,푹 쉴 수 있었어.,성공
+MID_SV_Thermae_Kai1_m03_01,카이,기분이 편해졌어.,성공
+MID_SV_Thermae_Dit_m03_01,디트리히,깨끗해졌군……,성공
+MID_SV_Thermae_Seo_m03_01,세오도라,뭉친 근육이 풀렸군.,성공
+MID_SV_Thermae_Led_m03_01,레다,좋은 휴식이었네.,성공
+MID_SV_Thermae_Bel_m03_01,베르트랑,몸이 많이 편해졌군.,성공
+MID_SV_Thermae_Tal_m03_01,타리문,역시 이게 최고야.,성공
+MID_SV_Thermae_Anh_m03_01,아나톨리아,쌓인 피로가 풀렸네요.,성공
+MID_SV_Thermae_Tia0_m03_01,티아라,몸도 마음도 편해졌어.,성공
+MID_SV_Thermae_Tia1_m03_01,티아라,치유된 느낌이야……,성공
+MID_SV_Thermae_Pet0_m03_01,피터르,푹 쉴 수 있었네.,성공
+MID_SV_Thermae_Pet1_m03_01,피터르,좋은 기분 전환이 됐어.,성공
+MID_SV_Thermae_Hur_m03_01,울턴드,몸도 마음도 따뜻해졌어.,성공
+MID_SV_Thermae_Max_m03_01,맥심,목욕 후는 항상 기분 좋다니까.,성공
+MID_SV_Thermae_Jes_m03_01,제스터,"키히히, 거침없이 춤출 수 있을 것 같아.",성공
+MID_SV_Thermae_Gol_m03_01,골라이어스,후아~ 상쾌하구먼……,성공
+MID_SV_Thermae_Gat_m03_01,게이츠,기분 좋았다.,성공
+MID_SV_Thermae_Dan_m03_01,단테,갓 빨래한 천 같은 기분이군.,성공
+MID_SV_Thermae_Fab_m03_01,파비오,조금은 휴식이 되었네요.,성공
+MID_SV_Thermae_Esm_m03_01,에스메랄다,몸도 마음도 개운해졌어.,성공
+MID_SV_Thermae_Mic_m03_01,미카엘라,조금은 푹 쉴 수 있었어.,성공
+MID_SV_Thermae_Urs_m03_01,우술라,좋은 휴식이었어요.,성공
+MID_SV_Thermae_Sim_m03_01,시몬,상쾌한걸.,성공
+MID_SV_Thermae_Lou_m03_01,루루디아,몸도 마음도 개운해졌네!,성공
+MID_SV_Thermae_Fia_m03_01,피아나,따뜻하게 치유된 느낌이에요……,성공
+MID_SV_Thermae_Die_m03_01,디에고,나쁘지 않은 휴식이었다.,성공
+MID_SV_Thermae_Lor0_m03_01,로레타,"후우, 좋은 시간이었어.",성공
+MID_SV_Thermae_Lor1_m03_01,로레타,이제 좀 살 것 같네……,성공
+MID_SV_Thermae_Set_m03_01,세테스,충분한 휴식을 취했군.,성공
+MID_SV_Thermae_Nin_m03_01,리네,편안한 시간을 즐길 수 있었어.,성공
+MID_SV_Thermae_Bon_m03_01,보나파르트,좋은 기분 전환이 됐군……,성공
+MID_SV_Thermae_Tob_m03_01,토비아스,몸이 개운하구먼!,성공
+MID_SV_Thermae_Lil_m03_01,릴리안,몸이 가벼워진 것 같은데~,성공
+MID_SV_Thermae_Lys_m03_01,라이선더,귀중한 치유의 시간이었다……,성공
+MID_SV_Thermae_Buc_m03_01,버커니어,기분 좋았다……,성공
+MID_SV_Thermae_Sci_m03_01,시로코,이제 숙녀의 베개에 먼지를 묻히는 일은 없겠군.,성공
+MID_SV_Thermae_Moo0_m03_01,무우,개운해졌으니 다시 힘낼 수 있겠어!,성공
+MID_SV_Thermae_Moo1_m03_01,무우,상쾌한 기분이야.,성공
+MID_SV_Thermae_Oly_m03_01,올림피아,나쁘지 않았어요.,성공
+MID_SV_Thermae_Naz_m03_01,나타,후아~ 상쾌하다.,성공
+MID_SV_Thermae_Sar_m03_01,사란,좋은 휴식이었어.,성공
+MID_SV_Thermae_Dai_m03_01,대도,어깨가 가벼워진 것 같아.,성공
+MID_SV_Thermae_Hal_m03_01,하르빈,하아…… 개운하다……,성공
+MID_SV_Thermae_Guj_m03_01,그자람,"오, 어깨가 가벼워졌군.",성공
+MID_SV_Thermae_Yan_m03_01,양계,심신이 맑고 깨끗해졌군.,성공
+MID_SV_Thermae_Iio_m03_01,이오,편하게 쉴 수 있었군.,성공
+MID_SV_Thermae_Pep_m03_01,페페,실로 훌륭한 욕탕이었다.,성공
+MID_SV_Thermae_Noc_m03_01,녹투라,좋은 휴식 시간이었어.,성공
+MID_SV_Thermae_Sop_m03_01,소피아,"하아, 개운하다……",성공
+MID_SV_Thermae_Cat_m03_01,카타냐,좋은 시간을 보낼 수 있었어.,성공
+MID_SV_Thermae_Ned_m03_01,누디누,다음 전투에 필요한 활력을 얻었군.,성공
+MID_SV_Thermae_Zac_m03_01,자코네,몸이 따뜻해져서 좋군.,성공
+MID_SV_Thermae_Maj_m03_01,마지데,개운해졌으니 다시 날뛰어 주마!,성공
+MID_SV_Thermae_Ven_m03_01,밴디츠,심신이 조금은 편해졌군.,성공
+MID_SV_Thermae_Ini_m03_01,이니오니,뼛속까지 따뜻해졌어……,성공
+MID_SV_Thermae_Jas_m03_01,자스민,덕분에 피로가 풀렸어.,성공
+MID_SV_Thermae_Ale_m03_01,알렉산드라,느긋하게 쉴 수 있었어요……,성공
+MID_SV_Thermae_Nat_m03_01,네이선,기분 좋은 시간이었다.,성공
+MID_SV_Thermae_Hri_m03_01,키릭,상쾌한 기분이다.,성공
+MID_SV_Thermae_Tro_m03_01,트로이아,좋은 휴식이 됐네.,성공
+MID_SV_Thermae_Cen_m03_01,센트리온,마음이 편안해지는 시간이었다.,성공
+MID_SV_Thermae_Asw_m03_01,아스완,좋은 기분 전환이 됐네.,성공
+MID_SV_Thermae_Kou_m03_01,홍화,상쾌한 기분이군.,성공
+MID_SV_Thermae_Nuz_m03_01,누조,평온을 얻었다……,성공
+MID_SV_Thermae_Kir_m03_01,키로이카,상쾌하군.,성공
