@@ -69,7 +69,6 @@
             <table id = "mainTable"
                    data-search="true"
                    data-toggle="table"
-                   data-url="data/growth.json"
                    data-show-columns="true"
                    data-detail-view="true"
                    data-detail-view-by-click="true"
@@ -181,7 +180,30 @@
         });
     });
 
-    Promise.all(APTITUDE_KINDS.map(k => fetchJson("data/unit_" + k[2] + ".json"))).then(lists => {
+    const UNIT_SKILL_KINDS = {p_skill: "개인스킬", u_skill: "개인 유니크 스킬"};
+
+    function withSkillDesc(cell, descs) {
+        if (cell === undefined || cell === null || cell === "" || cell === "-") return cell;
+        return String(cell).split("<br>").map(name => {
+            const desc = descs[name.trim()];
+            return desc === undefined ? name : name.trim() + " : " + desc;
+        }).join("<br>");
+    }
+
+    Promise.all([fetchJson("data/growth.json"), fetchJson("data/skills.json")]).then(([rows, skills]) => {
+        Object.entries(UNIT_SKILL_KINDS).forEach(([column, kind]) => {
+            const descs = {};
+            skills.filter(s => s.kind === kind).forEach(s => {
+                descs[s.name] = s.desc;
+            });
+            rows.forEach(row => {
+                row[column] = withSkillDesc(row[column], descs);
+            });
+        });
+        $('#mainTable').bootstrapTable('load', rows);
+    });
+
+    Promise.all(APTITUDE_KINDS.map(k =>fetchJson("data/unit_" + k[2] + ".json"))).then(lists => {
         unitSkills = {};
         APTITUDE_KINDS.forEach((k, i) => {
             unitSkills[k[0]] = lists[i];
