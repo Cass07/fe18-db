@@ -66,7 +66,6 @@
             <table id = "mainTable"
                    data-search="true"
                    data-toggle="table"
-                   data-url="data/class_growth.json"
                    data-show-columns="true">
                 <thead>
                 <tr>
@@ -129,6 +128,44 @@
     const SUPPORT_COLUMNS = ['name', 'support'];
 
     const CONCAT_COLUMNS = STAT_COLUMNS.concat(SKILL_COLUMNS).concat(REQUIRE_COLUMNS).concat(SUPPORT_COLUMNS);
+
+    const CLASS_SKILL_KINDS = {
+        master_skill: "클래스 마스터 스킬",
+        class_skill_1: "클래스 스킬",
+        class_skill_2: "클래스 스킬",
+        class_skill_3: "클래스 스킬"
+    };
+    const COMBAT_ART_SUFFIX = " (전투기술)";
+    const fetchJson = url => fetch(url).then(res => res.ok ? res.json() : []).catch(() => []);
+
+    function withSkillDesc(cell, descs) {
+        if (cell === undefined || cell === null || cell === "" || cell === "-") return cell;
+        return String(cell).split("<br>").map(name => {
+            const desc = descs[name.trim()];
+            return desc === undefined ? name : name.trim() + " : " + desc;
+        }).join("<br>");
+    }
+
+    Promise.all([fetchJson("data/class_growth.json"), fetchJson("data/skills.json"), fetchJson("data/combat_arts.json")]).then(([rows, skills, arts]) => {
+        const descsByKind = {};
+
+        descsByKind["클래스 마스터 스킬"] = {};
+
+        // 전투기술은 뒤에 suffix 붙임
+        arts.forEach(a => {
+            descsByKind["클래스 마스터 스킬"][a.name] = a.desc + COMBAT_ART_SUFFIX;
+        });
+        skills.forEach(s => {
+            (descsByKind[s.kind] = descsByKind[s.kind] || {})[s.name] = s.desc;
+        });
+        rows.forEach(row => {
+            Object.entries(CLASS_SKILL_KINDS).forEach(([column, kind]) => {
+                row[column] = withSkillDesc(row[column], descsByKind[kind] || {});
+            });
+        });
+
+        $('#mainTable').bootstrapTable('load', rows);
+    });
 
     function showOnlyColumns(visibleColumns) {
         let $table = $('#mainTable');

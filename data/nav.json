@@ -66,6 +66,27 @@
     "child" : []
   },
   {
+    "title" : "대사",
+    "href" : "",
+    "child" : [
+      {
+        "title" : "투기장",
+        "href" : "arena-train.html",
+        "child" : []
+      },
+      {
+        "title" : "식사",
+        "href" : "meal.html",
+        "child" : []
+      },
+      {
+        "title" : "테르메",
+        "href" : "thermae.html",
+        "child" : []
+      }
+    ]
+  },
+  {
     "title" : "기타",
     "href" : "",
     "child" : [
