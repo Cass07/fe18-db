@@ -74,7 +74,7 @@
                    data-detail-formatter="detailFormatter">
                 <thead>
                 <tr>
-                    <th data-field="name" data-sortable="true">이름</th>
+                    <th data-field="name" data-sortable="true" data-formatter="skillNameFormatter">이름</th>
                     <th data-field="desc" data-sortable="true">설명</th>
                     <th data-field="kind" data-sortable="true">기술 종류</th>
                 </tr>
@@ -90,6 +90,7 @@
 </div>
 
 <script src="assets/js/nav.js"></script>
+<script src="assets/js/skill-icon.js"></script>
 <script>
     $(document).ready(function () {
         NavInitiator.initiate();
@@ -120,7 +121,7 @@
         $("#mainTable").bootstrapTable("load", kind === "전체" ? allSkills : allSkills.filter(s => s.kind === kind));
     });
 
-    Promise.all([fetchJson("data/skills.json"), fetchJson("data/combat_arts.json"), fetchJson("data/combat_arts_stats.json")]).then(([skills, arts, stats]) => {
+    Promise.all([SkillIcon.load(), fetchJson("data/combat_arts.json"), fetchJson("data/combat_arts_stats.json")]).then(([skills, arts, stats]) => {
         const statsByEn = {};
         stats.forEach(s => statsByEn[s.en] = s);
         arts.forEach(art => art.stats = statsByEn[art.en] || null);
@@ -131,6 +132,10 @@
     Promise.all(UNIT_FILES.map(f => fetchJson("data/unit_" + f + ".json"))).then(lists => {
         unitSkills = lists.flat();
     });
+
+    function skillNameFormatter(value) {
+        return SkillIcon.format(value);
+    }
 
     function statsTable(row) {
         if (!row.stats) return "";

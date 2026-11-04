@@ -124,6 +124,7 @@
 </div>
 
 <script src="assets/js/nav.js"></script>
+<script src="assets/js/skill-icon.js"></script>
 <script>
     $(document).ready(function () {
         NavInitiator.initiate();
@@ -145,7 +146,10 @@
         if (!value) {
             return '';
         }
-        return String(value).split(',').map(v => v.trim()).join('<br>');
+        return String(value).split(',').map(v => v.trim()).map(v => {
+            const match = v.match(/^(.*?)\s*(\(.*\))?$/);
+            return SkillIcon.icon(match[1]) + v;
+        }).join('<br>');
     }
 
     const COMBAT_ARTS_STATS_HEADER = ['cost', 'might', 'hit', 'crit', 'range'];
@@ -157,7 +161,7 @@
 
     // 스킬, 전투기술, 마법의 설명 로드. 이름이 겹치면 skills > combat_arts > magic 순으로 우선
     Promise.all([
-        fetch('data/skills.json').then(res => res.json()),
+        SkillIcon.load(),
         fetch('data/combat_arts.json').then(res => res.json()),
         fetch('data/combat_arts_stats.json').then(res => res.ok ? res.json() : []).catch(() => []),
         fetch('data/magic.json').then(res => res.json())
@@ -204,7 +208,7 @@
                 const match = entry.trim().match(/^(.*?)\s*(\(.*\))?$/);
                 if (!match[1]) return;
                 const desc = descMap[match[1]];
-                items.push('<b>' + escapeHtml(match[1] + (match[2] || '')) + '</b> (' + rank + ')'
+                items.push(SkillIcon.icon(match[1]) + '<b>' + escapeHtml(match[1] + (match[2] || '')) + '</b> (' + rank + ')'
                     + (desc ? ' : ' + escapeHtml(desc) : ''));
             });
         });
@@ -234,7 +238,7 @@
                     }).join(', ');
                 }
                 rows.push('<td>' + escapeHtml(rank) + '</td>'
-                    + '<td><b>' + escapeHtml(match[1] + (match[2] || '')) + '</b></td>'
+                    + '<td>' + SkillIcon.icon(match[1]) + '<b>' + escapeHtml(match[1] + (match[2] || '')) + '</b></td>'
                     + '<td>' + escapeHtml(descMap[match[1]] || '') + '</td>'
                     + '<td>' + escapeHtml(statText) + '</td>');
             });
