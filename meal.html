@@ -51,6 +51,12 @@
     <br>
     <div class = "row">
         <div class= "col">
+            <h3>식사 대사</h3>
+        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div class= "col">
             <button class="btn btn-primary" id="선호">선호</button>
             <button class="btn btn-primary" id="보통">보통</button>
             <button class="btn btn-primary" id="비선호">비선호</button>
@@ -107,11 +113,6 @@
                 }
             });
         }
-
-        $('#is-final').on('change', function () {
-            filters.finalOnly = this.checked;
-            applyFilters();
-        });
 
         function filterByType(type) {
             filters.type = type;
