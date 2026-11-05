@@ -108,6 +108,7 @@
 </html>
 
 <script src="assets/js/spoiler.js"></script>
+<script src="assets/js/skill-icon.js"></script>
 
 <script>
 
@@ -142,11 +143,11 @@
         if (cell === undefined || cell === null || cell === "" || cell === "-") return cell;
         return String(cell).split("<br>").map(name => {
             const desc = descs[name.trim()];
-            return desc === undefined ? name : name.trim() + " : " + desc;
+            return desc === undefined ? name : SkillIcon.format(name.trim()) + " : " + desc;
         }).join("<br>");
     }
 
-    Promise.all([fetchJson("data/class_growth.json"), fetchJson("data/skills.json"), fetchJson("data/combat_arts.json")]).then(([rows, skills, arts]) => {
+    Promise.all([fetchJson("data/class_growth.json"), SkillIcon.load(), fetchJson("data/combat_arts.json")]).then(([rows, skills, arts]) => {
         const descsByKind = {};
 
         descsByKind["클래스 마스터 스킬"] = {};

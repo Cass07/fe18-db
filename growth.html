@@ -125,6 +125,7 @@
 </html>
 
 <script src="assets/js/spoiler.js"></script>
+<script src="assets/js/skill-icon.js"></script>
 
 <script>
     function applySpoilerFilter() {
@@ -186,11 +187,11 @@
         if (cell === undefined || cell === null || cell === "" || cell === "-") return cell;
         return String(cell).split("<br>").map(name => {
             const desc = descs[name.trim()];
-            return desc === undefined ? name : name.trim() + " : " + desc;
+            return desc === undefined ? name : SkillIcon.format(name.trim()) + " : " + desc;
         }).join("<br>");
     }
 
-    Promise.all([fetchJson("data/growth.json"), fetchJson("data/skills.json")]).then(([rows, skills]) => {
+    Promise.all([fetchJson("data/growth.json"), SkillIcon.load()]).then(([rows, skills]) => {
         Object.entries(UNIT_SKILL_KINDS).forEach(([column, kind]) => {
             const descs = {};
             skills.filter(s => s.kind === kind).forEach(s => {
@@ -221,7 +222,7 @@
         return String(cell).split(/[,\r\n]+/).map(entry => entry.trim()).filter(entry => entry).map(entry => {
             const match = entry.match(/^([\s\S]*?)\s*(\([\s\S]*\))?$/);
             const desc = match && skillDescs[match[1]];
-            return entry + (desc ? " <small class='text-muted'>- " + desc + "</small>" : "");
+            return SkillIcon.icon(match ? match[1] : entry) + entry + (desc ? " <small class='text-muted'>- " + desc + "</small>" : "");
         }).join(", ");
     }
 
