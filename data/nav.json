@@ -39,6 +39,10 @@
       {
         "title": "유닛별 습득 스킬, 전투기술",
         "href": "unit-skill.html"
+      },
+      {
+        "title": "군단병",
+        "href": "legion.html"
       }
     ]
   },
@@ -82,6 +86,11 @@
       {
         "title" : "테르메",
         "href" : "thermae.html",
+        "child" : []
+      },
+      {
+        "title" : "선물 회화",
+        "href" : "gift-reaction.html",
         "child" : []
       },
       {
