@@ -1,4 +1,4 @@
-// 스킬 이름 앞에 아이콘(image/icon/[icon_idx].png)을 붙여 출력하는 공용 포매터
+// 스킬 이름 앞에 아이콘(image/icon/[icon].png)을 붙여 출력하는 공용 포매터
 // 전역에는 SkillIcon 하나만 노출 (SkillIcon.load, SkillIcon.icon, SkillIcon.format, SkillIcon.loadLearnData, SkillIcon.learnTable)
 // 사용법:
 //   SkillIcon.load().then(skills => { ... SkillIcon.format("공격 진형") ... });
@@ -29,7 +29,7 @@ const SkillIcon = (function () {
         return String(text).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    // data/skills.json 을 불러와 이름 → icon_idx 맵을 만든다. 여러 번 호출해도 fetch는 한 번만 함
+    // data/skills.json 을 불러와 이름 → icon 맵을 만든다. 여러 번 호출해도 fetch는 한 번만 함
     function load() {
         if (loading === null) {
             injectStyle();
@@ -38,8 +38,8 @@ const SkillIcon = (function () {
                 .catch(() => [])
                 .then(skills => {
                     skills.forEach(s => {
-                        if (s.icon_idx !== undefined && s.icon_idx !== null && s.icon_idx !== "") {
-                            iconIdxByName[s.name] = s.icon_idx;
+                        if (s.icon !== undefined && s.icon !== null && s.icon !== "") {
+                            iconIdxByName[s.name] = s.icon;
                         }
                     });
                     return skills;

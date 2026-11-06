@@ -1,4 +1,4 @@
-en,name,desc,kind,icon_idx,is_ca
+en,name,desc,kind,icon,is_ca
 Attack Formation,공격 진형,인접한 아군의 공격력 +1,지휘,1,0
 Attack Formation+,공격 진형+,인접한 아군의 공격력 +2,지휘,2,0
 Defense Formation,방어 진형,인접한 아군의 방어력 +1,지휘,3,0
