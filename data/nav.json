@@ -94,6 +94,11 @@
         "child" : []
       },
       {
+        "title" : "레벨업",
+        "href" : "levelup.html",
+        "child" : []
+      },
+      {
         "title" : "후일담",
         "href" : "ending.html",
         "child" : []
