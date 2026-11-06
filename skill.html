@@ -106,8 +106,13 @@
     const COMBAT_ARTS_STATS_HEADER = ["cost", "might", "hit", "crit", "range"];
     const COMBAT_ARTS_STATS_HEADER_KR = ["내구 소비", "위력", "명중", "필살", "사정"];
 
+    // unit_*.json 파일 → growth.json 의 적성 컬럼
+    const APTITUDE_COLUMN = {reason: "black_magic", faith: "white_magic"};
+
     let allSkills = [];
     let unitSkills = null;
+    // 유닛 이름 → growth.json 행 (boon / bane 표시용)
+    let growthByName = {};
 
     const fetchJson = url => fetch(url).then(res => res.ok ? res.json() : []).catch(() => []);
 
@@ -121,17 +126,28 @@
         $("#mainTable").bootstrapTable("load", kind === "전체" ? allSkills : allSkills.filter(s => s.kind === kind));
     });
 
-    Promise.all([SkillIcon.load(), fetchJson("data/combat_arts.json"), fetchJson("data/combat_arts_stats.json")]).then(([skills, arts, stats]) => {
+    Promise.all([SkillIcon.load(), fetchJson("data/combat_arts_stats.json")]).then(([skills, stats]) => {
         const statsByEn = {};
         stats.forEach(s => statsByEn[s.en] = s);
-        arts.forEach(art => art.stats = statsByEn[art.en] || null);
-        allSkills = skills.concat(arts);
+        skills.forEach(s => s.stats = s.is_ca ? statsByEn[s.en] || null : null);
+        allSkills = skills;
         $("#kind").trigger("change");
     });
 
-    Promise.all(UNIT_FILES.map(f => fetchJson("data/unit_" + f + ".json"))).then(lists => {
-        unitSkills = lists.flat();
+    Promise.all([fetchJson("data/growth.json")].concat(UNIT_FILES.map(f => fetchJson("data/unit_" + f + ".json")))).then(([growth, ...lists]) => {
+        growth.forEach(g => growthByName[g.name] = g);
+        // 각 행에 해당 기술 종류의 적성 컬럼을 기록
+        unitSkills = lists.flatMap((list, i) => list.map(unit => ({unit, aptitude: APTITUDE_COLUMN[UNIT_FILES[i]] || UNIT_FILES[i]})));
     });
+
+    // growth.html 과 동일한 boon(▲) / bane(▼) 표시
+    function aptitudeMark(unitName, aptitude) {
+        const growth = growthByName[unitName];
+        const v = growth ? Number(growth[aptitude]) : 0;
+        if (v > 0) return '<span class="text-primary">▲</span>';
+        if (v < 0) return '<span class="text-danger">▼</span>';
+        return "";
+    }
 
     function skillNameFormatter(value) {
         return SkillIcon.format(value);
@@ -157,7 +173,7 @@
 
         const ranks = RANK_ORDER.concat("S+");
         const byRank = {};
-        unitSkills.forEach(unit => {
+        unitSkills.forEach(({unit, aptitude}) => {
             ranks.forEach(rank => {
                 const cell = unit[rank];
                 if (!cell) return;
@@ -166,14 +182,17 @@
                     if (!entry) return;
                     const match = entry.match(/^([\s\S]*?)\s*(\([\s\S]*\))?$/);
                     if (!match || match[1] !== row.name) return;
-                    (byRank[rank] = byRank[rank] || []).push(unit.name + (match[2] || ""));
+                    (byRank[rank] = byRank[rank] || []).push({name: unit.name, label: unit.name + aptitudeMark(unit.name, aptitude) + (match[2] || "")});
                 });
             });
         });
 
         const lines = ranks
             .filter(rank => byRank[rank])
-            .map(rank => rank + " : " + byRank[rank].sort((a, b) => a.localeCompare(b, "ko")).join(", "));
+            .map(rank => rank + " : " + byRank[rank]
+                .sort((a, b) => a.name.localeCompare(b.name, "ko"))
+                .map(u => u.label)
+                .join(", "));
 
         return statsTable(row)+  row.desc + "<br><br>" + (lines.length > 0 ? lines.join("<br>") : "습득하는 유닛이 없습니다.");
     }

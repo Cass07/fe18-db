@@ -173,13 +173,10 @@
     const RANK_ORDER = ["E", "D", "D+", "C", "C+", "B", "B+", "A", "A+", "S", "S+"];
     const fetchJson = url => fetch(url).then(res => res.ok ? res.json() : []).catch(() => []);
     let unitSkills = null;
-    let skillDescs = {};
 
-    Promise.all(["skills", "combat_arts", "magic"].map(f => fetchJson("data/" + f + ".json"))).then(lists => {
-        lists.flat().forEach(s => {
-            skillDescs[s.name] = s.desc;
-        });
-    });
+    // 습득 기술 테이블용 스킬(전투기술 포함) / 마법 설명, 전투기술 스탯 로드
+    let learnDataLoaded = false;
+    SkillIcon.loadLearnData().then(() => learnDataLoaded = true);
 
     const UNIT_SKILL_KINDS = {p_skill: "개인스킬", u_skill: "개인 유니크 스킬"};
 
@@ -218,14 +215,6 @@
         return "-";
     }
 
-    function formatLearned(cell) {
-        return String(cell).split(/[,\r\n]+/).map(entry => entry.trim()).filter(entry => entry).map(entry => {
-            const match = entry.match(/^([\s\S]*?)\s*(\([\s\S]*\))?$/);
-            const desc = match && skillDescs[match[1]];
-            return SkillIcon.icon(match ? match[1] : entry) + entry + (desc ? " <small class='text-muted'>- " + desc + "</small>" : "");
-        }).join(", ");
-    }
-
     function detailFormatter(index, row) {
         const lb = "<br>";
         const statTable = '<div class="table-responsive"><table class="table table-sm table-bordered text-center mb-2">'
@@ -250,20 +239,20 @@
             + lb + '<br><b>유니크 스킬</b><br>' + (row.u_skill || "-") + '</p>';
 
         let learn;
-        if (unitSkills === null) {
+        if (unitSkills === null || !learnDataLoaded) {
             learn = "불러오는 중...";
         } else {
             const lines = [];
             APTITUDE_KINDS.forEach(k => {
                 const unit = (unitSkills[k[0]] || []).find(u => u.name === row.name);
                 if (!unit) return;
-                const entries = RANK_ORDER.filter(rank => unit[rank]).map(rank => rank + " : " + formatLearned(unit[rank]));
-                if (entries.length > 0) lines.push("<b>" + k[1] + "</b><br>" + entries.join("<br>"));
+                const table = SkillIcon.learnTable(unit, RANK_ORDER, "");
+                if (table) lines.push('<p class="mb-1"><b>' + k[1] + "</b></p>" + table);
             });
-            learn = lines.length > 0 ? lines.join("<br><br>") : "습득하는 기술이 없습니다.";
+            learn = lines.length > 0 ? lines.join("<br>") : "습득하는 기술이 없습니다.";
         }
 
         return statTable + aptitudeTable + sums + initialStatTitle + initialStatTable + lb
-            + skills + lb + '<p class="mb-0"><b>습득 기술</b><br>' + learn + '</p>';
+            + skills + lb + '<p class="mb-2"><b>습득 기술</b></p>' + learn;
     }
 </script>

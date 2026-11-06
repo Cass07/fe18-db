@@ -147,13 +147,13 @@
         }).join("<br>");
     }
 
-    Promise.all([fetchJson("data/class_growth.json"), SkillIcon.load(), fetchJson("data/combat_arts.json")]).then(([rows, skills, arts]) => {
+    Promise.all([fetchJson("data/class_growth.json"), SkillIcon.load()]).then(([rows, skills]) => {
         const descsByKind = {};
 
         descsByKind["클래스 마스터 스킬"] = {};
 
         // 전투기술은 뒤에 suffix 붙임
-        arts.forEach(a => {
+        skills.filter(s => s.is_ca).forEach(a => {
             descsByKind["클래스 마스터 스킬"][a.name] = a.desc + COMBAT_ART_SUFFIX;
         });
         skills.forEach(s => {
