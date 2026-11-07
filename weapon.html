@@ -56,6 +56,7 @@
             <button class="btn btn-primary" id="axe">도끼</button>
             <button class="btn btn-primary" id="bow">활</button>
             <button class="btn btn-primary" id="gauntlet">건틀릿</button>
+            <button class="btn btn-primary" id="equip">기타 장비</button>
             <button class="btn btn-primary" id="all">전체</button>
         </div>
     </div>
@@ -138,6 +139,7 @@
         $("#axe").on("click", function () { filterByKind("axe"); });
         $("#bow").on("click", function () { filterByKind("bow"); });
         $("#gauntlet").on("click", function () { filterByKind("gauntlet"); });
+        $("#equip").on("click", function () { filterByKind("equip"); });
         $("#all").on("click", function () { filterByKind(null); });
     });
 </script>
