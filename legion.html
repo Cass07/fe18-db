@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/select2.min.css"/>
+    <style>
+        .aoe-table { border-collapse: collapse; table-layout: fixed; border: 1px solid lightgray; }
+        .aoe-cell { width: 10px; height: 10px; min-width: 10px; padding: 0; border: 1px solid lightgray; line-height: 0; }
+        .aoe-circle { width: 10px; height: 10px; box-sizing: border-box; border: 2px solid #000; border-radius: 50%; background: #fff; }
+    </style>
 
 </head>
 
@@ -53,6 +58,7 @@
         <div class= "col">
             <h3>군단병</h3>
         </div>
+        <p>적 전용 데이터도 있습니다.</p>
     </div>
     <br>
     <div class = "row">
@@ -117,7 +123,50 @@
 
 <script>
     const STAT_LABELS = [["str", "힘"], ["mg", "마력"], ["spd", "속도"], ["dex", "기술"], ["def", "수비"], ["res", "마방"], ["cha", "매력"]];
+    const LEGION_AOE_COLOR = {
+        "물리" : "#d93f3f",
+        "마법" : "#d93f3f",
+        "회복" : "#3bd92e",
+        "ZOC" : "#487cff"
+    }
 
+    // legion_aoe.json 로드 (idx -> table)
+    const AOE_MAP = {};
+    $.ajax({
+        url: "data/legion_aoe.json",
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            data.forEach(d => { AOE_MAP[d.idx] = d.table; });
+        }
+    });
+
+    function aoeTable(aoeId, kind) {
+        const raw = AOE_MAP[aoeId];
+        if (!raw) return "";
+        const color = LEGION_AOE_COLOR[kind] || "#999";
+        const rows = raw.split(";").filter(r => r !== "").map(r => r.split(",").map(Number));
+        const maxCols = Math.max(...rows.map(r => r.length));
+
+        const circle = '<div class="aoe-circle"></div>';
+
+        const body = rows.map(r => {
+            let tds = "";
+            for (let i = 0; i < maxCols; i++) {
+                const v = r[i] || 0;
+                if (v === 1) {
+                    tds += `<td class="aoe-cell" style="background:${color};"></td>`;
+                } else if (v === 2) {
+                    tds += `<td class="aoe-cell">${circle}</td>`;
+                } else {
+                    tds += `<td class="aoe-cell"></td>`;
+                }
+            }
+            return `<tr>${tds}</tr>`;
+        }).join("");
+
+        return '<table class="aoe-table">' + body + '</table>';
+    }
 
     function detailFormatter(index, row) {
         const lb = "<br>";
@@ -134,7 +183,9 @@
             + '<tr><th>속성</th><th>위력</th><th>명중</th><th>횟수</th></tr>'
             + '<tr><td>' + row.kind + '</td><td>' + row.might + '</td><td>' + row.hit + '</td><td>' + row.uses + '</td></tr></table></div>';
 
-        return legionDesc + lb +  lb + statTable + lb  + gambitDesc + lb + lb + gambitTable;
+        const aoeTable = '<h5>계략 범위</h5>' + aoeTable(row.aoe, row.kind);
+
+        return legionDesc + lb + lb + statTable + lb + gambitDesc + lb + lb + gambitTable + lb + aoeTable;
     }
 
     $(function () {
