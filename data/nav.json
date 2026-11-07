@@ -99,6 +99,16 @@
         "child" : []
       },
       {
+        "title" : "월드맵 랜덤 대사",
+        "href" : "map-wait.html",
+        "child" : []
+      },
+      {
+        "title" : "월드맵 탐색 대사",
+        "href" : "map-search.html",
+        "child" : []
+      },
+      {
         "title" : "후일담",
         "href" : "ending.html",
         "child" : []
