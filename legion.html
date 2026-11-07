@@ -183,9 +183,9 @@
             + '<tr><th>속성</th><th>위력</th><th>명중</th><th>횟수</th></tr>'
             + '<tr><td>' + row.kind + '</td><td>' + row.might + '</td><td>' + row.hit + '</td><td>' + row.uses + '</td></tr></table></div>';
 
-        const aoeTable = '<h5>계략 범위</h5>' + aoeTable(row.aoe, row.kind);
+        const aoeTableHtml = '<h5>계략 범위</h5>' + aoeTable(row.aoe, row.kind);
 
-        return legionDesc + lb + lb + statTable + lb + gambitDesc + lb + lb + gambitTable + lb + aoeTable;
+        return legionDesc + lb + lb + statTable + lb + gambitDesc + lb + lb + gambitTable + lb + aoeTableHtml;
     }
 
     $(function () {
