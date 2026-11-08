@@ -56,6 +56,7 @@
             <button class="btn btn-primary" id="axe">도끼</button>
             <button class="btn btn-primary" id="bow">활</button>
             <button class="btn btn-primary" id="gauntlet">건틀릿</button>
+            <button class="btn btn-primary" id="equip">기타 장비</button>
             <button class="btn btn-primary" id="all">전체</button>
         </div>
     </div>
@@ -63,6 +64,7 @@
     <div class = "row">
         <div class= "col">
             <label><input type = checkbox id="is-final"> 최종강화만 표시</label>
+            <label><input type = checkbox id="not-enemy"> 적 전용 제외</label>
         </div>
     </div>
     <div class = "row">
@@ -71,6 +73,9 @@
                    data-search="false"
                    data-toggle="table"
                    data-url="data/weapon.json"
+                   data-detail-view="true"
+                   data-detail-view-by-click="true"
+                   data-detail-formatter="detailFormatter"
                    data-show-columns="true">
                 <thead>
                 <tr>
@@ -108,23 +113,63 @@
 </html>
 
 <script>
+    const STAT_LABELS = [["might", "위력"], ["weight", "무게"], ["hit", "명중"], ["avoid", "회피"], ["crit", "필살"], ["range", "사거리"]];
+    const WEAPON_KIND_LABELS = [["sword", "검"], ["lance", "창"], ["axe", "도끼"], ["bow", "활"], ["gauntlet", "건틀릿"], ["equip", "기타 장비"]];
+    const REPAIR_LABEL = [["repair_re", "수리 재료"], ["repair_cnt", "수량"], ["repair_gold", "골드"]];
+    const FORGE_LABEL = [["forge_re", "연성 재료"], ["forge_cnt", "수량"], ["forge_gold", "골드"]];
+
+    function detailFormatter(index, row) {
+        const lb = "<br>";
+
+        const weaponDesc = `<h5>무기</h5>${row.name} : ${row.desc}`;
+
+        const weaponStatTable = '<div class="table-responsive"><table class="table table-bordered table-sm mb-0 w-auto">'
+            + '<tr>' + STAT_LABELS.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
+            + '<tr>' + STAT_LABELS.map(s => '<td>' + (row[s[0]] === ""? 0 : row[s[0]]) + '</td>').join("") + '</tr></table></div>';
+
+        const isRepairable = row.repair_re !== "" && row.repair_cnt !== "" && row.repair_gold !== "";
+        const isForgeable = row.forge_re !== "" && row.forge_cnt !== "" && row.repair_gold !== "";
+
+        const repairTable = '<div class="table-responsive"><table class="table table-bordered table-sm mb-0 w-auto">'
+            + '<tr>' + REPAIR_LABEL.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
+            + '<tr>' + REPAIR_LABEL.map(s => '<td>' + (row[s[0]] === ""? 0 : row[s[0]]) + '</td>').join("") + '</tr></table></div>';
+
+        const forgeTable = '<div class="table-responsive"><table class="table table-bordered table-sm mb-0 w-auto">'
+            + '<tr>' + FORGE_LABEL.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
+            + '<tr>' + FORGE_LABEL.map(s => '<td>' + (row[s[0]] === ""? 0 : row[s[0]]) + '</td>').join("") + '</tr></table></div>';
+
+        const isEnemyOnlyText = Number(row.isEnemy) === 1 ? "<br>적 전용" : "";
+
+        return weaponDesc + isEnemyOnlyText + lb + lb
+            + weaponStatTable + lb
+            + (isRepairable ? repairTable + lb : "")
+            + (isForgeable ? forgeTable + lb : "");
+    }
+
     $(function () {
         const filters = {
             kind : null,
-            finalOnly : false
+            finalOnly : false,
+            notEnemyOnly : false
         }
 
         function applyFilters() {
             $("#mainTable").bootstrapTable("filterBy", {}, {
                 filterAlgorithm: function (row) {
                     return (!filters.kind || row.kind === filters.kind)
-                        && (!filters.finalOnly || Number(row.final) === 1);
+                        && (!filters.finalOnly || Number(row.final) === 1)
+                        && (!filters.notEnemyOnly || Number(row.isEnemy) === 0);
                 }
             });
         }
 
         $('#is-final').on('change', function () {
             filters.finalOnly = this.checked;
+            applyFilters();
+        });
+
+        $('#not-enemy').on('change', function () {
+            filters.notEnemyOnly = this.checked;
             applyFilters();
         });
 
@@ -138,6 +183,7 @@
         $("#axe").on("click", function () { filterByKind("axe"); });
         $("#bow").on("click", function () { filterByKind("bow"); });
         $("#gauntlet").on("click", function () { filterByKind("gauntlet"); });
+        $("#equip").on("click", function () { filterByKind("equip"); });
         $("#all").on("click", function () { filterByKind(null); });
     });
 </script>
