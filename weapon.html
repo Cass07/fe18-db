@@ -134,16 +134,23 @@
             + '<tr>' + REPAIR_LABEL.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
             + '<tr>' + REPAIR_LABEL.map(s => '<td>' + (row[s[0]] === ""? 0 : row[s[0]]) + '</td>').join("") + '</tr></table></div>';
 
+        const repairItemUrlText = row.repair_re !== "" ? `<a href="${getItemMapUrl(row.repair_re)}">${row.repair_re} 습득 위치</a>` : "";
+
         const forgeTable = '<div class="table-responsive"><table class="table table-bordered table-sm mb-0 w-auto">'
             + '<tr>' + FORGE_LABEL.map(s => '<th>' + s[1] + '</th>').join("") + '</tr>'
             + '<tr>' + FORGE_LABEL.map(s => '<td>' + (row[s[0]] === ""? 0 : row[s[0]]) + '</td>').join("") + '</tr></table></div>';
+
+        const forgeItemUrlText = row.forge_re !== "" ? `<a href="${getItemMapUrl(row.forge_re)}">${row.forge_re} 습득 위치</a>` : "";
 
         const isEnemyOnlyText = Number(row.isEnemy) === 1 ? "<br>적 전용" : "";
 
         return weaponDesc + isEnemyOnlyText + lb + lb
             + weaponStatTable + lb
-            + (isRepairable ? repairTable + lb : "")
-            + (isForgeable ? forgeTable + lb : "");
+            + (isRepairable ? repairTable + repairItemUrlText + lb + lb : "")
+            + (isForgeable ? forgeTable + forgeItemUrlText+ lb + lb: "");
+    }
+    function getItemMapUrl(itemName) {
+        return `spot-map.html?tab=item&row=spot%7C${itemName}`
     }
 
     $(function () {

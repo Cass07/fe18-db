@@ -488,6 +488,11 @@
 
         bootstrap.Tab.getOrCreateInstance(document.getElementById("tab-" + activeTab)).show();
         render();
-        if (selectedRow !== null) zoomToHighlighted();
+        if (selectedRow !== null) {
+            // 선택된 row의 item 값을 검색어로 넣어 해당 데이터만 표시
+            const item = findRow(activeTab, selectedRow)?.item;
+            if (item) $(TABLES[activeTab]).bootstrapTable("resetSearch", String(item));
+            zoomToHighlighted();
+        }
     }
 </script>
