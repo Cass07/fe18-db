@@ -109,6 +109,21 @@
         "child" : []
       },
       {
+        "title" : "극장",
+        "href" : "theater.html",
+        "child" : []
+      },
+      {
+        "title" : "극장 출연",
+        "href" : "theater-act.html",
+        "child" : []
+      },
+      {
+        "title" : "극장 관람",
+        "href" : "theater-watch.html",
+        "child" : []
+      },
+      {
         "title" : "후일담",
         "href" : "ending.html",
         "child" : []
