@@ -171,8 +171,12 @@
         ["infantry", "보행", "infantry"], ["riding", "기마", "riding"], ["armor", "중갑", "armor"], ["flying", "비행", "flying"]
     ];
     const RANK_ORDER = ["E", "D", "D+", "C", "C+", "B", "B+", "A", "A+", "S", "S+"];
+    const FOOD_RANK = ["비선호", "보통", "선호", "매우 선호"];
+    const FOOD_RANK_FIELDS = ["bad", "good", "great", "perfect"];
     const fetchJson = url => fetch(url).then(res => res.ok ? res.json() : []).catch(() => []);
     let unitSkills = null;
+    let unitFoods = null;
+    fetchJson("data/unit-food.json").then(list => unitFoods = list);
 
     // 습득 기술 테이블용 스킬(전투기술 포함) / 마법 설명, 전투기술 스탯 로드
     let learnDataLoaded = false;
@@ -252,7 +256,32 @@
             learn = lines.length > 0 ? lines.join("<br>") : "습득하는 기술이 없습니다.";
         }
 
+        let food;
+        if (unitFoods === null) {
+            food = "불러오는 중...";
+        } else {
+            const matched = unitFoods.filter(u => u.name === row.name);
+            if (matched.length === 0) {
+                food = "음식 정보가 없습니다.";
+            } else {
+                const formatFood = unitFood => FOOD_RANK.map((label, i) => {
+                    const names = String(unitFood[FOOD_RANK_FIELDS[i]] || "")
+                        .split("|").map(n => n.trim()).filter(n => n !== "");
+                    return {label, names};
+                }).reverse().filter(r => r.names.length > 0)
+                    .map(r => '<p class="mb-1"><b>' + r.label + '</b> : ' + r.names.join(", ") + '</p>')
+                    .join("");
+                // 정보가 여러 개면 option 값으로 구분
+                food = matched.map(unitFood => {
+                    const header = (matched.length > 1 || unitFood.option)
+                        ? '<p class="mb-1"><b>[' + (unitFood.option || "기본") + ']</b></p>' : "";
+                    return header + formatFood(unitFood);
+                }).join("<br>");
+            }
+        }
+
         return statTable + aptitudeTable + sums + initialStatTitle + initialStatTable + lb
-            + skills + lb + '<p class="mb-2"><b>습득 기술</b></p>' + learn;
+            + skills + lb + '<p class="mb-2"><b>습득 기술</b></p>' + learn
+            + lb + '<p class="mb-2"><b>음식 선호도</b></p>' + food;
     }
 </script>
