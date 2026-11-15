@@ -47,6 +47,10 @@
       {
         "title": "군단병",
         "href": "legion.html"
+      },
+      {
+        "title": "상자 확률",
+        "href": "box.html"
       }
     ]
   },
@@ -128,6 +132,16 @@
         "child" : []
       },
       {
+        "title" : "봉사",
+        "href" : "serve.html",
+        "child" : []
+      },
+      {
+        "title" : "호불호",
+        "href" : "like-dislike.html",
+        "child" : []
+      },
+      {
         "title" : "후일담",
         "href" : "ending.html",
         "child" : []
@@ -152,6 +166,20 @@
         "title" : "외전",
         "href" : "paralogue.html",
         "child" : []
+      },
+      {
+        "title" : "음식",
+        "href" : "food.html",
+        "child" : []
+      },
+      {
+        "title" : "식재료",
+        "href" : "ingre.html",
+        "child" : []
+      },
+      {
+        "title": "선물",
+        "href": "present.html"
       }
     ]
   }
