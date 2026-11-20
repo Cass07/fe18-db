@@ -213,7 +213,23 @@
             }
         }
 
+        const $image = $('#profile-image');
+
+        // 이미지 로드 실패 시 흰 박스 유지
+        $image.on('error', function () {
+            $image.removeAttr('src');
+        });
+
+        function setImage(icon) {
+            if (icon) {
+                $image.attr('src', 'image/profile/' + encodeURIComponent(icon) + '.png');
+            } else {
+                $image.removeAttr('src');
+            }
+        }
+
         function clearProfile() {
+            setImage(null);
             $('#profile-title, #profile-birthday, #profile-age, #profile-height, ' +
                 '#profile-like, #profile-dislike, #profile-hobby').text('-');
             renderHistory([]);
@@ -226,6 +242,7 @@
                 return;
             }
 
+            setImage(profile.icon);
             $('#profile-title').text([profile.subname, profile.name].filter(Boolean).join(' '));
             $('#profile-birthday').text(profile.m + '/' + profile.d);
             $('#profile-age').text(profile.y === 0 ? '불명' : profile.y + '년');
