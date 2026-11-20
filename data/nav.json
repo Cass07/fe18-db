@@ -142,6 +142,11 @@
         "child" : []
       },
       {
+        "title" : "프로필",
+        "href" : "profile.html",
+        "child" : []
+      },
+      {
         "title" : "후일담",
         "href" : "ending.html",
         "child" : []
