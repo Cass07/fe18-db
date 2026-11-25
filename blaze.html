@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/select2.min.css"/>
+    <style>
+        .aoe-table { border-collapse: collapse; table-layout: fixed; border: 1px solid lightgray; }
+        .aoe-cell { width: 10px; height: 10px; min-width: 10px; padding: 0; border: 1px solid lightgray; line-height: 0; }
+        .aoe-circle { width: 10px; height: 10px; box-sizing: border-box; border: 2px solid #000; border-radius: 50%; background: #fff; }
+    </style>
 
 </head>
 
@@ -75,6 +80,7 @@
                     <th data-field="type" data-sortable="true">공격타입</th>
                     <th data-field="hit" data-sortable="true">명중</th>
                     <th data-field="req_count" data-sortable="true">요구 혼염치</th>
+                    <th data-field="hp" data-sortable="true" data-formatter="hpFormatter">HP</th>
                     <th data-field="desc" data-sortable="true" data-visible="false">설명</th>
                 </tr>
                 </thead>
@@ -108,8 +114,42 @@
             + '<tr><th>공격타입</th><td>' + row.type + '</td></tr>'
             + '<tr><th>명중</th><td>' + row.hit + '</td></tr>'
             + '<tr><th>요구 혼염치</th><td>' + row.req_count + '</td></tr>'
+            + '<tr><th>소비 HP</th><td>' + row.hp + '</td></tr>'
             + '</table></div>';
-        return desc + dataTable;
+        const aoe = aoeTable(row.aoe);
+        const aoeTableHtml = aoe === "" ? "" : lb + '<h5>공격 범위</h5>' + aoe;
+        return desc + dataTable + aoeTableHtml;
+    }
+
+    const BLAZE_AOE_COLOR = "#d93f3f";
+
+    function aoeTable(raw) {
+        if (!raw) return "";
+        const rows = raw.split(";").filter(r => r !== "").map(r => r.split(",").map(Number));
+        const maxCols = Math.max(...rows.map(r => r.length));
+
+        const circle = '<div class="aoe-circle"></div>';
+
+        const body = rows.map(r => {
+            let tds = "";
+            for (let i = 0; i < maxCols; i++) {
+                const v = r[i] || 0;
+                if (v === 1) {
+                    tds += `<td class="aoe-cell" style="background:${BLAZE_AOE_COLOR};">${circle}</td>`;
+                } else if (v === 2 || v === 3) {
+                    tds += `<td class="aoe-cell" style="background:${BLAZE_AOE_COLOR};"></td>`;
+                } else {
+                    tds += `<td class="aoe-cell"></td>`;
+                }
+            }
+            return `<tr>${tds}</tr>`;
+        }).join("");
+
+        return '<table class="aoe-table">' + body + '</table>';
+    }
+
+    function hpFormatter(value, row, index) {
+        return `${value}%`;
     }
 
     $(function () {
