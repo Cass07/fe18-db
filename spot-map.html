@@ -134,7 +134,7 @@
 </html>
 
 <script>
-    const MAP_IMAGE = "image/UI_Map.png";
+    const MAP_IMAGE = "image/UI_Map_2.webp";
     // 이 줌 레벨 이상에서만 location 라벨 표시
     const LABEL_MIN_ZOOM = 0.5;
     // location_info type별 아이템 key와 부가정보 출력 형식 (item이 null이면 item table에서 제외)
@@ -144,6 +144,7 @@
         station: {item: null, extra: () => ""},
         animal_spot: {item: "unit", extra: () => ""},
         dungeon: {item: "item", extra: row => row.description},
+        cultivation: {item: "material", extra: row => row.drop_rate},
     };
     const MARKER_STYLE = {
         normal: {radius: 5, fillColor: "#ffffff"},
@@ -295,7 +296,7 @@
         const width = image.naturalWidth, height = image.naturalHeight;
         const bounds = L.latLngBounds(toLatLng(0, height), toLatLng(width, 0));
         map = L.map("spotMap", {
-            crs: L.CRS.Simple, minZoom: -3, maxZoom: 2, zoomSnap: 0.25, zoomDelta: 0.5,
+            crs: L.CRS.Simple, minZoom: -4, maxZoom: 1, zoomSnap: 0.25, zoomDelta: 0.5,
             attributionControl: false, renderer: L.canvas({tolerance: 6}),
         });
         L.imageOverlay(MAP_IMAGE, bounds).addTo(map);
@@ -315,7 +316,7 @@
             const style = loc.interactive ? MARKER_STYLE.normal : MARKER_STYLE.disabled;
             const marker = new PieMarker(toLatLng(loc.x, loc.y), {
                 ...style, fillColor: loc.colors[0] || style.fillColor, colors: loc.colors,
-                color: "#444444", weight: 2, fillOpacity: 1, interactive: loc.interactive,
+                color: "#d2d2d2", weight: 2, fillOpacity: 1, interactive: loc.interactive,
             }).addTo(map);
             if (loc.label) {
                 marker.bindTooltip(escapeHtml(loc.label), {

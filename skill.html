@@ -105,6 +105,8 @@
     const UNIT_FILES = ["armor", "authority", "axe", "bow", "faith", "flying", "gauntlet", "infantry", "lance", "reason", "riding", "sword"];
     const COMBAT_ARTS_STATS_HEADER = ["cost", "might", "hit", "crit", "range"];
     const COMBAT_ARTS_STATS_HEADER_KR = ["내구 소비", "위력", "명중", "필살", "사정"];
+    const ENHANCE_HEADER = ["enhance", "inherit"];
+    const ENHANCE_HEADER_KR = ["강화 비용", "계승 비용"];
 
     // unit_*.json 파일 → growth.json 의 적성 컬럼
     const APTITUDE_COLUMN = {reason: "black_magic", faith: "white_magic"};
@@ -126,10 +128,15 @@
         $("#mainTable").bootstrapTable("load", kind === "전체" ? allSkills : allSkills.filter(s => s.kind === kind));
     });
 
-    Promise.all([SkillIcon.load(), fetchJson("data/combat_arts_stats.json")]).then(([skills, stats]) => {
+    Promise.all([SkillIcon.load(), fetchJson("data/combat_arts_stats.json"), fetchJson("data/enhance.json")]).then(([skills, stats, enhance]) => {
         const statsByEn = {};
         stats.forEach(s => statsByEn[s.en] = s);
-        skills.forEach(s => s.stats = s.is_ca ? statsByEn[s.en] || null : null);
+        const enhanceByName = {};
+        enhance.forEach(e => enhanceByName[e.name] = e);
+        skills.forEach(s => {
+            s.stats = s.is_ca ? statsByEn[s.en] || null : null;
+            s.enhance = s.is_ca ? enhanceByName[s.name] || null : null;
+        });
         allSkills = skills;
         $("#kind").trigger("change");
     });
@@ -154,15 +161,26 @@
     }
 
     function statsTable(row) {
-        if (!row.stats) return "";
+        // 값이 0(또는 없음)인 강화 / 계승 비용 컬럼은 표시하지 않음
+        const enhanceKeys = row.enhance ? ENHANCE_HEADER.filter(key => Number(row.enhance[key]) > 0) : [];
+        if (!row.stats && enhanceKeys.length === 0) return "";
         const escape = v => $("<div>").text(v).html();
-        const cells = COMBAT_ARTS_STATS_HEADER.map(key => {
-            const base = row.stats[key];
-            const plus = row.stats[key + "+"];
-            return "<td>" + escape(plus === "" || base === plus ? base : base + " / " + plus) + "</td>";
+        const headers = [];
+        const cells = [];
+        if (row.stats) {
+            COMBAT_ARTS_STATS_HEADER.forEach((key, i) => {
+                const base = row.stats[key];
+                const plus = row.stats[key + "+"];
+                headers.push(COMBAT_ARTS_STATS_HEADER_KR[i]);
+                cells.push("<td>" + escape(plus === "" || base === plus ? base : base + " / " + plus) + "</td>");
+            });
+        }
+        enhanceKeys.forEach(key => {
+            headers.push(ENHANCE_HEADER_KR[ENHANCE_HEADER.indexOf(key)]);
+            cells.push("<td>" + escape(row.enhance[key]) + "</td>");
         });
         return "<table class='table table-bordered table-sm mb-0 w-auto'>"
-            + "<thead><tr>" + COMBAT_ARTS_STATS_HEADER_KR.map(h => "<th class='p-1'>" + h + "</th>").join("") + "</tr></thead>"
+            + "<thead><tr>" + headers.map(h => "<th class='p-1'>" + h + "</th>").join("") + "</tr></thead>"
             + "<tbody><tr>" + cells.join("") + "</tr></tbody></table><br>";
     }
 
